@@ -3,14 +3,19 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { AArrowDown } from "lucide-react";
-
+import Quiz from "./component/quiz/quiz.jsx";
+import Leaderboard from "./component/Leaderboard/Leaderboard.jsx";
+import Login from "./pages/LoginScreen/Login.jsx";
+import Signup from "./pages/SignUpScreen/signUp.jsx";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
-      <p className=" text-primary p-4"> hey </p>
-    </>
+{/* <Quiz/> */}
+ {/* <Leaderboard/>  */}
+ {/* <Login/> */}
+<Signup/> 
+   </>
   );
 }
 
