@@ -1,0 +1,38 @@
+import React from 'react'
+import { Star, UserRound } from 'lucide-react'
+
+function CourseCard({ course }) {
+  return (
+    <div className='w-[270px] cursor-pointer border-[1.5px] border-[#E9EAF0]'>
+        <img src={course.image} alt='Course Image' width={270} height={230} className='object-cover w-full'/>
+        <div className='flex flex-col h-[180px]'>
+            <div className='px-4 py-4 flex flex-col gap-3 h-[130px]'>
+                <div className='flex justify-between'>
+                    <div className='text-[12px] text-[#342F98] bg-gray-100 px-2 py-1 font-semibold'>
+                        {course.category}
+                    </div>
+                    <div className='text-xl text-[#3258B4] font-semibold'>
+                        ${course.price}
+                    </div>
+                </div>
+                <p className='text-lg leading-tight font-semibold text-dark'>
+                    {course.title}
+                </p>
+            </div>
+            <div className='flex justify-between items-center px-3 py-3 border-t-[1.5px] border-[#E9EAF0]'>
+                <div className='flex items-center gap-2'>
+                    <Star size={19} color='#FD8E1F' fill='#FD8E1F'/>
+                    <h2 className='text-[16px] font-semibold text-gray-700'>{course.rating}</h2>
+                </div>
+                <div className='flex items-center gap-2'>
+                    <UserRound size={20} color='#FF6636'/>
+                    <h2 className='text-[15px] font-semibold text-gray-700'>{course.students}</h2>
+                    <h2 className='text-[15px] text-gray-600'>Students</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default CourseCard

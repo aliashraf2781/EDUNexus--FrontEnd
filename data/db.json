@@ -1,0 +1,150 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Development",
+      "count": 4235,
+      "topics": [
+        { "id": 11, "name": "Web Development", "count": 2100 },
+        { "id": 12, "name": "Mobile Development", "count": 1235 },
+        { "id": 13, "name": "Game Development", "count": 900 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Business",
+      "count": 3454,
+      "topics": [
+        { "id": 21, "name": "Entrepreneurship", "count": 1500 },
+        { "id": 22, "name": "Marketing", "count": 1200 },
+        { "id": 23, "name": "Finance", "count": 754 }
+      ]
+    }
+  ],
+  "courseLevels": [
+    { "id": 1, "name": "All Level", "count": 3214 },
+    { "id": 2, "name": "Beginner", "count": 1234 },
+    { "id": 3, "name": "Intermediate", "count": 2341 },
+    { "id": 4, "name": "Expert", "count": 1432 }
+  ],
+  "tools": [
+    { "id": 1, "name": "HTML 5", "count": 3214 },
+    { "id": 2, "name": "CSS 3", "count": 1234 },
+    { "id": 3, "name": "React", "count": 2341 },
+    { "id": 4, "name": "Node.js", "count": 1432 }
+  ],
+  "prices": [
+    { "id": 1, "name": "Paid", "count": 1234 },
+    { "id": 2, "name": "Free", "count": 3214 }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Complete Blender Creator: Learn 3D Modelling for Beginners",
+      "category": "DEVELOPMENTS",
+      "price": 49,
+      "rating": 4.9,
+      "students": 197637,
+      "image": "src/assets/courses images/course1.png"
+    },
+    {
+      "id": 2,
+      "title": "React for Beginners",
+      "category": "DEVELOPMENTS",
+      "price": 39,
+      "rating": 4.7,
+      "students": 95637,
+      "image": "src/assets/courses images/course2.png"
+    },
+    {
+      "id": 3,
+      "title": "Digital Marketing Masterclass",
+      "category": "BUSINESS",
+      "price": 29,
+      "rating": 4.8,
+      "students": 123012,
+      "image": "src/assets/courses images/course3.png"
+    },
+    {
+      "id": 4,
+      "title": "Introduction to Python Programming",
+      "category": "DEVELOPMENTS",
+      "price": 35,
+      "rating": 4.6,
+      "students": 78412,
+      "image": "src/assets/courses images/course4.png"
+    },
+    {
+      "id": 5,
+      "title": "Financial Analysis for Beginners",
+      "category": "BUSINESS",
+      "price": 45,
+      "rating": 4.9,
+      "students": 45600,
+      "image": "src/assets/courses images/course5.png"
+    },
+    {
+      "id": 6,
+      "title": "Mastering CSS and Flexbox",
+      "category": "DEVELOPMENTS",
+      "price": 25,
+      "rating": 4.5,
+      "students": 67899,
+      "image": "src/assets/courses images/course6.png"
+    },
+    {
+      "id": 7,
+      "title": "Entrepreneurship Crash Course",
+      "category": "BUSINESS",
+      "price": 59,
+      "rating": 4.7,
+      "students": 90321,
+      "image": "src/assets/courses images/course7.png"
+    },
+    {
+      "id": 8,
+      "title": "Full-Stack Web Development Bootcamp",
+      "category": "DEVELOPMENTS",
+      "price": 89,
+      "rating": 4.8,
+      "students": 210300,
+      "image": "src/assets/courses images/course8.png"
+    },
+    {
+      "id": 9,
+      "title": "JavaScript ES6+ Guide",
+      "category": "DEVELOPMENTS",
+      "price": 34,
+      "rating": 4.6,
+      "students": 45670,
+      "image": "src/assets/courses images/course9.png"
+    },
+    {
+      "id": 10,
+      "title": "Marketing Strategies in 2025",
+      "category": "BUSINESS",
+      "price": 42,
+      "rating": 4.7,
+      "students": 87564,
+      "image": "src/assets/courses images/course10.png"
+    },
+    {
+      "id": 11,
+      "title": "Node.js & Express from Scratch",
+      "category": "DEVELOPMENTS",
+      "price": 38,
+      "rating": 4.5,
+      "students": 63450,
+      "image": "src/assets/courses images/course11.png"
+    },
+    {
+      "id": 12,
+      "title": "Excel for Business Analysis",
+      "category": "BUSINESS",
+      "price": 31,
+      "rating": 4.6,
+      "students": 74210,
+      "image": "src/assets/courses images/course12.png"
+    }
+  ]
+}
