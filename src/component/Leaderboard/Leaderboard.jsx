@@ -36,7 +36,8 @@ const leaderboardData = [
 
 const Leaderboard = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full">
+      {/* Header */}
       <div className="flex flex-wrap justify-between items-center mb-6">
         <h3 className="text-2xl font-bold text-dark">
           <span className="text-dark">Edu</span>
@@ -66,8 +67,10 @@ const Leaderboard = () => {
         </div>
       </div>
 
+      {/* Title */}
       <h1 className="text-3xl font-bold text-primary mb-6 text-left">Leaderboard</h1>
 
+      {/* Filter Section */}
       <div className="flex flex-col md:flex-row justify-between gap-4 mb-6">
         <input
           type="text"
@@ -81,12 +84,14 @@ const Leaderboard = () => {
         </select>
       </div>
 
+      {/* Leaderboard List */}
       <div className="space-y-4">
         {leaderboardData.map((user, index) => (
           <div
             key={index}
             className="bg-secondary p-4 rounded-lg flex flex-col md:flex-row justify-between items-center"
           >
+            {/* User Info */}
             <div className="flex items-center gap-4 mb-4 md:mb-0">
               <img
                 src={user.img}
@@ -96,11 +101,13 @@ const Leaderboard = () => {
               <h5 className="font-semibold text-dark">{user.name}</h5>
             </div>
 
+            {/* Achievement */}
             <div className="bg-gradient-to-r from-[#e3d7d2] to-[#d6cfc9] px-6 py-2 rounded-full flex items-center gap-2 min-w-[260px] justify-center text-dark font-medium">
               <span>Achievement:</span>
               <span className="capitalize font-semibold">{user.achievement}</span>
             </div>
 
+            {/* Score */}
             <div className="text-right mt-4 md:mt-0">
               <h6 className="text-dark mb-1 font-medium">Score</h6>
               <span className="font-bold text-dark">{user.score}</span>

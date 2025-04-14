@@ -36,16 +36,16 @@ const Quiz = () => {
   const progress = (currentQuestion / questions.length) * 100;
 
   return (
-    <div className="bg-[var(--color-secondary)] w-full min-h-screen fixed top-0 left-0">
+    <div className="bg-secondary w-full min-h-screen fixed top-0 left-0">
       <div className="flex justify-between items-center p-4">
-        <h5 className="text-[var(--color-primary)] font-bold text-xl">QUIZ</h5>
-        <X size={24} className="cursor-pointer text-[var(--color-dark)]" onClick={handleExit} />
+        <h5 className="text-primary font-bold text-xl">QUIZ</h5>
+        <X size={24} className="cursor-pointer text-dark" onClick={handleExit} />
       </div>
 
       <div className="flex flex-col items-center justify-center px-4 py-8">
         {!showResult ? (
           <>
-            <div className="bg-white text-[var(--color-primary)] font-bold text-lg text-center p-4 mb-6 rounded w-full max-w-xl">
+            <div className="bg-white text-primary font-bold text-lg text-center p-4 mb-6 rounded w-full max-w-xl">
               {questions[currentQuestion].question}
             </div>
 
@@ -55,26 +55,25 @@ const Quiz = () => {
                 const isSelected = option === selectedOption;
 
                 let bgColor = 'bg-white';
-                let textColor = 'text-[var(--color-dark)]';
-                let border = '';
+                let textColor = 'text-dark';
 
                 if (isAnswered) {
                   if (isSelected && !isCorrect) {
-                    bgColor = 'bg-[#E69090]';
+                    bgColor = 'bg-red-300';
                   }
                   if (isCorrect) {
-                    bgColor = 'bg-[var(--color-primary)]';
+                    bgColor = 'bg-primary';
                     textColor = 'text-white';
                   }
                 } else if (isSelected) {
-                  bgColor = 'bg-[var(--color-primary)]';
+                  bgColor = 'bg-primary';
                   textColor = 'text-white';
                 }
 
                 return (
                   <button
                     key={idx}
-                    className={`w-full py-2 px-4 rounded font-bold ${bgColor} ${textColor} ${border}`}
+                    className={`w-full py-2 px-4 rounded font-bold ${bgColor} ${textColor}`}
                     onClick={() => handleOptionClick(option)}
                     disabled={isAnswered}
                   >
@@ -85,14 +84,14 @@ const Quiz = () => {
             </div>
 
             <div className="flex items-center justify-between mt-8 w-full max-w-xl">
-              <div className="w-3/4 h-2 bg-[var(--color-secondary)] rounded overflow-hidden">
+              <div className="w-3/4 h-2 bg-secondary rounded overflow-hidden">
                 <div
-                  className="h-full bg-[var(--color-primary)]"
+                  className="h-full bg-primary"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
               <button
-                className="bg-[var(--color-primary)] text-white px-4 py-2 rounded ml-4"
+                className="bg-primary text-white px-4 py-2 rounded ml-4"
                 onClick={handleNext}
                 disabled={!isAnswered}
               >
@@ -101,7 +100,7 @@ const Quiz = () => {
             </div>
           </>
         ) : (
-          <div className="text-center w-full max-w-md text-[var(--color-dark)]">
+          <div className="text-center w-full max-w-md text-dark">
             <img src="./Layer 1.png" alt="result" className="mb-4 w-full" />
 
             <div className="bg-white border border-gray-300 rounded px-4 py-3 mb-3 flex justify-between font-bold">
@@ -115,7 +114,7 @@ const Quiz = () => {
             </div>
 
             <button
-              className="w-full bg-[var(--color-primary)] text-white py-2 rounded mt-4"
+              className="w-full bg-primary text-white py-2 rounded mt-4"
               onClick={handleExit}
             >
               Okey
