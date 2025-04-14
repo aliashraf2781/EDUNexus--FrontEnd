@@ -1,7 +1,7 @@
 import React from 'react'
-import CourseData from '../components/CourseData/CourseData'
-import CourseDetailsCard from '../components/CourseDetailsCard/CourseDetailsCard'
-import Trailer from '../components/Trailer/Trailer'
+import CourseData from '../../components/CourseData/CourseData'
+import CourseDetailsCard from '../../components/CourseDetailsCard/CourseDetailsCard'
+import Trailer from '../../components/Trailer/Trailer'
 
 function CourseDetails() {
   return (

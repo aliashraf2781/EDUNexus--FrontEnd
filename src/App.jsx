@@ -1,19 +1,12 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-// import "./App.css";
-// import { AArrowDown } from "lucide-react";
-import CourseList from './pages/CourseList/CourseList.jsx'
-import Quiz from "./component/quiz/quiz.jsx";
-import Leaderboard from "./component/Leaderboard/Leaderboard.jsx";
-import Login from "./pages/LoginScreen/Login.jsx";
-import Signup from "./pages/SignUpScreen/signUp.jsx";
-import CourseDetails from './pages/CourseDetails/CourseDetails.jsx';
-function App() {
+import Leaderboard from './Components/Leaderboard/Leaderboard';
+import Quiz from './Components/Quiz/Quiz';
+import SignupPage from './pages/SignUpScreen/signUp';
+import Login from './pages/LoginScreen/Login';
 
+function App() {
   return (
     <>
-      <CourseDetails />
+    
     </>
   );
 }
