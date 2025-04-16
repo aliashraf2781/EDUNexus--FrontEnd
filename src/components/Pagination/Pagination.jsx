@@ -15,7 +15,7 @@ function Pagination() {
         <div className='flex items-center text-light justify-between my-8 rounded-full hover:bg-secondary hover:text-dark cursor-pointer'>
             <ArrowRight className='m-3' size={25} />
         </div>
-        <div className='flex items-center gap-2 mx-5'>
+        <div className='flex items-center gap-2 md:mx-5'>
             {Pages.map((page) => (
             <div 
                 key={page.id}

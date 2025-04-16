@@ -146,5 +146,97 @@
       "students": 74210,
       "image": "src/assets/courses images/course12.png"
     }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Vako Shvili",
+      "title": "Web Designer & Best-Selling Instructor",
+      "image": "src/assets/courses images/instructor1.png",
+      "courseRating": 4.9,
+      "students": "236,568",
+      "courses": "09",
+      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
+    },
+    {
+      "id": 2,
+      "name": "Nima Tahami",
+      "title": "Entrepreneur & Designer • Founder of ShiftRide",
+      "image": "src/assets/courses images/instructor2.png",
+      "courseRating": 4.6,
+      "students": "5,342",
+      "courses": "01",
+      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both..."
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Guy Hawkins",
+      "image": "src/assets/courses images/avatar1.png",
+      "date": "1 week ago",
+      "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
+    },
+    {
+      "id": 2,
+      "name": "Dianne Russell",
+      "image": "src/assets/courses images/avatar2.png",
+      "date": "51 mins ago",
+      "comment": "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step."
+    },
+    {
+      "id": 2,
+      "name": "Eleanor Pena",
+      "image": "src/assets/courses images/avatar3.png",
+      "date": "1 days ago",
+      "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
+    }
+  ],
+  "relatedCourses": [
+    {
+      "id": 1,
+      "title": "Machine Learning A-Z™: Hands-On Python & R In Data...",
+      "category": "DESIGN",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse1.png"
+    },
+    {
+      "id": 2,
+      "title": "The Complete 2021 Web Development Bootcamp",
+      "category": "DEVELOPMENTS",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse2.png"
+    },
+    {
+      "id": 3,
+      "title": "Learn Python Programming Masterclass",
+      "category": "BUSINESS",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse3.png"
+    },
+    {
+      "id": 4,
+      "title": "The Complete Digital Marketing Course - 12 Courses in 1",
+      "category": "MARKETING",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse4.png"
+    },
+    {
+      "id": 5,
+      "title": "Reiki Level I, II and Master/Teacher Program",
+      "category": "IT & SOFTWARE",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse5.png"
+    }
   ]
 }
