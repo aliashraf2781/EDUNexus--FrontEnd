@@ -1,42 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Cpu, ChevronDown } from 'lucide-react'
 import FilterContainer from '../FilterContainer/FilterContainer'
 import FilterTopic from '../FilterTopic/FilterTopic'
 
 
-function FilterSection({ showFilters, setShowFilters }) {
-  const [categories, setCategories] = useState([])
-  const [courseLevels, setCourseLevels] = useState([])
-  const [tools, setTools] = useState([])
-  const [prices, setPrices] = useState([])
-
+function FilterSection({ showFilters, setShowFilters, categories, courseLevels, tools, prices }) {
   const [openTopics, setOpenTopics] = useState({})
   const [selectedTopics, setSelectedTopics] = useState([])
   const [selectedLevels, setSelectedLevels] = useState([])
   const [selectedTools, setSelectedTools] = useState([])
   const [selectedPrice, setSelectedPrice] = useState([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const [catRes, levelRes, toolsRes, priceRes] = await Promise.all([
-        fetch('http://localhost:3002/categories'),
-        fetch('http://localhost:3002/courseLevels'),
-        fetch('http://localhost:3002/tools'),
-        fetch('http://localhost:3002/prices'),
-      ])
-      const [catData, levelData, toolsData, priceData] = await Promise.all([
-        catRes.json(),
-        levelRes.json(),
-        toolsRes.json(),
-        priceRes.json(),
-      ])
-      setCategories(catData)
-      setCourseLevels(levelData)
-      setTools(toolsData)
-      setPrices(priceData)
-    }
-    fetchData()
-  }, [])
 
   const handleTopicClick = (topicId) => {
     setSelectedTopics(prev => 
