@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import {MoveRight, Check, Loader, ArrowRight} from 'lucide-react'
 import CourseData from '../../components/CourseData/CourseData'
@@ -163,26 +162,4 @@ function CourseDetails() {
   )
 }
 
-=======
-import React from 'react'
-import CourseData from '../../components/CourseData/CourseData'
-import CourseDetailsCard from '../../components/CourseDetailsCard/CourseDetailsCard'
-import Trailer from '../../components/Trailer/Trailer'
-
-function CourseDetails() {
-  return (
-    <div className="container grid grid-cols-5">
-        <div className="md:col-span-3 flex flex-col gap-4">
-          <CourseData />
-          <Trailer />
-        </div>
-
-        <div className="md:col-span-2 flex justify-center">
-          <CourseDetailsCard />
-        </div>
-    </div>
-  )
-}
-
->>>>>>> 6ff3aac694df0170e8308a15a93315e91af27016
 export default CourseDetails
