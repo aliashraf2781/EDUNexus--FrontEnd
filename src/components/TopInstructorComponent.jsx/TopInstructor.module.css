@@ -1,0 +1,9 @@
+.photoShadow {
+  position: absolute;
+  top: -204px;
+  left: 26px;
+  z-index: -1;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
