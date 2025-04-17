@@ -5,7 +5,7 @@ import createdBy2  from '../../assets/courses images/createdBy2.png';
 
 function CourseData() {
   return (
-      <div className='w-full h-85 bg-gray-100 pl-27 pt-15 flex flex-1 flex-col gap-4 py-4 pr-4'>
+      <div className='w-full h-fit bg-gray-100 lg:pl-27 px-7 pt-15 flex flex-1 flex-col gap-4 py-4 pr-4'>
         <div className='text-light text-sm flex gap-2 items-center'>
           <span className='cursor-pointer text-light hover:text-dark text-sm'>Home</span>
           <ChevronRight size={15} className='text-light mt-1' />
@@ -21,7 +21,7 @@ function CourseData() {
         <div className='text-light text-md'>
           3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living freelancing.
         </div>
-        <div className='flex justify-between items-center w-full'>
+        <div className='flex flex-col md:flex-row gap-2 justify-between items-center w-full'>
           <div className='flex gap-2 items-center'>
             <div className="w-9 h-9 rounded-full relative">
               <img src={createdBy2} alt="Avatar 1" className="w-full h-full object-cover" />
