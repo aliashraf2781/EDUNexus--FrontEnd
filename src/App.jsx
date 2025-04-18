@@ -11,12 +11,17 @@ import CourseList from "./pages/CourseList/CourseList";
 import NotFoundPage from "./pages/NotFoundPage/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import SideMenuComponent from "./components/InstructorDashbord/SideMenuComponent/SideMenuComponent";
+import NavbarComponent from "./components/InstructorDashbord/NavbarComponent/NavbarComponent";
 export default function App() {
   return (
     <>
-      <Navbar />
-      <NotFoundPage />
-      <Footer />
+      <div className="flex">
+        <SideMenuComponent />
+        <main className="flex-1 px-5 py-6">
+          <NavbarComponent />
+        </main>
+      </div>
     </>
   );
 }
