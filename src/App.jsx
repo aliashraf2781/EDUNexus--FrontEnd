@@ -4,11 +4,11 @@ import SignupPage from './pages/SignUpScreen/signUp';
 import Login from './pages/LoginScreen/Login';
 import About from './pages/aboutScreen/about';
 import ContactUs from './pages/ContactSreen/contactus';
+import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 function App() {
   return (
     <>
-    {/* <ContactUs/> */}
-    <About/>
+      <StudentDashboard/>
     </>
   );
 }
