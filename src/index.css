@@ -6,3 +6,22 @@
   --color-light: #8c94a3;
   --color-dark: #1d2026;
 }
+
+.Assignment-items::-webkit-scrollbar {
+  height: 4px;
+}
+
+.Assignment-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.Assignment-items::-webkit-scrollbar-thumb {
+  background: #F24822;
+  border-radius: 8px;
+}
+
+.Assignment-items::-webkit-scrollbar-thumb:hover {
+  background: #d63a1c;
+}
+
