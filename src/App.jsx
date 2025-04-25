@@ -10,6 +10,7 @@ import CourseLesson from "./pages/CourseLesson/CourseLesson";
 import CourseList from "./pages/CourseList/CourseList";
 import CourseRating from "./components/CourseRating/CourseRating";
 import InstructorQuizEditor from "./pages/InstructorQuizEditor/InstructorQuizEditor";
+import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 function App() {
   return (
     <>
