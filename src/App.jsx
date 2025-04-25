@@ -5,10 +5,11 @@ import Login from './pages/LoginScreen/Login';
 import About from './pages/aboutScreen/about';
 import ContactUs from './pages/ContactSreen/contactus';
 import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
+import InsQuizEditor from './pages/instructorQuizEditor/InsQuizEditor';
 function App() {
   return (
     <>
-      <StudentDashboard/>
+     <InsQuizEditor/>
     </>
   );
 }
