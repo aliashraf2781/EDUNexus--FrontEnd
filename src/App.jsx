@@ -6,12 +6,13 @@ import About from './pages/aboutScreen/about';
 import ContactUs from './pages/ContactSreen/contactus';
 import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 import InsQuizEditor from './pages/instructorQuizEditor/InsQuizEditor';
+import CourseDetails from './pages/CourseDetails/CourseDetails'
+import CourseLesson from './pages/CourseLesson/CourseLesson'
+import CourseList from './pages/CourseList/CourseList'
+
 function App() {
   return (
     <>
      <InsQuizEditor/>
     </>
   );
-}
-
-export default App
