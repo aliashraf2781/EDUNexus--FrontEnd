@@ -9,8 +9,10 @@ import UpcomingQuizzes from "../../components/StdDashboard/UpcomingQuizzes/Upcom
 import ActiveCourse from "../../components/StdDashboard/progressTracking/ActiveCourse";
 import StatisticsSection from "../../components/StdDashboard/progressTracking/StatisticsSection";
 import DeadlinesSection from "../../components/StdDashboard/progressTracking/DeadlinesSection";
-
 import StdLeaderboard from "../../components/StdDashboard/StdDashbordLeaderboard/StdLeaderboard";
+import ChatApp from "../../components/StdDashboard/StdChat/ChatApp";
+import ProfileSettings from "../../components/StdDashboard/ProfileSettings/ProfileSettings";
+
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
   const [activeCard, setActiveCard] = useState("Enrolled Courses");
@@ -52,13 +54,13 @@ const Dashboard = () => {
       case "Messages":
         return (
           <div className="p-6 text-gray-700 font-medium">
-            Your messages will appear here.
+             <ChatApp />
           </div>
         );
       case "Settings":
         return (
-          <div className="p-6 text-gray-700 font-medium">
-            Settings options will be available here.
+          <div className="p-6 text-gray-700 bg-[#FFF3F0] font-medium">
+             <ProfileSettings/>
           </div>
         );
       default:
