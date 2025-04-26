@@ -103,40 +103,40 @@ export default function Dashboard() {
             </select>
           </div>
           <hr className="text-gray-200  -mx-5" />
-          <div class="flex items-start gap-4">
-            <img alt="" src={commentSvg} class="  object-cover" />
+          <div className="flex items-start gap-4">
+            <img alt="" src={commentSvg} className="  object-cover" />
 
             <div>
-              <h3 class="font-medium text-gray-900 sm:text-lg">
+              <h3 className="font-medium text-gray-900 sm:text-lg">
                 Kevin comments on your lecture “What is ux” in <br /> “2021
                 ui/ux design with figma”
               </h3>
 
-              <p class="mt-0.5 text-gray-700">Just now</p>
+              <p className="mt-0.5 text-gray-700">Just now</p>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <img alt="" src={reviewSvg} class="  object-cover" />
+          <div className="flex items-start gap-4">
+            <img alt="" src={reviewSvg} className="  object-cover" />
 
             <div>
-              <h3 class="font-medium text-gray-900 sm:text-lg">
+              <h3 className="font-medium text-gray-900 sm:text-lg">
                 John give a 5 star rating on your course “2021 ui/ux <br />{" "}
                 design with figma”
               </h3>
 
-              <p class="mt-0.5 text-gray-700">5 mins ago</p>
+              <p className="mt-0.5 text-gray-700">5 mins ago</p>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <img alt="" src={purchaseSvg} class="  object-cover" />
+          <div className="flex items-start gap-4">
+            <img alt="" src={purchaseSvg} className="  object-cover" />
 
             <div>
-              <h3 class="font-medium text-gray-900 sm:text-lg">
+              <h3 className="font-medium text-gray-900 sm:text-lg">
                 Sraboni purchase your course “2021 ui/ux <br /> design with
                 figma”
               </h3>
 
-              <p class="mt-0.5 text-gray-700">6 mins ago</p>
+              <p className="mt-0.5 text-gray-700">6 mins ago</p>
             </div>
           </div>
         </div>
