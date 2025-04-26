@@ -14,7 +14,8 @@ import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 function App() {
   return (
     <>
-      <InstructorQuizEditor />
+      {/* <InstructorQuizEditor /> */}
+      <InsQuizEditor />
     </>
   );
 }
