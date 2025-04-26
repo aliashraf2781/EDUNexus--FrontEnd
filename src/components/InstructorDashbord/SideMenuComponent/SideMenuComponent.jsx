@@ -10,7 +10,7 @@ import settingsSvg from "../../../assets/Instructor Dashboard SideMenu/settings.
 
 export default function SideMenuComponent() {
   return (
-    <div className="flex flex-col justify-between h-svh p-3 w-60 bg-dark text-gray-100">
+    <div className="fixed flex flex-col justify-between h-svh p-3 w-60 bg-dark text-gray-100">
       <div className="space-y-3">
         <div className="flex items-center justify-center">
           <img src={logo} alt="" className="w-32 h-7" />

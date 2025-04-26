@@ -4,13 +4,13 @@ import avatar from "../../../assets/Instructor Dashboard navbar/avatarsvg.svg";
 import { LogOut } from "lucide-react";
 export default function NavbarComponent() {
   return (
-    <div className="flex justify-between w-full">
+    <div className="ml-60 flex justify-between flex-wrap bg-white px-5">
       <div>
         {" "}
         <p>Good Morning</p>
         <h2 className="text-xl font-semibold">Dashboard</h2>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 flex-wrap">
         <label htmlFor="Search">
           <div className="relative">
             <input
