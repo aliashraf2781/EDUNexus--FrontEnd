@@ -13,13 +13,17 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import SideMenuComponent from "./components/InstructorDashbord/SideMenuComponent/SideMenuComponent";
 import NavbarComponent from "./components/InstructorDashbord/NavbarComponent/NavbarComponent";
+import Dashboard from "./components/InstructorDashbord/Dashboard/Dashboard";
 export default function App() {
   return (
     <>
       <div className="flex">
         <SideMenuComponent />
-        <main className="flex-1 px-5 py-6">
+        <main className=" flex-1 ">
           <NavbarComponent />
+          <div className="ml-60 bg-slate-100">
+            <Dashboard/>
+          </div>
         </main>
       </div>
     </>
