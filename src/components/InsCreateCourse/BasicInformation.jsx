@@ -1,12 +1,12 @@
 import React from "react";
-import { useEditor, EditorContent } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
+// import { useEditor, EditorContent } from "@tiptap/react";
+// import StarterKit from "@tiptap/starter-kit";
 
 const BasicInformation = () => {
-  const editor = useEditor({
-    extensions: [StarterKit],
-    content: "",
-  });
+  // const editor = useEditor({
+  //   extensions: [StarterKit],
+  //   content: "",
+  // });
 
   return (
     <div className="bg-white p-6 rounded-md shadow-md mb-6">
@@ -30,37 +30,37 @@ const BasicInformation = () => {
           Course Descriptions
         </label>
         <div className="border border-gray-300 rounded-md p-2">
-          <EditorContent
+          {/* <EditorContent
             editor={editor}
             className="min-h-[150px] px-3 py-2 border-none outline-none"
-          />
+          /> */}
           <div className="flex items-center gap-2 border-t border-gray-300 pt-2 mt-2">
             <button
-              onClick={() => editor.chain().focus().toggleBold().run()}
+              // onClick={() => editor.chain().focus().toggleBold().run()}
               className="text-gray-500 hover:text-black text-sm font-medium"
             >
               B
             </button>
             <button
-              onClick={() => editor.chain().focus().toggleItalic().run()}
+              // onClick={() => editor.chain().focus().toggleItalic().run()}
               className="text-gray-500 hover:text-black text-sm font-medium italic"
             >
               I
             </button>
             <button
-              onClick={() => editor.chain().focus().toggleStrike().run()}
+              // onClick={() => editor.chain().focus().toggleStrike().run()}
               className="text-gray-500 hover:text-black text-sm font-medium line-through"
             >
               S
             </button>
             <button
-              onClick={() => editor.chain().focus().toggleBulletList().run()}
+              // onClick={() => editor.chain().focus().toggleBulletList().run()}
               className="text-gray-500 hover:text-black text-sm font-medium"
             >
               • List
             </button>
             <button
-              onClick={() => editor.chain().focus().toggleOrderedList().run()}
+              // onClick={() => editor.chain().focus().toggleOrderedList().run()}
               className="text-gray-500 hover:text-black text-sm font-medium"
             >
               1. List
