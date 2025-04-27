@@ -72,7 +72,7 @@ function CourseDetailsCard() {
                     </button>
 
                     <Link to='/course-lesson' >
-                        <button className='bg-[#A1A5B3] text-[#2a70da] cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
+                        <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
                             Buy Now
                         </button>
                     </Link>
