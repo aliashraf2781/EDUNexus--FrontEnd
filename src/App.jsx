@@ -13,13 +13,16 @@ import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/login";
 import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
 import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
-import Layout from "./Layout";
+import Layout from "./Components/Layout/Layout";
+
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from './Components/Quiz/Quiz';
+// import { Layout } from "lucide-react";
+import DashboardLayout from "./Components/Layout/DashboardLayout";
 
 const route = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -70,10 +73,7 @@ const route = createBrowserRouter([
         path: "student-dashboard",
         element: <StudentDashboard />,
       },
-      {
-        path: "create-course",
-        element: <CreateCoursePage />,
-      },
+
       {
         path: "instructor-profile-settings",
         element: <InsProfileSettings />,
@@ -84,6 +84,35 @@ const route = createBrowserRouter([
     path: "signup",
     element: <SignupPage />,
   },
+
+  {
+    path: "/instructor",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: <StudentDashboard />,
+      },
+      {
+        path: "profile",
+        element: <InsProfile />,
+      },
+      {
+        path: "settings",
+        element: <InsProfileSettings />,
+      },
+      {
+        path: "create-course",
+        element: <CreateCoursePage />,
+      },
+      {
+        path: "create-quiz",
+        element: <InsQuizEditor />,
+      },
+
+    ]
+  },
+
   {
     path: "login",
     element: <Login />,

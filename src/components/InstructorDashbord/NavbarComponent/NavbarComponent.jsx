@@ -4,7 +4,7 @@ import avatar from "../../../assets/Instructor Dashboard navbar/avatarsvg.svg";
 import { LogOut } from "lucide-react";
 export default function NavbarComponent() {
   return (
-    <div className="ml-60 flex justify-between flex-wrap bg-white px-5">
+    <div className=" flex justify-between flex-wrap bg-white px-5">
       <div>
         {" "}
         <p>Good Morning</p>
