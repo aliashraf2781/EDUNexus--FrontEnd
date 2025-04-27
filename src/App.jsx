@@ -1,8 +1,3 @@
-import SignupPage from "./pages/SignUpScreen/signUp";
-import Login from "./pages/LoginScreen/Login";
-import About from "./pages/aboutScreen/about";
-import ContactUs from "./pages/ContactSreen/contactus";
-import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 import CourseDetails from "./pages/CourseDetails/CourseDetails";
 import CourseLesson from "./pages/CourseLesson/CourseLesson";
 import CourseList from "./pages/CourseList/CourseList";
@@ -12,7 +7,10 @@ import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 import Home from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFoundPage/NotFound";
 import Layout from "./Layout";
+
 import { createBrowserRouter, RouterProvider } from "react-router";
+import KnowledgeSection from "./pages/aboutScreen/about";
+import ContactUs from "./pages/ContactSreen/contactus";
 
 const route = createBrowserRouter([
   {
@@ -29,11 +27,11 @@ const route = createBrowserRouter([
       },
       {
         path: "about",
-        element: <About />,
+        element: <KnowledgeSection />,
       },
       {
         path: "contact",
-        element: <ContactUs />,
+        element: <ContactUs/>,
       },
       {
         path: "student-dashboard",

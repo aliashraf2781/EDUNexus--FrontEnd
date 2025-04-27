@@ -156,6 +156,46 @@
       "rating": 4.6,
       "students": 74210,
       "image": "src/assets/courses images/course12.png"
+    },
+    {
+      "id": 13,
+      "title": "Nutrition and Health Coaching",
+      "category": "Health",
+      "price": 14.99,
+      "rating": 4.5,
+      "students": 12000,
+      "image": "src/assets/featuredCoursesThumbnails/healthThumbnail.svg",
+      "progress": 0
+    },
+    {
+      "id": 14,
+      "title": "Learn Guitar in 30 Days",
+      "category": "Music",
+      "price": 9.99,
+      "rating": 4.6,
+      "students": 15000,
+      "image": "src/assets/featuredCoursesThumbnails/musicThumbnail.svg",
+      "progress": 0
+    },
+    {
+      "id": 15,
+      "title": "Boost Your Confidence & Self-Esteem",
+      "category": "Personal Development",
+      "price": 11.99,
+      "rating": 4.4,
+      "students": 8000,
+      "image": "src/assets/featuredCoursesThumbnails/personalThumbnail.svg",
+      "progress": 0
+    },
+    {
+      "id": 16,
+      "title": "Master Time Management & Focus",
+      "category": "Productivity",
+      "price": 8.99,
+      "rating": 4.7,
+      "students": 9500,
+      "image": "src/assets/featuredCoursesThumbnails/productivityThumbnail.svg",
+      "progress": 0
     }
   ],
   "instructors": [
@@ -252,6 +292,7 @@
   ],
   "featuredCourses": [
     {
+      "id": 13,
       "category": "Health",
       "oldPrice": "79.99",
       "newPrice": 14.99,
@@ -265,6 +306,7 @@
       "imgSrc": "src/assets/featuredCoursesThumbnails/healthThumbnail.svg"
     },
     {
+      "id": 14,
       "category": "Music",
       "oldPrice": 69.99,
       "newPrice": 9.99,
@@ -278,6 +320,7 @@
       "imgSrc": "src/assets/featuredCoursesThumbnails/musicThumbnail.svg"
     },
     {
+      "id": 15,
       "category": "Personal Development",
       "oldPrice": 59.99,
       "newPrice": 11.99,
@@ -291,6 +334,7 @@
       "imgSrc": "src/assets/featuredCoursesThumbnails/personalThumbnail.svg"
     },
     {
+      "id": 16,
       "category": "Productivity",
       "oldPrice": 49.99,
       "newPrice": 8.99,
