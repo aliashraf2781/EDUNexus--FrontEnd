@@ -1,14 +1,15 @@
 import React from 'react'
 import { Star, UserRound } from 'lucide-react'
-
- const handleClick = () => {
-    // Navigate to the new page and send course details as state
-    // navigate(`/course/${course.id}`, { state: { course } });
-  };
+import { useNavigate } from 'react-router';
 
 function CourseCard({ course }) {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/course-details/${course.id}`);
+    };
+
   return (
-    <div className='w-auto cursor-pointer border-[1.5px] border-[#E9EAF0]' onClick={handleClick}>
+    <div className='w-auto h-fit cursor-pointer border-[1.5px] border-[#E9EAF0]' onClick={handleClick}>
         <img src={course.image} alt='Course Image' width={270} height={230} className='object-cover w-full'/>
         <div className='flex flex-col h-[180px]'>
             <div className='px-4 py-4 flex flex-col gap-3 h-[130px]'>

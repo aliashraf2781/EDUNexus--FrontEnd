@@ -13,6 +13,8 @@ function CourseList() {
   const [courseLevels, setCourseLevels] = useState([]);
   const [tools, setTools] = useState([]);
   const [prices, setPrices] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(8);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +31,12 @@ function CourseList() {
     };
     fetchData();
   }, []);
+
+  const indexOfLastCourse = currentPage * itemsPerPage;
+  const indexOfFirstCourse = indexOfLastCourse - itemsPerPage;
+  const currentCourses = courses.slice(indexOfFirstCourse, indexOfLastCourse);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="w-vw min-h-lvh lg:py-8 py-4 lg:px-15 px-3">
       <div className="mx-auto max-w-6xl px-4 flex flex-col ">
@@ -81,12 +89,17 @@ function CourseList() {
                   : "lg:col-span-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
               }`}
             >
-              {courses.map((course) => (
+              {currentCourses.map((course) => (
                 <CourseCard course={course} />
               ))}
             </div>
             <div className="col-span-full h-20 flex items-center justify-center mx-2">
-              <Pagination />
+              <Pagination
+                itemsPerPage={itemsPerPage}
+                totalItems={courses.length}
+                paginate={paginate}
+                currentPage={currentPage}
+              />
             </div>
           </div>
         </div>
