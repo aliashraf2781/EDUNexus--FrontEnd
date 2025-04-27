@@ -1,4 +1,4 @@
-import Leaderboard from "./Components/Leaderboard/Leaderboard";
+// import Leaderboard from "./Components/Leaderboard/Leaderboard";
 import Quiz from "./Components/Quiz/Quiz";
 import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/Login";
@@ -14,18 +14,12 @@ import Footer from "./components/Footer/Footer";
 import SideMenuComponent from "./components/InstructorDashbord/SideMenuComponent/SideMenuComponent";
 import NavbarComponent from "./components/InstructorDashbord/NavbarComponent/NavbarComponent";
 import Dashboard from "./components/InstructorDashbord/Dashboard/Dashboard";
+import KnowledgeSection from "./pages/aboutScreen/about";
 export default function App() {
   return (
     <>
-      <div className="flex">
-        <SideMenuComponent />
-        <main className=" flex-1 ">
-          <NavbarComponent />
-          <div className="ml-60 bg-slate-100">
-            <Dashboard/>
-          </div>
-        </main>
-      </div>
+      <Login/>
+      <SignupPage/>
     </>
   );
 }
