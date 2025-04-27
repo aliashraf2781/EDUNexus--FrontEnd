@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {ArrowLeft, FolderOpen, CirclePlay, Clock3} from 'lucide-react'
 import LessonDetails from '../../components/LessonDetails/LessonDetails'
 import CourseContent from '../../components/CourseContent/CourseContent'
 import LessonComments from '../../components/LessonComments/LessonComments'
+import AIAssistant from '../../components/AIAssistant/AIAssistant'
+import { getLessons } from '../../api/courses'
 
 function CourseLesson() {
+    const [lesson, setLesson] = useState([]);
+
+     useEffect(() => {
+        const fetchData = async () => {
+          const allLessons = await getLessons();
+          setLesson(allLessons.data[0]);
+        };
+        fetchData();
+      }, []);
+
   return (
     <div className='w-vw min-h-lvh'>
         <div className='flex flex-col gap-3'>
@@ -14,19 +26,19 @@ function CourseLesson() {
                         <ArrowLeft size={17} className='text-dark'/>
                     </div>
                     <div className='flex flex-col gap-1'>
-                        <span className='tetx-dark text-md'>Complete Website Responsive Design: from Figma to Webflow to Website Design</span>
+                        <span className='tetx-dark text-md'>{lesson.courseTitle}</span>
                         <div className='flex gap-3 items-center'>
                             <div className='flex justify-center gap-1 items-center'>
                                 <FolderOpen className='w-4 h-4 text-primary' size={14}/>
-                                <span className='text-gray-600 text-[14px]'>6 Sections</span>
+                                <span className='text-gray-600 text-[14px]'>{lesson.sections} Sections</span>
                             </div>
                             <div className='flex justify-center gap-1 items-center'>
                                 <CirclePlay className='w-4 h-4 text-[#564FFD]' size={14}/>
-                                <span className='text-gray-600 text-[14px]'>202 Lectures</span>
+                                <span className='text-gray-600 text-[14px]'>{lesson.lectures} Lectures</span>
                             </div>
                             <div className='flex justify-center gap-1 items-center'>
                                 <Clock3 className='w-4 h-4 text-[#FD8E1F]' size={14}/>
-                                <span className='text-gray-600 text-[14px]'>19h 37m</span>
+                                <span className='text-gray-600 text-[14px]'>{lesson.duration}</span>
                             </div>
                         </div>
                     </div>
@@ -40,14 +52,15 @@ function CourseLesson() {
                     </div>
                 </div>
             </div>
-            <div className='px-6 py-3 w-full flex gap-3'>
+            <div className='px-6 py-3 w-full flex gap-4'>
                 <div className='w-full lg:w-[60%]'>
-                    <LessonDetails />
+                    <LessonDetails lesson={lesson} />
                     <LessonComments />
                 </div>
                 <div className='hidden lg:block lg:w-[40%]'>
                     <CourseContent />
                 </div>
+                <AIAssistant />
             </div>
         </div>
         

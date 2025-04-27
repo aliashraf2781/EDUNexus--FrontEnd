@@ -4,6 +4,7 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import FilterSection from "../../components/FilterSection/FilterSection";
 import Pagination from "../../components/Pagination/Pagination";
 import SideFilterMenu from "../../components/SideFilterMenu/SideFilterMenu";
+import { getAllCourses, getAllCategories, getCourseLevels, getTools, getPrices } from "../../api/courses";
 
 function CourseList() {
   const [showFilters, setShowFilters] = useState(false);
@@ -15,25 +16,16 @@ function CourseList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const coursesResponse = await fetch("http://localhost:3001/courses");
-      const categoriesResponse = await fetch(
-        "http://localhost:3001/categories"
-      );
-      const courseLevelsResponse = await fetch(
-        "http://localhost:3001/courseLevels"
-      );
-      const toolsResponse = await fetch("http://localhost:3001/tools");
-      const pricesResponse = await fetch("http://localhost:3001/prices");
-      const coursesData = await coursesResponse.json();
-      const categoriesData = await categoriesResponse.json();
-      const courseLevelsData = await courseLevelsResponse.json();
-      const toolsData = await toolsResponse.json();
-      const pricesData = await pricesResponse.json();
-      setCourses(coursesData);
-      setCategories(categoriesData);
-      setCourseLevels(courseLevelsData);
-      setTools(toolsData);
-      setPrices(pricesData);
+      const allCourses = await getAllCourses();
+      setCourses(allCourses.data);
+      const allCategories = await getAllCategories();
+      setCategories(allCategories.data);
+      const allCourseLevels = await getCourseLevels();
+      setCourseLevels(allCourseLevels.data);
+      const allTools = await getTools();
+      setTools(allTools.data);
+      const allPrices = await getPrices();
+      setPrices(allPrices.data);
     };
     fetchData();
   }, []);
