@@ -2,6 +2,7 @@ import { Bell } from "lucide-react";
 import React from "react";
 import avatar from "../../../assets/Instructor Dashboard navbar/avatarsvg.svg";
 import { LogOut } from "lucide-react";
+import { Link } from "react-router";
 export default function NavbarComponent() {
   return (
     <div className=" flex justify-between flex-wrap bg-white px-5">
@@ -47,11 +48,16 @@ export default function NavbarComponent() {
         <span className="p-2 bg-slate-100 ">
           <Bell className="" />
         </span>
-        <img src={avatar} alt="" />
-        <div className="flex items-center space-x-4">
-          <LogOut />
-          <p>Sign-out</p>
-        </div>
+        <img src={avatar} alt="" className="w-8" />
+        <Link
+          to={"/"}
+          className="
+          text-sm font-semibold text-gray-700 flex items-center gap-2 cursor-pointer
+          border border-gray-300 rounded-md px-3 py-1.5 hover:bg-gray-100 transition duration-200
+        "
+        >
+          Back To Home
+        </Link>
       </div>
     </div>
   );
