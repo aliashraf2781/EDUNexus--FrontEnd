@@ -46,10 +46,8 @@ const SingleLecture = ({ index, onRemove }) => {
       </div>
 
       <div className="flex flex-col lg:flex-row space-x-4">
-        <div className="w-full lg:w-1/2">
-          <CourseThumbnail />
-        </div>
-        <div className="w-full lg:w-1/2">
+       
+        <div className="w-full ">
           <CourseTrailer />
         </div>
       </div>

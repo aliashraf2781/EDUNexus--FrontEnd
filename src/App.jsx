@@ -7,7 +7,6 @@ import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 import Home from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFoundPage/NotFound";
 import About from "./pages/aboutScreen/about";
-import ContactUs from "./pages/ContactSreen/contactus";
 import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/login";
@@ -19,7 +18,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-
+import ContactUs from "./pages/ContactSreen/contactus"
 const route = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +38,7 @@ const route = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <ContactUs />,
+        element: <ContactUs/>,
       },
       {
         path: "student-dashboard",
@@ -73,7 +72,6 @@ const route = createBrowserRouter([
         path: "student-dashboard",
         element: <StudentDashboard />,
       },
-
       {
         path: "instructor-profile-settings",
         element: <InsProfileSettings />,

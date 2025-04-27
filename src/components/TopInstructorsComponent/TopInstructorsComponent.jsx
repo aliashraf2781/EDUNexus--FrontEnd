@@ -1,6 +1,8 @@
 import React from "react";
 import TopInstructorComponent from "../TopInstructorComponent.jsx/TopInstructorComponent";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
+
 export default function TopInstructorsComponent() {
   return (
     <div className="py-16 container mb-40 ">
@@ -19,11 +21,15 @@ export default function TopInstructorsComponent() {
         </div>
       </div>
       <p className=" mt-10 2xl:mt-16 text-center flex justify-center flex-wrap items-center gap-1 ">
-      Thousands of students waiting for a instructor. Start teaching & earning now!.{" "}
-        <a href="#" className="flex gap-1.5 text-blue-500 items-center">
-          {" "}
-          Become Instructor<ArrowRight />{" "}
-        </a>
+        Thousands of students waiting for a instructor. Start teaching & earning
+        now!.{" "}
+        <Link to="/signup">
+          <a href="#" className="flex gap-1.5 text-blue-500 items-center">
+            {" "}
+            Become Instructor
+            <ArrowRight />{" "}
+          </a>
+        </Link>
       </p>
     </div>
   );
