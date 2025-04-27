@@ -1,5 +1,7 @@
 import React from "react";
 import NotFound from "../../assets/Not Found Page/404.svg";
+import { Link } from "react-router";
+
 export default function NotFoundPage() {
   return (
     <div className="py-16 px-2 container flex flex-col lg:flex-row justify-evenly items-center">
@@ -17,7 +19,7 @@ export default function NotFoundPage() {
           type="button"
           className="self-start cursor-pointer text-white px-8 py-3 font-semibold bg-primary hover:bg-orange-600 active:bg-amber-700 "
         >
-          Go Back
+          <Link to="/">Go Back</Link>
         </button>
       </div>
       <img src={NotFound} alt="" />

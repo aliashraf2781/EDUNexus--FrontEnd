@@ -10,6 +10,8 @@ import About from "./pages/aboutScreen/about";
 import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/login";
+import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
+import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
 import Layout from "./Layout";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -64,6 +66,14 @@ const route = createBrowserRouter([
       {
         path: "student-dashboard",
         element: <StudentDashboard />,
+      },
+      {
+        path: "create-course",
+        element: <CreateCoursePage />,
+      },
+      {
+        path: "instructor-profile-settings",
+        element: <InsProfileSettings />,
       },
     ],
   },

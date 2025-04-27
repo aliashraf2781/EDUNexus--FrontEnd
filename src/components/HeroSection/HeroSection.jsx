@@ -1,5 +1,6 @@
 import React from "react";
 import kid from "../../assets/Header.png";
+import { Link } from "react-router";
 
 export default function HeroSection() {
   return (
@@ -16,12 +17,14 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-4 md:mt-8 mx-auto flex justify-center md:block">
+          <Link to="/signup">
             <a
               href="#"
               className="  inline-block rounded-sm bg-primary px-12 py-3 text-sm font-bold text-white transition focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
             >
+
               Create Account
-            </a>
+            </a></Link>
           </div>
         </div>
       </div>
