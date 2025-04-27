@@ -19,6 +19,8 @@ export default function FeaturedCourseComponent({
   imgSrc,
   color,
 }) {
+
+  
   return (
     <div className="flex flex-col sm:flex-row items-center border border-gray-200 rounded-lg overflow-hidden transition hover:shadow-2xl">
       <img

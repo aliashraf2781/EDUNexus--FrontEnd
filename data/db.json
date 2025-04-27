@@ -47,7 +47,6 @@
       "students": 197637,
       "image": "src/assets/courses images/course1.png",
       "progress": 75
-
     },
     {
       "id": 2,
@@ -67,7 +66,7 @@
       "rating": 4.8,
       "students": 123012,
       "image": "src/assets/courses images/course3.png",
-       "progress": 80
+      "progress": 80
     },
     {
       "id": 4,
@@ -97,7 +96,7 @@
       "rating": 4.5,
       "students": 67899,
       "image": "src/assets/courses images/course6.png",
-       "progress": 40
+      "progress": 40
     },
     {
       "id": 7,
@@ -127,7 +126,7 @@
       "rating": 4.6,
       "students": 45670,
       "image": "src/assets/courses images/course9.png",
-       "progress": 77
+      "progress": 77
     },
     {
       "id": 10,
@@ -147,7 +146,7 @@
       "rating": 4.5,
       "students": 63450,
       "image": "src/assets/courses images/course11.png",
-       "progress": 88
+      "progress": 88
     },
     {
       "id": 12,
@@ -249,6 +248,60 @@
       "rating": "5.0",
       "students": "265.7K",
       "image": "src/assets/courses images/relatedCourse5.png"
+    }
+  ],
+  "featuredCourses": [
+    {
+      "category": "Health",
+      "oldPrice": "79.99",
+      "newPrice": 14.99,
+      "title": "Nutrition and Health Coaching",
+      "instructorName": "Dr. Jane Smith",
+      "rating": 4.5,
+      "reviewsCount": 2300,
+      "students": 12000,
+      "level": "All Levels",
+      "duration": "12h",
+      "imgSrc": "src/assets/featuredCoursesThumbnails/healthThumbnail.svg"
+    },
+    {
+      "category": "Music",
+      "oldPrice": 69.99,
+      "newPrice": 9.99,
+      "title": "Learn Guitar in 30 Days",
+      "instructorName": "John Mayer",
+      "rating": 4.6,
+      "reviewsCount": 3100,
+      "students": 15000,
+      "level": "Beginner",
+      "duration": "10h",
+      "imgSrc": "src/assets/featuredCoursesThumbnails/musicThumbnail.svg"
+    },
+    {
+      "category": "Personal Development",
+      "oldPrice": 59.99,
+      "newPrice": 11.99,
+      "title": "Boost Your Confidence & Self-Esteem",
+      "instructorName": "Mel Robbins",
+      "rating": 4.4,
+      "reviewsCount": 1980,
+      "students": 8000,
+      "level": "All Levels",
+      "duration": "6h",
+      "imgSrc": "src/assets/featuredCoursesThumbnails/personalThumbnail.svg"
+    },
+    {
+      "category": "Productivity",
+      "oldPrice": 49.99,
+      "newPrice": 8.99,
+      "title": "Master Time Management & Focus",
+      "instructorName": "Thomas Frank",
+      "rating": 4.7,
+      "reviewsCount": 2750,
+      "students": 9500,
+      "level": "Intermediate",
+      "duration": "5h",
+      "imgSrc": "src/assets/featuredCoursesThumbnails/productivityThumbnail.svg"
     }
   ]
 }
