@@ -12,8 +12,8 @@ function CourseCard({ course }) {
                         ${course.category === 'DESIGN' ? 'bg-secondary text-[#993D20]' : ''}
                         ${course.category === 'DEVELOPMENTS' ? 'bg-gray-100 text-[#342F98]' : ''}
                         ${course.category === 'BUSINESS' ? 'bg-[#E1F7E3] text-[#15711F]' : ''}
-                        ${course.category === 'MARKETING' ? 'bg-gray-100 text-[#342F98]' : ''}
-                        ${course.category === 'IT & SOFTWARE' ? 'bg-secondary text-[#993D20]' : ''}`}>
+                        ${course.category === 'MARKETING' ? 'bg-gray-200 text-[#ff8235]' : ''}
+                        ${course.category === 'IT & SOFTWARE' ? 'bg-gray-100 text-[#dc0e0e]' : ''}`}>
                         {course.category}
                     </div>
                     <div className='text-lg text-[#3258B4] font-semibold'>
