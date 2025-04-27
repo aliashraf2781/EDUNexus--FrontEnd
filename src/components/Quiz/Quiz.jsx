@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react'; 
 import questions from './questions';
+import { Navigate, Link } from 'react-router';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -30,7 +31,11 @@ const Quiz = () => {
   };
 
   const handleExit = () => {
-    window.location.reload();
+    // window.location.reload();
+    //navigate to the course details page
+
+    
+    
   };
 
   const progress = (currentQuestion / questions.length) * 100;
@@ -113,12 +118,13 @@ const Quiz = () => {
               <span>{score}</span>
             </div>
 
-            <button
-              className="w-full bg-primary text-white py-2 rounded mt-4"
-              onClick={handleExit}
-            >
-              Okey
-            </button>
+          <Link to="/course-lesson">
+              <button
+                className="w-full bg-primary text-white py-2 rounded mt-4"
+                >
+                Okey
+              </button>
+              </Link>
           </div>
         )}
       </div>

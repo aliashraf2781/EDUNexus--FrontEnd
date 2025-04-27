@@ -1,6 +1,7 @@
 import React from 'react'
 import CourseContentContainer from '../CourseContentContainer/CourseContentContainer'
 import CourseContentTopics from '../CourseContentTopics/CourseContentTopics'
+import { Link } from 'react-router';
 
 const Lessons = [
   {
@@ -122,6 +123,7 @@ function CourseContent() {
           isFinished={lesson.isFinished}
           open={lesson.isOpened}
         >
+
           {lesson.topics?.map((topic) => (
             <CourseContentTopics 
               key={topic.name}
@@ -131,6 +133,11 @@ function CourseContent() {
               isSelected={topic.done}
             />
           ))}
+          <Link to='/quiz' end>
+            <h3 className='py-3 px-7 text-primary underline font-semibold'>
+              Quiz
+            </h3>
+          </Link>
         </CourseContentContainer>
       ))}
     </div>
