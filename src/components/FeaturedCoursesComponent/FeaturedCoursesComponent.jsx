@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FeaturedCourseComponent from "../FeaturedCourseComponent/FeaturedCourseComponent"; // Adjust the path if needed
 import { NavLink } from "react-router"; // Ensure you are using the correct Router package (react-router-dom v6+)
 
+=======
+import React from "react";
+import FeaturedCourseComponent from "../FeaturedCourseComponent/FeaturedCourseComponent";
+import healthThumbnail from "../../assets/featuredCoursesThumbnails/healthThumbnail.svg";
+import musicThumbnail from "../../assets/featuredCoursesThumbnails/musicThumbnail.svg";
+import personalThumbnail from "../../assets/featuredCoursesThumbnails/personalThumbnail.svg";
+import productivityThumbnail from "../../assets/featuredCoursesThumbnails/productivityThumbnail.svg";
+import { Link, NavLink } from "react-router";
+>>>>>>> ea2f8bd190ede9aeb0f20be4c3ccc85e2344e901
 const categoryColors = {
   Health: {
     bg: "bg-blue-100",
@@ -87,6 +97,11 @@ export default function FeaturedCoursesComponent() {
             />
           ))}
         </NavLink>
+        <Link to={"courses"} className="flex justify-center mt-10">
+          <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-opacity-80 transition duration-300">
+            View All Courses
+          </button>
+        </Link>
       </div>
     </div>
   );

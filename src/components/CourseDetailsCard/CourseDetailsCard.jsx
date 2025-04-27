@@ -2,8 +2,13 @@ import React from 'react'
 import { AlarmClock, Clock3, ChartNoAxesColumnIncreasing, UsersRound, BookText, 
     NotepadText, DollarSign, Trophy, TvMinimal, Layers, Copy, Facebook, Twitter, Mail, MessageCircleCode } from 'lucide-react'
 import CurriculumSection from '../CurriculumSection/CurriculumSection'
+import {  Link, NavLink } from 'react-router'
 
-function CourseDetailsCard() {
+
+
+
+
+function CourseDetailsCard({course}) {
   return (
     <>
         <div className='w-full h-75 bg-gray-100 pr-27 pt-15 lg:flex flex-1 flex-col gap-4 py-2 pr-l hidden'>
@@ -11,8 +16,8 @@ function CourseDetailsCard() {
                 <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-3 px-5'>
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
-                            <span className='text-dark text-2xl'>$14.00</span>
-                            <span className='text-light text-md line-through'>$26.00</span>
+                            <span className='text-dark text-2xl'>${course[0].price}</span>
+                            <span className='text-light text-md line-through'>${course[0].price + 20}</span>
                         </div>
                         <div className='flex items-center bg-secondary py-1 px-2 gap-1 text-[#4484E3]'>
                             <span className='text-sm'>56%</span>
@@ -65,9 +70,13 @@ function CourseDetailsCard() {
                     <button className='bg-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
                         Add To Cart
                     </button>
-                    <button className='bg-[#A1A5B3] text-[#2a70da] cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
-                        Buy Now
-                    </button>
+
+                    <Link to='/course-lesson' >
+                        <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
+                            Buy Now
+                        </button>
+                    </Link>
+
                     <div className='flex gap-2 items-center '>
                         <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Add To Wishlist</button>
                         <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Gift Course</button>

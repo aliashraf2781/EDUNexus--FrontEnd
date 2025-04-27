@@ -12,15 +12,16 @@ import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/login";
 import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
 import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
-import Layout from "./Layout";
+import Layout from "./Components/Layout/Layout";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
-import KnowledgeSection from "./pages/aboutScreen/about";
-import ContactUs from "./pages/ContactSreen/contactus";
+import Quiz from "./Components/Quiz/Quiz";
+// import { Layout } from "lucide-react";
+import DashboardLayout from "./Components/Layout/DashboardLayout";
 
 const route = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -44,12 +45,16 @@ const route = createBrowserRouter([
         element: <StudentDashboard />,
       },
       {
-        path: "course-details",
+        path: "course-details/:id",
         element: <CourseDetails />,
       },
       {
         path: "course-lesson",
         element: <CourseLesson />,
+      },
+      {
+        path: "quiz",
+        element: <Quiz />,
       },
       {
         path: "course-notifation",
@@ -68,10 +73,6 @@ const route = createBrowserRouter([
         element: <StudentDashboard />,
       },
       {
-        path: "create-course",
-        element: <CreateCoursePage />,
-      },
-      {
         path: "instructor-profile-settings",
         element: <InsProfileSettings />,
       },
@@ -80,6 +81,33 @@ const route = createBrowserRouter([
   {
     path: "signup",
     element: <SignupPage />,
+  },
+  {
+    path: "instructor",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        // path: "dashboard",
+        element: <StudentDashboard />,
+      },
+      {
+        path: "profile",
+        element: <InsProfile />,
+      },
+      {
+        path: "settings",
+        element: <InsProfileSettings />,
+      },
+      {
+        path: "create-course",
+        element: <CreateCoursePage />,
+      },
+      {
+        path: "create-quiz",
+        element: <InsQuizEditor />,
+      },
+    ],
   },
   {
     path: "login",

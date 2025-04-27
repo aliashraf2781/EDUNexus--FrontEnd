@@ -8,17 +8,31 @@ import Curriculum from '../../components/Curriculum/Curriculum'
 import StudentRating from '../../components/StudentRating/StudentRating'
 import InstructorCard from '../../components/InstructorCard/InstructorCard'
 import SmallCourseCard from '../../components/SmallCourseCard/SmallCourseCard'
+import { useParams, useNavigate } from 'react-router'
 
 function CourseDetails() {
+  const { id } = useParams();
+  const [course, setCourse] = useState(null);
   const [instructors, setInstructors] = useState([])
   const [students, setStudents] = useState([])
   const [relatedCourses, setRelatedCourses] = useState([])
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchCourse = async () => {
+      const response = await fetch(`http://localhost:3001/courses?id=${id}`);
+      const data = await response.json();
+      setCourse(data);
+    };
+
+    fetchCourse();
+  }, [id]);
 
   useEffect(() => {
     const fetchData = async () => {
       const instructorsResponse = await fetch('http://localhost:3001/instructors')
       const studentsResponse = await fetch('http://localhost:3001/students')
-      const relatedCoursesResponse = await fetch('http://localhost:3001/relatedCourses')
+      const relatedCoursesResponse = await fetch(`http://localhost:3001/courses?_limit=5`)
       const instructorsData = await instructorsResponse.json()
       const studentsData = await studentsResponse.json()
       const relatedCoursesData = await relatedCoursesResponse.json()
@@ -28,14 +42,15 @@ function CourseDetails() {
     }
     fetchData()
   }, [])
+  if (!course) return <div>Loading...</div>;
 
   return (
     <div className='w-vw min-h-lvh'>
       <div className="grid grid-cols-1 lg:grid-cols-5">
         <div className="lg:col-span-3 grid-cols-1 flex flex-col gap-4">
-          <CourseData />
+          <CourseData course={course}/>
           <div className='flex flex-col gap-4 w-full items-center lg:pl-27 px-4 pb-8'>
-            <Trailer/>
+            <Trailer course={course}/>
             <div className='flex flex-col gap-4 w-full py-2 text-gray-500 text-[14px]'>
               <h2 className='text-dark font-semibold text-2xl py-2'>Course instructor <span className='font-normal'>(02)</span></h2>
               {instructors.map((instructor) => (
@@ -134,7 +149,7 @@ function CourseDetails() {
           </div>
         </div>
         <div className="lg:col-span-2 flex justify-center">
-          <CourseDetailsCard />
+          <CourseDetailsCard course={course}/>
         </div>   
       </div>
       <div className="w-full">
@@ -147,7 +162,7 @@ function CourseDetails() {
           <div className='md:px-27 px-7 py-7 flex flex-col gap-6'>
             <div className='flex gap-3 justify-between items-start'>
               <span className='text-primary text-4xl font-semibold'>Related Courses</span>
-              <div className='flex justify-center items-center bg-secondary w-fit py-2.5 px-3 lg:px-8 gap-2 cursor-pointer'>
+              <div className='flex justify-center items-center bg-secondary w-fit py-2.5 px-3 lg:px-8 gap-2 cursor-pointer' onClick={() => navigate('/courses')}>
                 <span className=' text-primary text-md font-semibold hidden md:block'>View All</span>
                 <ArrowRight className='text-primary mt-1' size={20}/>
               </div>

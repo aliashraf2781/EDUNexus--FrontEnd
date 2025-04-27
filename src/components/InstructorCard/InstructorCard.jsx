@@ -5,7 +5,7 @@ function InstructorCard({instructor}) {
   return (
     <div className='w-full h-fit border border-gray-200 flex items-start py-2 px-1'>
         <div className='w-1/4 p-4'>
-            <img src={instructor.image} alt="instructor1" width={120} height={120} />
+            <img src={`../../../${instructor.image}`} alt="instructor1" width={120} height={120} />
         </div>
         <div className='w-3/4 flex flex-col p-2'>
             <h3 className='text-dark font-semibold text-lg'>{instructor.name}</h3>
