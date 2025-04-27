@@ -38,33 +38,7 @@ export default function KnowledgeSection() {
   return (
     <>
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4 mb-16 border-b border-light gap-4">
-        {/* Logo + Search */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:max-w-md">
-          <h1 className="text-2xl font-bold text-dark">
-            Edu<span className="text-primary">NEXUS</span>
-          </h1>
-          <div className="flex items-center border border-light rounded-md px-3 py-1 bg-white w-full sm:w-auto flex-1">
-            <Search size={18} className="text-light mr-2" />
-            <input
-              type="text"
-              placeholder="What do you want learn..."
-              className="w-full outline-none bg-transparent text-dark placeholder-light"
-            />
-          </div>
-        </div>
-
-        {/* Actions */}
-        <div className="flex items-center gap-4">
-          <Bell className="text-dark" />
-          <button className="bg-primary text-white px-4 py-2 rounded font-medium">
-            Create Account
-          </button>
-          <button className="text-primary border border-primary px-4 py-2 rounded font-medium">
-            Sign In
-          </button>
-        </div>
-      </div>
+     
       <div className="flex flex-col md:flex-row items-center justify-center px-6 py-12 bg-white">
         {/* content */}
         <div className="max-w-sm w-full text-center md:text-left">
