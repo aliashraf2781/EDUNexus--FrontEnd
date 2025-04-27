@@ -15,6 +15,7 @@ import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
 import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
 import Layout from "./Layout";
 import { createBrowserRouter, RouterProvider } from "react-router";
+import Quiz from './Components/Quiz/Quiz';
 
 const route = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const route = createBrowserRouter([
       {
         path: "course-lesson",
         element: <CourseLesson />,
+      },
+      {
+        path: "quiz",
+        element: <Quiz />,
       },
       {
         path: "course-notifation",
