@@ -6,8 +6,8 @@ const suggestions = ['user interface', 'user experience', 'web design', 'interfa
 function StartSection({ showFilters, setShowFilters }) {
   return (
     <div className='flex flex-col gap-3 border-b border-gray-200 my-5'>
-      <div className='flex flex-col md:flex-row justify-between gap-4 md:gap-0'>
-        <div className='flex flex-col sm:flex-row items-start sm:items-center gap-3'>
+      <div className='flex flex-col sm:flex-row lg:justify-between gap-4 md:gap-2'>
+        <div className='flex items-start sm:items-center gap-3'>
           <button 
             onClick={() => setShowFilters(!showFilters)}
             className={`group h-10 px-4 border-[1.5px] flex items-center gap-2
@@ -20,8 +20,8 @@ function StartSection({ showFilters, setShowFilters }) {
               focus:!outline-none`}
           >
             <SlidersVertical size={17} />
-            <span className='text-[15px] font-semibold'>Filter</span>
-            <span className={`text-xs font-semibold px-2 py-1
+            <span className='text-[15px] font-semibold hidden md:block'>Filter</span>
+            <span className={`text-xs font-semibold px-2 py-1 hidden md:block
               ${showFilters 
                 ? 'bg-primary text-white' 
                 : 'bg-secondary text-[#3258B4]'
@@ -33,20 +33,20 @@ function StartSection({ showFilters, setShowFilters }) {
           </button>
           
           <div className='flex items-center gap-3 text-dark border-[1.5px] border-gray-100 
-            rounded-none px-3 py-2 h-10 w-full sm:w-md'>
+            rounded-none px-3 py-2 h-10 w-full sm:w-auto'>
             <Search size={19} />
             <input 
               type="text" 
               placeholder='Search' 
-              className='focus:!outline-none w-full'
+              className='focus:!outline-none w-full lg:w-sm'
             />
           </div>
         </div>
 
         <div className='flex items-center gap-3 text-dark'>
           <span className='text-[13px] whitespace-nowrap'>Sort by: </span>
-          <div className='border-[1.5px] border-gray-100 px-3 h-10 flex items-center cursor-pointer w-full sm:w-auto'>
-            <select className='text-[15px] rounded-none focus:!outline-none w-full'>
+          <div className='border-[1.5px] border-gray-100 px-3 h-10 flex items-center cursor-pointer w-fit'>
+            <select className='text-[15px] rounded-none focus:!outline-none w-fit'>
               <option value="relevance">Trending</option>
               <option value="newest">Newest</option>
               <option value="oldest">Oldest</option>

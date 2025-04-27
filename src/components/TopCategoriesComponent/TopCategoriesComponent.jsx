@@ -30,7 +30,7 @@ const categories = [
 
 function TopCategoriesComponent() {
   return (
-    <div className="py-16">
+    <div className="py-16 mb-12 md:mb-52">
       <h1 className="text-center text-primary font-bold text-5xl mb-10">
         Top Category
       </h1>

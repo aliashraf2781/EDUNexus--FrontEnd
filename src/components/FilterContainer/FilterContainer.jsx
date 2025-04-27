@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState }  from 'react'
 import { ChevronDown, X } from 'lucide-react'
 
 function FilterContainer({ 
@@ -11,7 +11,7 @@ function FilterContainer({
 
   return (
     <>
-      <div className={`fixed inset-y-0 left-0 transform lg:relative lg:translate-x-0 
+      <div className={`static inset-y-0 left-0 transform lg:relative lg:translate-x-0 
         transition duration-200 ease-in-out z-30
         ${showFilters ? 'translate-x-0' : '-translate-x-full'}`}
       >
@@ -29,15 +29,6 @@ function FilterContainer({
                     isOpen ? 'rotate-180' : ''
                   }`}
                 />
-                <button 
-                  className='lg:hidden' 
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    setShowFilters(false)
-                  }}
-                >
-                  <X size={20} />
-                </button>
               </div>
             </div>
 

@@ -5,33 +5,6 @@ export default function ContactUs() {
   return (
     <>
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4 border-b border-light gap-4">
-        {/* Logo + Search */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:max-w-md">
-          <h1 className="text-2xl font-bold text-dark">
-            Edu<span className="text-primary">NEXUS</span>
-          </h1>
-          <div className="flex items-center border border-light rounded-md px-3 py-1 bg-white w-full sm:w-auto flex-1">
-            <Search size={18} className="text-light mr-2" />
-            <input
-              type="text"
-              placeholder="What do you want learn..."
-              className="w-full outline-none bg-transparent text-dark placeholder-light"
-            />
-          </div>
-        </div>
-
-        {/* Actions */}
-        <div className="flex items-center gap-4">
-          <Bell className="text-dark" />
-          <button className="bg-primary text-white px-4 py-2 rounded font-medium">
-            Create Account
-          </button>
-          <button className="text-primary border border-primary px-4 py-2 rounded font-medium">
-            Sign In
-          </button>
-        </div>
-      </div>
 
       {/* Banner Section */}
       <div className="flex flex-col-reverse lg:flex-row items-center justify-around px-8 py-16 bg-white gap-12">
@@ -75,7 +48,8 @@ export default function ContactUs() {
             <div className="flex gap-6 items-start">
               <h4 className="font-semibold text-primary w-40">ADDRESS</h4>
               <p className="text-sm text-dark">
-                1702 Olympic Boulevard<br />
+                1702 Olympic Boulevard
+                <br />
                 Santa Monica, CA 90404
               </p>
             </div>
@@ -83,7 +57,8 @@ export default function ContactUs() {
             <div className="flex gap-6 items-start">
               <h4 className="font-semibold text-primary w-40">PHONE NUMBER</h4>
               <p className="text-sm text-dark">
-                (480) 555-0103<br />
+                (480) 555-0103
+                <br />
                 (219) 555-0114
               </p>
             </div>
@@ -91,7 +66,8 @@ export default function ContactUs() {
             <div className="flex gap-6 items-start">
               <h4 className="font-semibold text-primary w-40">EMAIL ADDRESS</h4>
               <p className="text-sm text-dark">
-                help.eduguard@gmail.com<br />
+                help.eduguard@gmail.com
+                <br />
                 career.eduguard@gmail.com
               </p>
             </div>
@@ -135,10 +111,7 @@ export default function ContactUs() {
                 className="border border-light px-4 py-2 rounded w-full h-32 resize-none"
               />
 
-              <button
-                type="submit"
-                className="bg-primary text-white px-6 py-3 rounded font-semibold flex items-center gap-2"
-              >
+              <button className="bg-primary text-white px-6 py-3 rounded font-semibold flex items-center gap-2">
                 Send Message
                 <SendHorizontal />
               </button>
