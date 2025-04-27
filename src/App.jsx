@@ -18,7 +18,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-
+import ContactUs from "./pages/ContactSreen/contactus"
 const route = createBrowserRouter([
   {
     path: "/",
@@ -34,7 +34,7 @@ const route = createBrowserRouter([
       },
       {
         path: "about",
-        element: <KnowledgeSection />,
+        element: <About />,
       },
       {
         path: "contact",
