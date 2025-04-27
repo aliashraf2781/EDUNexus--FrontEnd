@@ -45,11 +45,11 @@ const SingleLecture = ({ index, onRemove }) => {
         ></textarea>
       </div>
 
-      <div className="flex space-x-4">
-        <div className="flex-1">
+      <div className="flex flex-col lg:flex-row space-x-4">
+        <div className="w-full lg:w-1/2">
           <CourseThumbnail />
         </div>
-        <div className="flex-1">
+        <div className="w-full lg:w-1/2">
           <CourseTrailer />
         </div>
       </div>

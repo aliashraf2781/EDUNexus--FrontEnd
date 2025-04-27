@@ -19,7 +19,7 @@ const CourseLectures = () => {
         <button
           type="button"
           onClick={addLecture}
-          className="bg-[#FF6636] text-white px-4 py-2 rounded-md hover:cursor-pointer"
+          className="bg-[#FF6636] text-white px-4 py-2 rounded-md hover:cursor-pointer outline-none"
         >
           + Add Lecture
         </button>

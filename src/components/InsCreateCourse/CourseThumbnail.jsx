@@ -24,7 +24,7 @@ const CourseThumbnail = () => {
             Supported format:{" "}
             <span className="font-semibold">.jpg, .jpeg, .png</span>
           </p>
-          <button className="bg-[#FFEEE8] text-[#FF6636] font-semibold px-4 py-2 rounded-md mt-2 hover:cursor-pointer flex items-center">
+          <button className="bg-[#FFEEE8] text-[#FF6636] font-semibold px-4 py-2 rounded-md mt-2 hover:cursor-pointer flex items-center outline-none">
             Upload Image
             <img src={upload} alt="Upload Icon" className="w-5 h-5 ml-2" />
           </button>
