@@ -54,13 +54,13 @@ const Dashboard = () => {
       case "Messages":
         return (
           <div className="p-6 text-gray-700 font-medium">
-             <ChatApp />
+            <ChatApp />
           </div>
         );
       case "Settings":
         return (
           <div className="p-6 text-gray-700 bg-[#FFF3F0] font-medium">
-             <ProfileSettings/>
+            <ProfileSettings />
           </div>
         );
       default:
@@ -106,10 +106,11 @@ const Dashboard = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`text-sm pb-3 transition-all duration-200 cursor-pointer focus:outline-none active:scale-95 ${activeTab === tab
+                  className={`text-sm pb-3 transition-all duration-200 cursor-pointer focus:outline-none active:scale-95 ${
+                    activeTab === tab
                       ? "text-gray-800 font-semibold border-b-2 border-orange-500"
                       : "text-gray-500 hover:text-gray-700"
-                    }`}
+                  }`}
                 >
                   {tab}
                 </button>

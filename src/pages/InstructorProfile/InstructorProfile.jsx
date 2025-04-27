@@ -19,8 +19,8 @@ function InstructorProfile() {
   }, [])
 
   return (
-    <div className='w-vw '>
-        <div className='w-full h-50 bg-secondary flex pt-15 justify-center'>
+    <div className=''>
+        <div className='w-full  bg-white flex pt-15 justify-center'>
             <div className="w-[100%] flex flex-col gap-7 items-center mb-6">
                 <InstructorProfileCard />
                 <InstructorData courses={courses} students={students}/>

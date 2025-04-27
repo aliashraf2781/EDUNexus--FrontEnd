@@ -4,6 +4,7 @@ import healthThumbnail from "../../assets/featuredCoursesThumbnails/healthThumbn
 import musicThumbnail from "../../assets/featuredCoursesThumbnails/musicThumbnail.svg";
 import personalThumbnail from "../../assets/featuredCoursesThumbnails/personalThumbnail.svg";
 import productivityThumbnail from "../../assets/featuredCoursesThumbnails/productivityThumbnail.svg";
+import { NavLink } from "react-router";
 const categoryColors = {
   Health: {
     bg: "bg-green-100",
@@ -83,7 +84,10 @@ export default function FeaturedCoursesComponent() {
         <h1 className="text-center text-primary font-bold text-5xl mb-10">
           Our Feature Courses
         </h1>
-        <div className=" mx-auto container grid  grid-cols-1  md:grid-cols-2  gap-6 ">
+        <NavLink
+          to={"course-details"}
+          className=" mx-auto container grid  grid-cols-1  md:grid-cols-2  gap-6 "
+        >
           {featuredCourses.map((item) => (
             <FeaturedCourseComponent
               key={item.title}
@@ -101,7 +105,7 @@ export default function FeaturedCoursesComponent() {
               title={item.title}
             />
           ))}
-        </div>
+        </NavLink>
       </div>
     </div>
   );
