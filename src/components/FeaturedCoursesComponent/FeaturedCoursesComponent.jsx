@@ -4,7 +4,7 @@ import healthThumbnail from "../../assets/featuredCoursesThumbnails/healthThumbn
 import musicThumbnail from "../../assets/featuredCoursesThumbnails/musicThumbnail.svg";
 import personalThumbnail from "../../assets/featuredCoursesThumbnails/personalThumbnail.svg";
 import productivityThumbnail from "../../assets/featuredCoursesThumbnails/productivityThumbnail.svg";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 const categoryColors = {
   Health: {
     bg: "bg-green-100",
@@ -106,6 +106,11 @@ export default function FeaturedCoursesComponent() {
             />
           ))}
         </NavLink>
+        <Link to={"courses"} className="flex justify-center mt-10">
+          <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-opacity-80 transition duration-300">
+            View All Courses
+          </button>
+        </Link>
       </div>
     </div>
   );

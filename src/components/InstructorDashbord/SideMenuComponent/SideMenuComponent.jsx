@@ -7,6 +7,7 @@ import studentProgressSvg from "../../../assets/Instructor Dashboard SideMenu/Cr
 import messagesSvg from "../../../assets/Instructor Dashboard SideMenu/ChatCircleDots.svg";
 import quizzesSvg from "../../../assets/Instructor Dashboard SideMenu/quizzes.svg";
 import settingsSvg from "../../../assets/Instructor Dashboard SideMenu/settings.svg";
+import { Link, NavLink } from "react-router";
 
 export default function SideMenuComponent() {
   return (
@@ -19,36 +20,45 @@ export default function SideMenuComponent() {
         <div className="flex-1">
           <ul className="pt-2 pb-4 space-y-1 text-sm">
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
-              <a
+              <NavLink
+                to={"dashboard"}
+                end
                 rel="noopener noreferrer"
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md"
+                className={({ isActive }) =>
+                  `flex items-center p-2 space-x-3 rounded-md ${
+                    isActive ? "bg-gray-200 text-orange-600" : "text-gray-400"
+                  }`
+                }
               >
                 <ChartColumnBig className="text-gray-400" />
-                <span>Dashboard</span>
-              </a>
+                <span className="">Dashboard</span>
+              </NavLink>
             </li>
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
-              <a
+              <NavLink
+                to={"create-course"}
+                className={({ isActive }) =>
+                  `flex items-center p-2 space-x-3 rounded-md ${
+                    isActive ? "bg-gray-200 text-orange-600" : "text-gray-400"
+                  }`
+                }
                 rel="noopener noreferrer"
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md"
               >
                 <img src={addCourseSvg} alt="" />
                 <span>Create New Course</span>
-              </a>
+              </NavLink>
             </li>
-            <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
-              <a
+            {/* <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
+              <NavLink 
+
                 rel="noopener noreferrer"
-                href="#"
                 className="flex items-center p-2 space-x-3 rounded-md"
               >
                 <img src={myCoursesSvg} alt="" />
                 <span>My Courses</span>
-              </a>
-            </li>
-            <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
+              </NavLink>
+            </li> */}
+            {/* <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
               <a
                 rel="noopener noreferrer"
                 href="#"
@@ -57,8 +67,8 @@ export default function SideMenuComponent() {
                 <img src={studentProgressSvg} alt="" />
                 <span>View Student Progress</span>
               </a>
-            </li>
-            <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
+            </li> */}
+            {/* <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
               <a
                 rel="noopener noreferrer"
                 href="#"
@@ -67,34 +77,46 @@ export default function SideMenuComponent() {
                 <img src={messagesSvg} alt="" />
                 <span>Messages</span>
               </a>
-            </li>
+            </li> */}
+
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
-              <a
+              <NavLink
+                to={"create-quiz"}
                 rel="noopener noreferrer"
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md"
+                className={({ isActive }) =>
+                  `flex items-center p-2 space-x-3 rounded-md ${
+                    isActive ? "bg-gray-200 text-orange-600" : "text-gray-400"
+                  }`
+                }
               >
                 <img src={quizzesSvg} alt="" />
                 <span>Quizzes</span>
-              </a>
+              </NavLink>
             </li>
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
-              <a
+              <NavLink
+                to={"settings"}
                 rel="noopener noreferrer"
-                href="#"
-                className="flex items-center p-2 space-x-3 rounded-md"
+                className={({ isActive }) =>
+                  `flex items-center p-2 space-x-3 rounded-md ${
+                    isActive ? "bg-gray-200 text-orange-600" : "text-gray-400"
+                  }`
+                }
               >
                 <img src={settingsSvg} alt="" />
                 <span>Settings</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex items-center p-2 mt-12 space-x-4 justify-self-end">
+      <Link
+        to={"/signup"}
+        className="flex items-center p-2 mt-12 space-x-4 justify-self-end"
+      >
         <LogOut />
         <p>Sign-out</p>
-      </div>
+      </Link>
     </div>
   );
 }
