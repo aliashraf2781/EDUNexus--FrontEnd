@@ -5,7 +5,7 @@ function StudentRating({student}) {
   return (
     <div className='flex h-fit py-3 gap-2 border-b-[1.4px] border-gray-200'>
       <div className='flex items-start justify-center'>
-        <img src={student.image} alt="avatar" width={45} height={45} className='rounded-full'/>
+        <img src={`../../../${student.image}`} alt="avatar" width={45} height={45} className='rounded-full'/>
       </div>
       <div className='flex flex-col ml-3 w-full gap-2'>
         <div className='flex items-center gap-2'>

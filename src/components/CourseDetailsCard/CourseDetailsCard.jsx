@@ -8,7 +8,7 @@ import {  Link, NavLink } from 'react-router'
 
 
 
-function CourseDetailsCard() {
+function CourseDetailsCard({course}) {
   return (
     <>
         <div className='w-full h-75 bg-gray-100 pr-27 pt-15 lg:flex flex-1 flex-col gap-4 py-2 pr-l hidden'>
@@ -16,8 +16,8 @@ function CourseDetailsCard() {
                 <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-3 px-5'>
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
-                            <span className='text-dark text-2xl'>$14.00</span>
-                            <span className='text-light text-md line-through'>$26.00</span>
+                            <span className='text-dark text-2xl'>${course[0].price}</span>
+                            <span className='text-light text-md line-through'>${course[0].price + 20}</span>
                         </div>
                         <div className='flex items-center bg-secondary py-1 px-2 gap-1 text-[#4484E3]'>
                             <span className='text-sm'>56%</span>
