@@ -23,7 +23,14 @@ function AIAssistant() {
         body: JSON.stringify({
           contents: [
             {
-              parts: [{ text: input }]
+              parts: [
+                {
+                  text: `You are an AI assistant for an e-learning platform called "EDU Nexus". 
+        Only answer questions related to education, online courses, learning skills, studying tips, and career advice. 
+        If the question is NOT related to education, politely refuse and guide them back to learning topics.`
+                },
+                { text: input }
+              ]
             }
           ]
         })

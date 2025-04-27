@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react'; 
 import questions from './questions';
-import { Navigate, Link } from 'react-router';
+import { Link } from 'react-router';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -44,7 +44,9 @@ const Quiz = () => {
     <div className="bg-secondary w-full min-h-screen fixed top-0 left-0">
       <div className="flex justify-between items-center p-4">
         <h5 className="text-primary font-bold text-xl">QUIZ</h5>
-        <X size={24} className="cursor-pointer text-dark" onClick={handleExit} />
+        <Link to="/course-lesson">
+          <X size={24} className="cursor-pointer text-dark" onClick={handleExit} />
+        </Link>
       </div>
 
       <div className="flex flex-col items-center justify-center px-4 py-8">
