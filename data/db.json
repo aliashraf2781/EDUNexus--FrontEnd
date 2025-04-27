@@ -1,3 +1,4 @@
+
 {
   "categories": [
     {
@@ -166,7 +167,6 @@
       "rating": 4.5,
       "students": 63450,
       "image": "src/assets/courses images/course11.png",
-
       "progress": 88,
       "shortDescription": "Node.js & Express backend development.",
       "longDescription": "Learn how to build powerful and scalable web applications with Node.js and Express. This course covers server-side development, RESTful APIs, authentication, middleware, and deploying your applications to the cloud. Perfect for aspiring back-end developers!"
@@ -178,46 +178,6 @@
       "price": 31,
       "rating": 4.6,
       "students": 74210,
-      "image": "src/assets/courses images/course12.png"
-    },
-    {
-      "id": 13,
-      "title": "Nutrition and Health Coaching",
-      "category": "Health",
-      "price": 14.99,
-      "rating": 4.5,
-      "students": 12000,
-      "image": "src/assets/featuredCoursesThumbnails/healthThumbnail.svg",
-      "progress": 0
-    },
-    {
-      "id": 14,
-      "title": "Learn Guitar in 30 Days",
-      "category": "Music",
-      "price": 9.99,
-      "rating": 4.6,
-      "students": 15000,
-      "image": "src/assets/featuredCoursesThumbnails/musicThumbnail.svg",
-      "progress": 0
-    },
-    {
-      "id": 15,
-      "title": "Boost Your Confidence & Self-Esteem",
-      "category": "Personal Development",
-      "price": 11.99,
-      "rating": 4.4,
-      "students": 8000,
-      "image": "src/assets/featuredCoursesThumbnails/personalThumbnail.svg",
-      "progress": 0
-    },
-    {
-      "id": 16,
-      "title": "Master Time Management & Focus",
-      "category": "Productivity",
-      "price": 8.99,
-      "rating": 4.7,
-      "students": 9500,
-      "progress": 0,
       "image": "src/assets/courses images/course12.png",
       "shortDescription": "Excel for business insights and analysis.",
       "longDescription": "Harness the full potential of Microsoft Excel for business analysis and decision-making. This course teaches advanced Excel functions, data visualization, PivotTables, VLOOKUP, and scenario analysis to help you make data-driven business decisions confidently."
@@ -341,63 +301,6 @@
       "fileName": "Create account on webflow.pdf",
       "fileSize": "12.6 MB"
     }
-  ],
-  "featuredCourses": [
-    {
-      "id": 13,
-      "category": "Health",
-      "oldPrice": "79.99",
-      "newPrice": 14.99,
-      "title": "Nutrition and Health Coaching",
-      "instructorName": "Dr. Jane Smith",
-      "rating": 4.5,
-      "reviewsCount": 2300,
-      "students": 12000,
-      "level": "All Levels",
-      "duration": "12h",
-      "imgSrc": "src/assets/featuredCoursesThumbnails/healthThumbnail.svg"
-    },
-    {
-      "id": 14,
-      "category": "Music",
-      "oldPrice": 69.99,
-      "newPrice": 9.99,
-      "title": "Learn Guitar in 30 Days",
-      "instructorName": "John Mayer",
-      "rating": 4.6,
-      "reviewsCount": 3100,
-      "students": 15000,
-      "level": "Beginner",
-      "duration": "10h",
-      "imgSrc": "src/assets/featuredCoursesThumbnails/musicThumbnail.svg"
-    },
-    {
-      "id": 15,
-      "category": "Personal Development",
-      "oldPrice": 59.99,
-      "newPrice": 11.99,
-      "title": "Boost Your Confidence & Self-Esteem",
-      "instructorName": "Mel Robbins",
-      "rating": 4.4,
-      "reviewsCount": 1980,
-      "students": 8000,
-      "level": "All Levels",
-      "duration": "6h",
-      "imgSrc": "src/assets/featuredCoursesThumbnails/personalThumbnail.svg"
-    },
-    {
-      "id": 16,
-      "category": "Productivity",
-      "oldPrice": 49.99,
-      "newPrice": 8.99,
-      "title": "Master Time Management & Focus",
-      "instructorName": "Thomas Frank",
-      "rating": 4.7,
-      "reviewsCount": 2750,
-      "students": 9500,
-      "level": "Intermediate",
-      "duration": "5h",
-      "imgSrc": "src/assets/featuredCoursesThumbnails/productivityThumbnail.svg"
-    }
   ]
 }
+
