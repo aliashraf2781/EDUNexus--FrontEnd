@@ -6,6 +6,11 @@ import InsProfile from "./pages/InstructorProfile/InstructorProfile";
 import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 import Home from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFoundPage/NotFound";
+import About from "./pages/aboutScreen/about";
+import ContactUs from "./pages/ContactSreen/contactus";
+import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
+import SignupPage from "./pages/SignUpScreen/signUp";
+import Login from "./pages/LoginScreen/login";
 import Layout from "./Layout";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
@@ -77,8 +82,8 @@ function App() {
   return (
     <>
       <RouterProvider router={route} />
-</>
-)
+    </>
+  );
 }
 
 export default App;
