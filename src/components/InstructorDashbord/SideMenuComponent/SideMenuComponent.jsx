@@ -21,7 +21,7 @@ export default function SideMenuComponent() {
           <ul className="pt-2 pb-4 space-y-1 text-sm">
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
               <NavLink
-                to={"dashboard"}
+                to={""}
                 end
                 rel="noopener noreferrer"
                 className={({ isActive }) =>
