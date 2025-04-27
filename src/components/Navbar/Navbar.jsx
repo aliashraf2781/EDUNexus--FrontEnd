@@ -10,6 +10,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,44 +26,58 @@ export default function Navbar() {
           <nav aria-label="Global" className="hidden md:block">
             <ul className="flex items-center gap-4 lg:gap-6 text-sm">
               <li>
-                <a
+                <NavLink
+                  to={""}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
+                <NavLink
+                  to={"courses"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
                   Courses
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-200/75"
+                <NavLink
+                  to={"about"}
+                  className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
+                <NavLink
+                  to={"contact"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
                   Contact
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
+                <NavLink
+                  to={"signup"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
                   Become an instructor
-                </a>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"student-dashboard"}
+                  className="text-gray-400 transition hover:text-gray-200/75"
+                  href="#"
+                >
+                  Profile
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -125,13 +140,16 @@ export default function Navbar() {
 
           <div className="flex items-center justify-center sm:justify-end gap-4 lg:gap-6 w-full sm:w-auto">
             <div className="flex  items-center gap-4">
-              <Bell className="cursor-pointer h-5 w-5" />
+              <NavLink to={"course-notifation"}>
+                <Bell className="cursor-pointer h-5 w-5" />
+              </NavLink>
               <Heart className="cursor-pointer h-5 w-5" />
               <ShoppingCart className="cursor-pointer h-5 w-5" />
             </div>
 
-            <div className="flex   flex-row items-center gap-2 sm:gap-3">
-              <a
+            <div className="flex flex-row items-center gap-2 sm:gap-3">
+              <NavLink
+                to={"signup"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-orange-100 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-primary focus:ring-2"
                 href="#"
               >
@@ -141,9 +159,10 @@ export default function Navbar() {
                 <span className="text-xs sm:text-sm font-bold transition-all group-hover:me-4">
                   Create Account
                 </span>
-              </a>
+              </NavLink>
 
-              <a
+              <NavLink
+                to={"login"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-primary px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-white focus:ring-2"
                 href="#"
               >
@@ -153,7 +172,7 @@ export default function Navbar() {
                 <span className="text-xs sm:text-sm font-bold transition-all group-hover:me-4">
                   Sign In
                 </span>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

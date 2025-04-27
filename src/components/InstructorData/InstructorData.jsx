@@ -6,7 +6,7 @@ function InstructorData({courses, students}) {
     const [activeTab, setActiveTab] = useState("courses");
   return (
     <div className="flex gap-5 mx-43">
-        <div className='flex flex-col gap-2.5 border-[1.5px] border-gray-200 p-4 hidden lg:block lg:w-[40%] h-fit'>
+        <div className='md:flex flex-col gap-2.5 border-[1.5px] border-gray-200 p-4 hidden lg:block lg:w-[40%] h-fit'>
             <span className='text-dark text-xl font-semibold'>ABOUT ME</span>
             <p className='text-gray-600 text-sm'>One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup.</p>
             <p className='text-gray-600 text-sm'>He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed, and make a lot more money in the process. No more begging for vacation days and living from paycheck to paycheck. After trying everything from e-commerce stores to professional poker his lucky break came when he started freelance design. Vako fell in love with the field that gives him the lifestyle of his dreams.</p>

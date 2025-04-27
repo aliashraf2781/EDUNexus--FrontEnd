@@ -365,3 +365,307 @@
     }
   ]
 }
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Development",
+      "count": 4235,
+      "topics": [
+        { "id": 11, "name": "Web Development", "count": 2100 },
+        { "id": 12, "name": "Mobile Development", "count": 1235 },
+        { "id": 13, "name": "Game Development", "count": 900 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Business",
+      "count": 3454,
+      "topics": [
+        { "id": 21, "name": "Entrepreneurship", "count": 1500 },
+        { "id": 22, "name": "Marketing", "count": 1200 },
+        { "id": 23, "name": "Finance", "count": 754 }
+      ]
+    }
+  ],
+  "courseLevels": [
+    { "id": 1, "name": "All Level", "count": 3214 },
+    { "id": 2, "name": "Beginner", "count": 1234 },
+    { "id": 3, "name": "Intermediate", "count": 2341 },
+    { "id": 4, "name": "Expert", "count": 1432 }
+  ],
+  "tools": [
+    { "id": 1, "name": "HTML 5", "count": 3214 },
+    { "id": 2, "name": "CSS 3", "count": 1234 },
+    { "id": 3, "name": "React", "count": 2341 },
+    { "id": 4, "name": "Node.js", "count": 1432 }
+  ],
+  "prices": [
+    { "id": 1, "name": "Paid", "count": 1234 },
+    { "id": 2, "name": "Free", "count": 3214 }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Complete Blender Creator: Learn 3D Modelling for Beginners",
+      "category": "DEVELOPMENTS",
+      "price": 49,
+      "rating": 4.9,
+      "students": 197637,
+      "image": "src/assets/courses images/course1.png",
+      "progress": 75,
+      "shortDescription": "Learn 3D modeling with Blender from scratch.",
+      "longDescription": "Dive into the world of 3D modeling with Blender, the industry-standard open-source software. In this comprehensive course, you'll learn everything from basic navigation to creating detailed characters, environments, and animations. Whether you are aiming to become a 3D artist, game developer, or animator, this course provides the perfect foundation."  
+    },
+    {
+      "id": 2,
+      "title": "React for Beginners",
+      "category": "DEVELOPMENTS",
+      "price": 39,
+      "rating": 4.7,
+      "students": 95637,
+      "image": "src/assets/courses images/course2.png",
+      "progress": 50,
+      "shortDescription": "Master React basics and build modern web apps.",
+      "longDescription": "Start your journey into web development by mastering React, one of the most popular JavaScript libraries. This beginner-friendly course covers fundamental concepts like components, props, state management, and React Router, preparing you to build dynamic and modern web applications from scratch."
+    },
+    {
+      "id": 3,
+      "title": "Digital Marketing Masterclass",
+      "category": "BUSINESS",
+      "price": 29,
+      "rating": 4.8,
+      "students": 123012,
+      "image": "src/assets/courses images/course3.png",
+      "progress": 80,
+      "shortDescription": "Become a digital marketing expert.",
+      "longDescription": "Transform your career by mastering the essential skills of digital marketing. This all-in-one masterclass covers SEO, content marketing, Google Ads, social media strategies, email marketing, and analytics, helping you craft effective marketing campaigns and boost business growth."
+    },
+    {
+      "id": 4,
+      "title": "Introduction to Python Programming",
+      "category": "DEVELOPMENTS",
+      "price": 35,
+      "rating": 4.6,
+      "students": 78412,
+      "image": "src/assets/courses images/course4.png",
+      "progress": 60,
+      "shortDescription": "Learn Python programming fundamentals.",
+      "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
+    },
+    {
+      "id": 5,
+      "title": "Financial Analysis for Beginners",
+      "category": "BUSINESS",
+      "price": 45,
+      "rating": 4.9,
+      "students": 45600,
+      "image": "src/assets/courses images/course5.png",
+      "progress": 5,
+      "shortDescription": "Learn Python programming fundamentals.",
+      "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
+    },
+    {
+      "id": 6,
+      "title": "Mastering CSS and Flexbox",
+      "category": "DEVELOPMENTS",
+      "price": 25,
+      "rating": 4.5,
+      "students": 67899,
+      "image": "src/assets/courses images/course6.png",
+      "progress": 40,
+      "shortDescription": "CSS and Flexbox mastery for web design.",
+      "longDescription": "Master the art of building responsive and visually stunning web pages with CSS and Flexbox. This course provides hands-on experience with layout techniques, animations, and real-world projects to help you create professional, mobile-friendly websites with confidence."
+    },
+    {
+      "id": 7,
+      "title": "Entrepreneurship Crash Course",
+      "category": "BUSINESS",
+      "price": 59,
+      "rating": 4.7,
+      "students": 90321,
+      "image": "src/assets/courses images/course7.png",
+      "progress": 76,
+      "shortDescription": "Kickstart your entrepreneurship journey.",
+      "longDescription": "Launch your business idea with confidence! This crash course covers the essentials of entrepreneurship, from idea validation and business planning to funding, marketing, and scaling your startup. Get the practical skills and mindset you need to thrive as an entrepreneur."
+    },
+    {
+      "id": 8,
+      "title": "Full-Stack Web Development Bootcamp",
+      "category": "DEVELOPMENTS",
+      "price": 89,
+      "rating": 4.8,
+      "students": 210300,
+      "image": "src/assets/courses images/course8.png",
+      "progress": 65,
+      "shortDescription": "Full-stack web development training.",
+      "longDescription": "Become a full-stack web developer with this intensive bootcamp! Learn front-end development with HTML, CSS, JavaScript, and React, and back-end development with Node.js, Express, and MongoDB. Build and deploy real-world projects, and prepare for a career in tech."
+    },
+    {
+      "id": 9,
+      "title": "JavaScript ES6+ Guide",
+      "category": "DEVELOPMENTS",
+      "price": 34,
+      "rating": 4.6,
+      "students": 45670,
+      "image": "src/assets/courses images/course9.png",
+      "progress": 77,
+      "shortDescription": "Advanced JavaScript ES6+ techniques.",
+      "longDescription": "Level up your JavaScript skills with a deep dive into ES6+ features. This course covers everything from arrow functions, destructuring, and modules, to promises, async/await, and modern best practices, enabling you to write cleaner, more efficient code."
+    },
+    {
+      "id": 10,
+      "title": "Marketing Strategies in 2025",
+      "category": "BUSINESS",
+      "price": 42,
+      "rating": 4.7,
+      "students": 87564,
+      "image": "src/assets/courses images/course10.png",
+      "progress": 75,
+      "shortDescription": "Master marketing strategies for 2025.",
+      "longDescription": "Stay ahead of the curve with the latest marketing strategies tailored for 2025 and beyond. Learn about AI-driven marketing, personalized customer journeys, content marketing innovations, and how to leverage new platforms to maximize brand reach and engagement."
+    },
+    {
+      "id": 11,
+      "title": "Node.js & Express from Scratch",
+      "category": "DEVELOPMENTS",
+      "price": 38,
+      "rating": 4.5,
+      "students": 63450,
+      "image": "src/assets/courses images/course11.png",
+      "progress": 88,
+      "shortDescription": "Node.js & Express backend development.",
+      "longDescription": "Learn how to build powerful and scalable web applications with Node.js and Express. This course covers server-side development, RESTful APIs, authentication, middleware, and deploying your applications to the cloud. Perfect for aspiring back-end developers!"
+    },
+    {
+      "id": 12,
+      "title": "Excel for Business Analysis",
+      "category": "BUSINESS",
+      "price": 31,
+      "rating": 4.6,
+      "students": 74210,
+      "image": "src/assets/courses images/course12.png",
+      "shortDescription": "Excel for business insights and analysis.",
+      "longDescription": "Harness the full potential of Microsoft Excel for business analysis and decision-making. This course teaches advanced Excel functions, data visualization, PivotTables, VLOOKUP, and scenario analysis to help you make data-driven business decisions confidently."
+    },
+    {
+      "id": 21,
+      "title": "Machine Learning A-Z™: Hands-On Python & R In Data...",
+      "category": "DESIGN",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse1.png",
+      "shortDescription": "Master Machine Learning with hands-on projects in Python and R.",
+      "longDescription": "This comprehensive course walks you through the most important machine learning concepts, algorithms, and practical projects. Learn how to build predictive models, perform deep analysis, and apply machine learning techniques using Python and R. Perfect for both beginners and professionals looking to enhance their data science skills."
+    },
+    {
+      "id": 22,
+      "title": "The Complete 2021 Web Development Bootcamp",
+      "category": "DEVELOPMENTS",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse2.png",
+      "shortDescription": "Become a full-stack web developer from scratch.",
+      "longDescription": "This bootcamp takes you from beginner to professional web developer. You’ll master HTML, CSS, JavaScript, Node.js, React, MongoDB, and more through hands-on projects and real-world examples. Ideal for anyone looking to build a career in web development or launch their own websites and apps."
+    },
+    {
+      "id": 33,
+      "title": "Learn Python Programming Masterclass",
+      "category": "BUSINESS",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse3.png",
+      "shortDescription": "Master Python programming from beginner to advanced.",
+      "longDescription": "This masterclass is your complete guide to becoming proficient in Python. Starting with the basics, you'll progress to advanced topics like object-oriented programming, file handling, error management, and working with external libraries. Whether you aim to develop apps, automate tasks, or dive into AI, this course sets the perfect foundation."
+    },
+    {
+      "id": 44,
+      "title": "The Complete Digital Marketing Course - 12 Courses in 1",
+      "category": "MARKETING",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse4.png",
+      "shortDescription": "Learn all aspects of digital marketing in one complete course.",
+      "longDescription": "Covering SEO, YouTube Marketing, Facebook Marketing, Google Analytics, Email Marketing, and more, this course combines 12 mini-courses into one mega-package. Ideal for business owners, marketers, and anyone looking to grow their brand or career online with powerful digital marketing strategies."
+    },
+    {
+      "id": 55,
+      "title": "Reiki Level I, II and Master/Teacher Program",
+      "category": "IT & SOFTWARE",
+      "price": 57,
+      "rating": "5.0",
+      "students": "265.7K",
+      "image": "src/assets/courses images/relatedCourse5.png",
+      "shortDescription": "Become a certified Reiki healer from beginner to Master level.",
+      "longDescription": "Discover the powerful healing technique of Reiki and earn certifications for Level I, II, and Master/Teacher. Learn how to channel energy for self-healing and helping others, master advanced Reiki practices, and explore the spiritual journey of becoming a Reiki Master with professional guidance."
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Vako Shvili",
+      "title": "Web Designer & Best-Selling Instructor",
+      "image": "src/assets/courses images/instructor1.png",
+      "courseRating": 4.9,
+      "students": "236,568",
+      "courses": "09",
+      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
+    },
+    {
+      "id": 2,
+      "name": "Nima Tahami",
+      "title": "Entrepreneur & Designer • Founder of ShiftRide",
+      "image": "src/assets/courses images/instructor2.png",
+      "courseRating": 4.6,
+      "students": "5,342",
+      "courses": "01",
+      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both..."
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Guy Hawkins",
+      "image": "src/assets/courses images/avatar1.png",
+      "date": "1 week ago",
+      "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
+    },
+    {
+      "id": 2,
+      "name": "Dianne Russell",
+      "image": "src/assets/courses images/avatar2.png",
+      "date": "51 mins ago",
+      "comment": "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step."
+    },
+    {
+      "id": 2,
+      "name": "Eleanor Pena",
+      "image": "src/assets/courses images/avatar3.png",
+      "date": "1 days ago",
+      "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
+    }
+  ],
+  "lesson": [
+    {
+      "id": 1,
+      "courseTitle": "Complete Website Responsive Design: from Figma to Webflow to Website Design",
+      "lessonTitle": "2. Sign up in Webflow",
+      "sections": 6,
+      "lectures": 202,
+      "duration": "19h 37m",
+      "image": "src/assets/courses images/lessonImage.png",
+      "studentsWatching": 512,
+      "lastUpdated": "Oct 26, 2020",
+      "comments": 154,
+      "lectureDescription": "We cover everything you need to build your first website. From creating your first page through to uploading your website to the internet. We’ll use the world’s most popular (and free) web design tool called Visual Studio Code. There are exercise files you can download and then work along with me. At the end of each video I have a downloadable version of where we are in the process so that you can compare your project with mine. This will enable you to see easily where you might have a problem. We will delve into all the good stuff such as how to create your very own mobile burger menu from scratch learning some basic JavaScript and jQuery. If that all sounds a little too fancy - don’t worry, this course is aimed at people new to web design and who have never coded before. We’ll start right at the beginning and work our way through step by step.",
+      "lectureSummary": "We cover everything you need to build your first website. From creating your first page through to uploading your website to the internet. We’ll use the world’s most popular (and free) web design tool called Visual Studio Code. There are exercise files you can download and then work along with me. At the end of each video I have a downloadable version of where we are in the process so that you can compare your project with mine. This will enable you to see easily where you might have a problem. We will delve into all the good stuff such as how to create your very own mobile burger menu from scratch learning some basic JavaScript and jQuery. If that all sounds a little too fancy - don’t worry, this course is aimed at people new to web design and who have never coded before. We’ll start right at the beginning and work our way through step by step.",
+      "attachFiles": "(01)",
+      "fileName": "Create account on webflow.pdf",
+      "fileSize": "12.6 MB"
+    }
+  ]
+}

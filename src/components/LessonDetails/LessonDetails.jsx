@@ -6,10 +6,10 @@ import avatar1  from '../../assets/courses images/avatar1.png';
 import avatar2  from '../../assets/courses images/avatar2.png';
 import instructor1  from '../../assets/courses images/instructor1.png';
 
-function LessonDetails() {
+function LessonDetails({ lesson }) {
   return (
     <div className='flex flex-col gap-4'>
-        <div style={{backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), url("src/assets/courses images/lessonImage.png")', backgroundSize: 'cover'}} className='relative w-full h-[250px] lg:h-[400px]'>
+        {/* <div style={{backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), url("src/assets/courses images/lessonImage.png")', backgroundSize: 'cover'}} className='relative w-full h-[250px] lg:h-[400px]'>
             <div className='flex flex-col bottom-0 absolute w-full px-3 py-2 gap-2'>
                 <div className='w-full h-[2.5px] bg-light flex'>
                     <div className='w-[30%] h-[2.5px] bg-primary'></div>
@@ -35,8 +35,12 @@ function LessonDetails() {
                     </div>
                 </div>
             </div>
-        </div>
-        <span className='text-dark text-2xl font-semibold'>2. Sign up in Webflow</span>
+        </div> */}
+         {/* add video  */}
+         <div className=' w-full pb-5'>
+            <video className='w-full ' src="https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4" controls></video>
+         </div>
+        <span className='text-dark text-2xl font-semibold'>{lesson.lessonTitle}</span>
         <div className='flex justify-between items-center'>
             <div className='flex items-center gap-2'>
                 <div className='flex items-center gap-2'>
@@ -57,18 +61,18 @@ function LessonDetails() {
                     </div> 
                 </div>
                 <div className='flex flex-col'>
-                    <span className='text-dark text-sm font-semibold'>512</span>
+                    <span className='text-dark text-sm font-semibold'>{lesson.studentsWatching}</span>
                     <span className='text-gray-600 text-xs'>Students Watching</span>
                 </div>
             </div>
             <div className='flex items-end gap-3'>
                 <div className='flex gap-1 items-center'>
                     <span className='text-xs text-gray-600'>Last updated:</span>
-                    <span className='text-xs text-dark'>Oct 26, 2020</span>
+                    <span className='text-xs text-dark'>{lesson.lastUpdated}</span>
                 </div>
                 <div className='flex gap-1 items-center'>
                     <span className='text-xs text-gray-600'>Comments</span>
-                    <span className='text-xs text-dark'>154</span>
+                    <span className='text-xs text-dark'>{lesson.comments}</span>
                 </div>
             </div>
         </div>
@@ -85,22 +89,26 @@ function LessonDetails() {
             <div className='text-gray-600 flex lg:py-3 py-2 lg:px-6 px-2 justify-center font-semibold cursor-pointer'>Comments</div>
         </div>
         <div className='flex flex-col gap-4 py-4'>
-            <span className='text-dark text-2xl font-semibold'>Lectures Description</span>
-            <div className='text-gray-600 text-sm'>
-                We cover everything you need to build your first website. From creating your first page through to uploading your website to the internet. We’ll use the world’s most popular (and free) web design tool called Visual Studio Code. There are exercise files you can download and then work along with me. At the end of each video I have a downloadable version of where we are in the process so that you can compare your project with mine. This will enable you to see easily where you might have a problem. We will delve into all the good stuff such as how to create your very own mobile burger menu from scratch learning some basic JavaScript and jQuery.
+            <span className='text-dark text-2xl font-semibold'>Lecture Description</span>
+            <div className='text-gray-600 text-sm leading-normal'>
+                {lesson.lectureDescription}
             </div>
-            <div className='text-gray-600 text-sm'>
-                If that all sounds a little too fancy - don’t worry, this course is aimed at people new to web design and who have never coded before. We’ll start right at the beginning and work our way through step by step. 
+        </div>
+        <div className='flex flex-col gap-4 py-4'>
+            <span className='text-dark text-2xl font-semibold'>Lecture Summary</span>
+            <div className='text-gray-600 text-sm leading-normal'>
+                {/* {lesson.lectureSummary} */}
+                1.  React Fundamentals: Understand React concepts for building complex user interfaces. 2.  Modern Web Applications: Build modern and powerful web applications using React. 3.  Industry-Standard Libraries: Leverage libraries like Redux Toolkit, React Router, React Query, Tailwind CSS, and styled-components. 4.  Project-Based Learning: Focus on real-world projects, practice exercises, and challenges. 5.  Deep Dive into React Internals: Gain a thorough understanding of React's inner workings. 6.  Code Comprehension:  Comprehend what your code does to gain confidence in react. 7.  Modern Best Practices: Explore and implement modern best practices in React development. 8.  Advanced Patterns: Learn and utilize advanced patterns used by senior React engineers.
             </div>
         </div>
         <div className='flex flex-col gap-4 py-2'>
-            <span className='text-dark text-2xl font-semibold'>Attach Files <span className='font-normal'>(01)</span></span>
+            <span className='text-dark text-2xl font-semibold'>Attach Files <span className='font-normal'>{lesson.attachFiles}</span></span>
             <div className='flex bg-gray-200 w-full py-4 px-5 justify-between items-center'>
                 <div className='flex gap-3 items-center'>
                     <FileText size={50} color='#5183C4'/>
                     <div className='flex flex-col gap-0.5'>
-                        <span className='text-dark text-md'>Create account on webflow.pdf</span>
-                        <span className='text-gray-600 text-sm'>12.6 MB</span>
+                        <span className='text-dark text-md'>{lesson.fileName}</span>
+                        <span className='text-gray-600 text-sm'>{lesson.fileSize}</span>
                     </div>
                 </div>
                 <div className='bg-primary text-white py-3 px-5 text-sm font-semibold cursor-pointer'>
