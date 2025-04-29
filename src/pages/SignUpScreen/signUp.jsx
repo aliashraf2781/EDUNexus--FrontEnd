@@ -1,8 +1,12 @@
 import { User, Mail, Lock } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom"; // ✅ Import for navigation
 
 export default function SignupPage() {
+  const navigate = useNavigate(); // ✅ Initialize navigate function
+
+  // Define validation schema using Yup
   const SignupSchema = Yup.object().shape({
     username: Yup.string()
       .min(3, "Username must be at least 3 characters")
@@ -20,6 +24,7 @@ export default function SignupPage() {
       .oneOf([true], "You must accept the terms and conditions"),
   });
 
+  // Handle signup form submission
   const handleSignup = async (values) => {
     try {
       const response = await fetch("http://localhost:3001/users", {
@@ -28,7 +33,7 @@ export default function SignupPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id: Date.now(), // Unique ID for the new
+          id: Date.now(),
           username: values.username,
           email: values.email,
           password: values.password,
@@ -39,6 +44,9 @@ export default function SignupPage() {
         const newUser = await response.json();
         console.log("User created:", newUser);
         alert("Account created successfully!");
+
+        // ✅ Redirect to the dashboard after successful signup
+        navigate("/"); 
       } else {
         alert("Error creating account.");
       }
@@ -65,11 +73,11 @@ export default function SignupPage() {
             terms: false,
           }}
           validationSchema={SignupSchema}
-          onSubmit={handleSignup} // إرسال البيانات إلى FakeAPI عند إرسال النموذج
+          onSubmit={handleSignup} // ✅ Handle form submission
         >
           {({ errors, touched }) => (
             <Form className="space-y-4 w-full max-w-sm">
-              {/* Username */}
+              {/* Username Field */}
               <div className="relative">
                 <User className="absolute left-3 top-3.5 text-light" size={20} />
                 <Field
@@ -85,7 +93,7 @@ export default function SignupPage() {
                 />
               </div>
 
-              {/* Email */}
+              {/* Email Field */}
               <div className="relative">
                 <Mail className="absolute left-3 top-3.5 text-light" size={20} />
                 <Field
@@ -101,7 +109,7 @@ export default function SignupPage() {
                 />
               </div>
 
-              {/* Password */}
+              {/* Password Field */}
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 text-light" size={20} />
                 <Field
@@ -117,7 +125,7 @@ export default function SignupPage() {
                 />
               </div>
 
-              {/* Confirm Password */}
+              {/* Confirm Password Field */}
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 text-light" size={20} />
                 <Field
@@ -133,7 +141,7 @@ export default function SignupPage() {
                 />
               </div>
 
-              {/* Terms */}
+              {/* Terms and Conditions */}
               <div className="flex items-center space-x-2 text-sm">
                 <Field type="checkbox" name="terms" id="terms" className="accent-primary" />
                 <label htmlFor="terms" className="text-dark">
@@ -151,15 +159,16 @@ export default function SignupPage() {
                 SIGN UP
               </button>
 
+              {/* Login Link */}
               <p className="text-center text-sm text-dark">
-                You have account? <a href="#" className="text-primary font-medium">Login now</a>
+                You have an account? <a href="#" className="text-primary font-medium">Login now</a>
               </p>
             </Form>
           )}
         </Formik>
       </div>
 
-      {/* Right Section */}
+      {/* Right Section - Illustration */}
       <div className="w-full lg:w-1/2 bg-primary flex items-center justify-center">
         <img
           src="/signup.png"

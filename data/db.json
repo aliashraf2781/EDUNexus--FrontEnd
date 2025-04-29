@@ -1,46 +1,109 @@
-
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Development",
       "count": 4235,
       "topics": [
-        { "id": 11, "name": "Web Development", "count": 2100 },
-        { "id": 12, "name": "Mobile Development", "count": 1235 },
-        { "id": 13, "name": "Game Development", "count": 900 }
+        {
+          "id": 11,
+          "name": "Web Development",
+          "count": 2100
+        },
+        {
+          "id": 12,
+          "name": "Mobile Development",
+          "count": 1235
+        },
+        {
+          "id": 13,
+          "name": "Game Development",
+          "count": 900
+        }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Business",
       "count": 3454,
       "topics": [
-        { "id": 21, "name": "Entrepreneurship", "count": 1500 },
-        { "id": 22, "name": "Marketing", "count": 1200 },
-        { "id": 23, "name": "Finance", "count": 754 }
+        {
+          "id": 21,
+          "name": "Entrepreneurship",
+          "count": 1500
+        },
+        {
+          "id": 22,
+          "name": "Marketing",
+          "count": 1200
+        },
+        {
+          "id": 23,
+          "name": "Finance",
+          "count": 754
+        }
       ]
     }
   ],
   "courseLevels": [
-    { "id": 1, "name": "All Level", "count": 3214 },
-    { "id": 2, "name": "Beginner", "count": 1234 },
-    { "id": 3, "name": "Intermediate", "count": 2341 },
-    { "id": 4, "name": "Expert", "count": 1432 }
+    {
+      "id": "1",
+      "name": "All Level",
+      "count": 3214
+    },
+    {
+      "id": "2",
+      "name": "Beginner",
+      "count": 1234
+    },
+    {
+      "id": "3",
+      "name": "Intermediate",
+      "count": 2341
+    },
+    {
+      "id": "4",
+      "name": "Expert",
+      "count": 1432
+    }
   ],
   "tools": [
-    { "id": 1, "name": "HTML 5", "count": 3214 },
-    { "id": 2, "name": "CSS 3", "count": 1234 },
-    { "id": 3, "name": "React", "count": 2341 },
-    { "id": 4, "name": "Node.js", "count": 1432 }
+    {
+      "id": "1",
+      "name": "HTML 5",
+      "count": 3214
+    },
+    {
+      "id": "2",
+      "name": "CSS 3",
+      "count": 1234
+    },
+    {
+      "id": "3",
+      "name": "React",
+      "count": 2341
+    },
+    {
+      "id": "4",
+      "name": "Node.js",
+      "count": 1432
+    }
   ],
   "prices": [
-    { "id": 1, "name": "Paid", "count": 1234 },
-    { "id": 2, "name": "Free", "count": 3214 }
+    {
+      "id": "1",
+      "name": "Paid",
+      "count": 1234
+    },
+    {
+      "id": "2",
+      "name": "Free",
+      "count": 3214
+    }
   ],
   "courses": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Complete Blender Creator: Learn 3D Modelling for Beginners",
       "category": "DEVELOPMENTS",
       "price": 49,
@@ -49,10 +112,10 @@
       "image": "src/assets/courses images/course1.png",
       "progress": 75,
       "shortDescription": "Learn 3D modeling with Blender from scratch.",
-      "longDescription": "Dive into the world of 3D modeling with Blender, the industry-standard open-source software. In this comprehensive course, you'll learn everything from basic navigation to creating detailed characters, environments, and animations. Whether you are aiming to become a 3D artist, game developer, or animator, this course provides the perfect foundation."  
+      "longDescription": "Dive into the world of 3D modeling with Blender, the industry-standard open-source software. In this comprehensive course, you'll learn everything from basic navigation to creating detailed characters, environments, and animations. Whether you are aiming to become a 3D artist, game developer, or animator, this course provides the perfect foundation."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "React for Beginners",
       "category": "DEVELOPMENTS",
       "price": 39,
@@ -64,7 +127,7 @@
       "longDescription": "Start your journey into web development by mastering React, one of the most popular JavaScript libraries. This beginner-friendly course covers fundamental concepts like components, props, state management, and React Router, preparing you to build dynamic and modern web applications from scratch."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Digital Marketing Masterclass",
       "category": "BUSINESS",
       "price": 29,
@@ -76,7 +139,7 @@
       "longDescription": "Transform your career by mastering the essential skills of digital marketing. This all-in-one masterclass covers SEO, content marketing, Google Ads, social media strategies, email marketing, and analytics, helping you craft effective marketing campaigns and boost business growth."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Introduction to Python Programming",
       "category": "DEVELOPMENTS",
       "price": 35,
@@ -88,7 +151,7 @@
       "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Financial Analysis for Beginners",
       "category": "BUSINESS",
       "price": 45,
@@ -100,7 +163,7 @@
       "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Mastering CSS and Flexbox",
       "category": "DEVELOPMENTS",
       "price": 25,
@@ -112,7 +175,7 @@
       "longDescription": "Master the art of building responsive and visually stunning web pages with CSS and Flexbox. This course provides hands-on experience with layout techniques, animations, and real-world projects to help you create professional, mobile-friendly websites with confidence."
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Entrepreneurship Crash Course",
       "category": "BUSINESS",
       "price": 59,
@@ -124,7 +187,7 @@
       "longDescription": "Launch your business idea with confidence! This crash course covers the essentials of entrepreneurship, from idea validation and business planning to funding, marketing, and scaling your startup. Get the practical skills and mindset you need to thrive as an entrepreneur."
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Full-Stack Web Development Bootcamp",
       "category": "DEVELOPMENTS",
       "price": 89,
@@ -136,7 +199,7 @@
       "longDescription": "Become a full-stack web developer with this intensive bootcamp! Learn front-end development with HTML, CSS, JavaScript, and React, and back-end development with Node.js, Express, and MongoDB. Build and deploy real-world projects, and prepare for a career in tech."
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "JavaScript ES6+ Guide",
       "category": "DEVELOPMENTS",
       "price": 34,
@@ -148,7 +211,7 @@
       "longDescription": "Level up your JavaScript skills with a deep dive into ES6+ features. This course covers everything from arrow functions, destructuring, and modules, to promises, async/await, and modern best practices, enabling you to write cleaner, more efficient code."
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Marketing Strategies in 2025",
       "category": "BUSINESS",
       "price": 42,
@@ -160,7 +223,7 @@
       "longDescription": "Stay ahead of the curve with the latest marketing strategies tailored for 2025 and beyond. Learn about AI-driven marketing, personalized customer journeys, content marketing innovations, and how to leverage new platforms to maximize brand reach and engagement."
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Node.js & Express from Scratch",
       "category": "DEVELOPMENTS",
       "price": 38,
@@ -172,7 +235,7 @@
       "longDescription": "Learn how to build powerful and scalable web applications with Node.js and Express. This course covers server-side development, RESTful APIs, authentication, middleware, and deploying your applications to the cloud. Perfect for aspiring back-end developers!"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Excel for Business Analysis",
       "category": "BUSINESS",
       "price": 31,
@@ -183,7 +246,7 @@
       "longDescription": "Harness the full potential of Microsoft Excel for business analysis and decision-making. This course teaches advanced Excel functions, data visualization, PivotTables, VLOOKUP, and scenario analysis to help you make data-driven business decisions confidently."
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Machine Learning A-Z™: Hands-On Python & R In Data...",
       "category": "DESIGN",
       "price": 57,
@@ -194,7 +257,7 @@
       "longDescription": "This comprehensive course walks you through the most important machine learning concepts, algorithms, and practical projects. Learn how to build predictive models, perform deep analysis, and apply machine learning techniques using Python and R. Perfect for both beginners and professionals looking to enhance their data science skills."
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "The Complete 2021 Web Development Bootcamp",
       "category": "DEVELOPMENTS",
       "price": 57,
@@ -205,7 +268,7 @@
       "longDescription": "This bootcamp takes you from beginner to professional web developer. You’ll master HTML, CSS, JavaScript, Node.js, React, MongoDB, and more through hands-on projects and real-world examples. Ideal for anyone looking to build a career in web development or launch their own websites and apps."
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Learn Python Programming Masterclass",
       "category": "BUSINESS",
       "price": 57,
@@ -216,7 +279,7 @@
       "longDescription": "This masterclass is your complete guide to becoming proficient in Python. Starting with the basics, you'll progress to advanced topics like object-oriented programming, file handling, error management, and working with external libraries. Whether you aim to develop apps, automate tasks, or dive into AI, this course sets the perfect foundation."
     },
     {
-      "id": 44,
+      "id": "44",
       "title": "The Complete Digital Marketing Course - 12 Courses in 1",
       "category": "MARKETING",
       "price": 57,
@@ -227,7 +290,7 @@
       "longDescription": "Covering SEO, YouTube Marketing, Facebook Marketing, Google Analytics, Email Marketing, and more, this course combines 12 mini-courses into one mega-package. Ideal for business owners, marketers, and anyone looking to grow their brand or career online with powerful digital marketing strategies."
     },
     {
-      "id": 55,
+      "id": "55",
       "title": "Reiki Level I, II and Master/Teacher Program",
       "category": "IT & SOFTWARE",
       "price": 57,
@@ -240,7 +303,7 @@
   ],
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Vako Shvili",
       "title": "Web Designer & Best-Selling Instructor",
       "image": "src/assets/courses images/instructor1.png",
@@ -250,7 +313,7 @@
       "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Nima Tahami",
       "title": "Entrepreneur & Designer • Founder of ShiftRide",
       "image": "src/assets/courses images/instructor2.png",
@@ -262,21 +325,21 @@
   ],
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Guy Hawkins",
       "image": "src/assets/courses images/avatar1.png",
       "date": "1 week ago",
       "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Dianne Russell",
       "image": "src/assets/courses images/avatar2.png",
       "date": "51 mins ago",
       "comment": "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Eleanor Pena",
       "image": "src/assets/courses images/avatar3.png",
       "date": "1 days ago",
@@ -285,7 +348,7 @@
   ],
   "lesson": [
     {
-      "id": 1,
+      "id": "1",
       "courseTitle": "Complete Website Responsive Design: from Figma to Webflow to Website Design",
       "lessonTitle": "2. Sign up in Webflow",
       "sections": 6,
@@ -301,6 +364,100 @@
       "fileName": "Create account on webflow.pdf",
       "fileSize": "12.6 MB"
     }
+  ],
+  "questions": [
+    {
+      "question": "Responsive Web Design means?",
+      "options": [
+        "Fixed layout",
+        "Separate sites",
+        "Only media queries",
+        "Adaptive design"
+      ],
+      "correctAnswer": "Adaptive design",
+      "id": "03e3"
+    },
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "HighText Machine Language",
+        "HyperText Markup Language",
+        "HyperTool Markup Language",
+        "None"
+      ],
+      "correctAnswer": "HyperText Markup Language",
+      "id": "29dd"
+    },
+    {
+      "question": "Which CSS property changes the text color?",
+      "options": [
+        "text-style",
+        "color",
+        "font-color",
+        "text-color"
+      ],
+      "correctAnswer": "color",
+      "id": "f40d"
+    },
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "options": [
+        "<js>",
+        "<scripting>",
+        "<script>",
+        "<javascript>"
+      ],
+      "correctAnswer": "<script>",
+      "id": "c1ea"
+    },
+    {
+      "question": "Which tag is used to define an image in HTML?",
+      "options": [
+        "<img>",
+        "<image>",
+        "<picture>",
+        "<photo>"
+      ],
+      "correctAnswer": "<img>",
+      "id": "1182"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "instructor@example.com",
+      "password": "password123",
+      "role": "instructor"
+    },
+    {
+      "id": "2",
+      "email": "student@example.com",
+      "password": "student123",
+      "role": "student"
+    },
+    {
+      "id": "3",
+      "email": "organization@example.com",
+      "password": "org123456",
+      "role": "organization"
+    },
+    {
+      "id": 1745894743704,
+      "username": "shrouk",
+      "email": "shrouk@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 1745895082722,
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 1745895766436,
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    }
   ]
 }
-
