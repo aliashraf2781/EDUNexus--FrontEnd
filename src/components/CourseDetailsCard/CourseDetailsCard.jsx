@@ -2,6 +2,11 @@ import React from 'react'
 import { AlarmClock, Clock3, ChartNoAxesColumnIncreasing, UsersRound, BookText, 
     NotepadText, DollarSign, Trophy, TvMinimal, Layers, Copy, Facebook, Twitter, Mail, MessageCircleCode } from 'lucide-react'
 import CurriculumSection from '../CurriculumSection/CurriculumSection'
+import {  Link, NavLink } from 'react-router'
+
+
+
+
 
 function CourseDetailsCard({course}) {
   return (
@@ -65,9 +70,13 @@ function CourseDetailsCard({course}) {
                     <button className='bg-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
                         Add To Cart
                     </button>
-                    <button className='bg-[#A1A5B3] text-[#2a70da] cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
-                        Buy Now
-                    </button>
+
+                    <Link to='/course-lesson' >
+                        <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
+                            Buy Now
+                        </button>
+                    </Link>
+
                     <div className='flex gap-2 items-center '>
                         <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Add To Wishlist</button>
                         <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Gift Course</button>

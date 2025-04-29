@@ -7,18 +7,21 @@ import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
 import Home from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFoundPage/NotFound";
 import About from "./pages/aboutScreen/about";
-import ContactUs from "./pages/ContactSreen/contactus";
 import StudentDashboard from "./pages/StudentDashboard/StdDashboard";
 import SignupPage from "./pages/SignUpScreen/signUp";
 import Login from "./pages/LoginScreen/login";
 import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
 import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
-import Layout from "./Layout";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import Layout from "./Components/Layout/Layout";
 
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Quiz from "./Components/Quiz/Quiz";
+// import { Layout } from "lucide-react";
+import DashboardLayout from "./Components/Layout/DashboardLayout";
+import ContactUs from "./pages/ContactSreen/contactus"
 const route = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -35,7 +38,7 @@ const route = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <ContactUs />,
+        element: <ContactUs/>,
       },
       {
         path: "student-dashboard",
@@ -48,6 +51,10 @@ const route = createBrowserRouter([
       {
         path: "course-lesson",
         element: <CourseLesson />,
+      },
+      {
+        path: "quiz",
+        element: <Quiz />,
       },
       {
         path: "course-notifation",
@@ -66,10 +73,6 @@ const route = createBrowserRouter([
         element: <StudentDashboard />,
       },
       {
-        path: "create-course",
-        element: <CreateCoursePage />,
-      },
-      {
         path: "instructor-profile-settings",
         element: <InsProfileSettings />,
       },
@@ -78,6 +81,33 @@ const route = createBrowserRouter([
   {
     path: "signup",
     element: <SignupPage />,
+  },
+  {
+    path: "instructor",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        // path: "dashboard",
+        element: <StudentDashboard />,
+      },
+      {
+        path: "profile",
+        element: <InsProfile />,
+      },
+      {
+        path: "settings",
+        element: <InsProfileSettings />,
+      },
+      {
+        path: "create-course",
+        element: <CreateCoursePage />,
+      },
+      {
+        path: "create-quiz",
+        element: <InsQuizEditor />,
+      },
+    ],
   },
   {
     path: "login",

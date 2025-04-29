@@ -10,13 +10,13 @@ export default function StartLearningComponent() {
           </h2>
           <div className="flex items-center gap-4">
             <a
-              class="inline-block rounded-sm bg-primary font-semibold px-8 py-3 text-sm  text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
+              className="inline-block rounded-sm bg-primary font-semibold px-8 py-3 text-sm  text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
               href="#"
             >
               Join the Family
             </a>
             <a
-              class="inline-block rounded-sm bg-gray-800 font-semibold px-8 py-3 text-sm  text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
+              className="inline-block rounded-sm bg-gray-800 font-semibold px-8 py-3 text-sm  text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
               href="#"
             >
               Browse all courses

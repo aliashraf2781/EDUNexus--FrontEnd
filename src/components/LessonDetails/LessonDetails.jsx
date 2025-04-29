@@ -9,7 +9,7 @@ import instructor1  from '../../assets/courses images/instructor1.png';
 function LessonDetails({ lesson }) {
   return (
     <div className='flex flex-col gap-4'>
-        <div style={{backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), url("src/assets/courses images/lessonImage.png")', backgroundSize: 'cover'}} className='relative w-full h-[250px] lg:h-[400px]'>
+        {/* <div style={{backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), url("src/assets/courses images/lessonImage.png")', backgroundSize: 'cover'}} className='relative w-full h-[250px] lg:h-[400px]'>
             <div className='flex flex-col bottom-0 absolute w-full px-3 py-2 gap-2'>
                 <div className='w-full h-[2.5px] bg-light flex'>
                     <div className='w-[30%] h-[2.5px] bg-primary'></div>
@@ -35,7 +35,11 @@ function LessonDetails({ lesson }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
+         {/* add video  */}
+         <div className=' w-full pb-5'>
+            <video className='w-full ' src="https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4" controls></video>
+         </div>
         <span className='text-dark text-2xl font-semibold'>{lesson.lessonTitle}</span>
         <div className='flex justify-between items-center'>
             <div className='flex items-center gap-2'>
@@ -93,7 +97,8 @@ function LessonDetails({ lesson }) {
         <div className='flex flex-col gap-4 py-4'>
             <span className='text-dark text-2xl font-semibold'>Lecture Summary</span>
             <div className='text-gray-600 text-sm leading-normal'>
-                {lesson.lectureSummary}
+                {/* {lesson.lectureSummary} */}
+                1.  React Fundamentals: Understand React concepts for building complex user interfaces. 2.  Modern Web Applications: Build modern and powerful web applications using React. 3.  Industry-Standard Libraries: Leverage libraries like Redux Toolkit, React Router, React Query, Tailwind CSS, and styled-components. 4.  Project-Based Learning: Focus on real-world projects, practice exercises, and challenges. 5.  Deep Dive into React Internals: Gain a thorough understanding of React's inner workings. 6.  Code Comprehension:  Comprehend what your code does to gain confidence in react. 7.  Modern Best Practices: Explore and implement modern best practices in React development. 8.  Advanced Patterns: Learn and utilize advanced patterns used by senior React engineers.
             </div>
         </div>
         <div className='flex flex-col gap-4 py-2'>
