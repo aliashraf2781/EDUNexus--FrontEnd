@@ -9,6 +9,7 @@ import StudentRating from '../../components/StudentRating/StudentRating'
 import InstructorCard from '../../components/InstructorCard/InstructorCard'
 import SmallCourseCard from '../../components/SmallCourseCard/SmallCourseCard'
 import { useParams, useNavigate } from 'react-router'
+import { getInstructors, getStudents, getRelatedCourses } from '../../api/courses'
 
 function CourseDetails() {
   const { id } = useParams();
@@ -24,21 +25,17 @@ function CourseDetails() {
       const data = await response.json();
       setCourse(data);
     };
-
     fetchCourse();
   }, [id]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const instructorsResponse = await fetch('http://localhost:3001/instructors')
-      const studentsResponse = await fetch('http://localhost:3001/students')
-      const relatedCoursesResponse = await fetch(`http://localhost:3001/courses?_limit=5`)
-      const instructorsData = await instructorsResponse.json()
-      const studentsData = await studentsResponse.json()
-      const relatedCoursesData = await relatedCoursesResponse.json()
-      setInstructors(instructorsData)
-      setStudents(studentsData)
-      setRelatedCourses(relatedCoursesData)
+      const instructorsData = await getInstructors()
+      const studentsData = await getStudents()
+      const relatedCoursesData = await getRelatedCourses();
+      setInstructors(instructorsData.data)
+      setStudents(studentsData.data)
+      setRelatedCourses(relatedCoursesData.data)
     }
     fetchData()
   }, [])

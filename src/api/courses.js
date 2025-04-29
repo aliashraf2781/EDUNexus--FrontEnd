@@ -23,3 +23,15 @@ export const getPrices = () => {
 export const getLessons = () => {
     return api.get('/lesson');
 };
+
+export const getInstructors = () => {
+    return api.get('/instructors');
+};
+
+export const getStudents = () => {
+    return api.get('/students');
+};
+
+export const getRelatedCourses = () => {
+    return api.get('/courses?_limit=5');
+};

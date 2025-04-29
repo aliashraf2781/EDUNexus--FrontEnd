@@ -54,7 +54,7 @@ const route = createBrowserRouter([
         element: <CourseNotfication />,
       },
       {
-        path: "instructor-profile",
+        path: "instructor-profile/:id",
         element: <InsProfile />,
       },
       {

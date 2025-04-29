@@ -246,6 +246,7 @@
       "courseRating": 4.9,
       "students": "236,568",
       "courses": "09",
+      "website": "https://www.vakoshvili.com",
       "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
     },
     {
@@ -256,6 +257,7 @@
       "courseRating": 4.6,
       "students": "5,342",
       "courses": "01",
+      "website": "https://www.nimatahami.com",
       "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both..."
     }
   ],

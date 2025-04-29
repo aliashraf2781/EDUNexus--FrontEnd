@@ -10,7 +10,7 @@ function CourseCard({ course }) {
 
   return (
     <div className='w-auto h-fit cursor-pointer border-[1.5px] border-[#E9EAF0]' onClick={handleClick}>
-        <img src={course.image} alt='Course Image' width={270} height={230} className='object-cover w-full'/>
+        <img src={`../../../${course.image}`} alt='Course Image' width={270} height={230} className='object-cover w-full'/>
         <div className='flex flex-col h-[180px]'>
             <div className='px-4 py-4 flex flex-col gap-3 h-[130px]'>
                 <div className='flex justify-between'>
