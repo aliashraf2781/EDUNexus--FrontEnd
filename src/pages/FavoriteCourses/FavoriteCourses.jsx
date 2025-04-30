@@ -25,7 +25,7 @@ function FavoriteCourses() {
         <div className="flex overflow-x-auto space-x-4 scrollbar-thin scrollbar-thumb-gray-300">
           {favorites.map((course) => (
             <div key={course.id} className="flex-shrink-0">
-              <CourseCard course={course} subject={subjects.find(s => s.id === course.subject_id)} />
+              <CourseCard course={course} subject={subjects.find((subject) => (subject.id == course.subject_id))?.name}/>
             </div>
           ))}
         </div>
