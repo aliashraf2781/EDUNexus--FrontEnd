@@ -1,7 +1,7 @@
 import React from 'react'
 import { SlidersVertical, Search } from 'lucide-react'
 
-function StartSection({ showFilters, setShowFilters, results, filters }) {
+function StartSection({ showFilters, setShowFilters, results, filters, setSortOrder, setSearchTerm }) {
   return (
     <div className='flex flex-col gap-3 border-b border-gray-200 my-5'>
       <div className='flex flex-col sm:flex-row lg:justify-between gap-4 md:gap-2'>
@@ -36,6 +36,7 @@ function StartSection({ showFilters, setShowFilters, results, filters }) {
             <input 
               type="text" 
               placeholder='Search' 
+              onChange={(e) => setSearchTerm(e.target.value)}
               className='focus:!outline-none w-full lg:w-sm'
             />
           </div>
@@ -45,7 +46,7 @@ function StartSection({ showFilters, setShowFilters, results, filters }) {
           <div className='flex items-center gap-3 text-dark'>
             <span className='text-[13px] whitespace-nowrap'>Sort by: </span>
             <div className='border-[1.5px] border-gray-100 px-3 h-10 flex items-center cursor-pointer w-fit'>
-              <select className='text-[15px] rounded-none focus:!outline-none w-fit'>
+              <select className='text-[15px] rounded-none focus:!outline-none w-fit' onChange={(e) => setSortOrder(e.target.value)}>
                 <option value="popular">Most Popular</option>
                 <option value="newest">Newest</option>
                 <option value="oldest">Oldest</option>

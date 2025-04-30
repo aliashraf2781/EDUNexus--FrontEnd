@@ -41,7 +41,7 @@ function CourseCard({ course, subject }) {
                         ${course.subject_id === 11 ? 'bg-indigo-100 text-indigo-800' : ''}
                         ${course.subject_id === 12 ? 'bg-lime-100 text-lime-800' : ''}
                         ${course.subject_id === 13 ? 'bg-teal-100 text-teal-800' : ''}`}>
-                            {subject?.name}
+                            {subject}
                     </div>
                     <div className='text-xl text-[#3258B4] font-semibold'>
                         ${course.price}

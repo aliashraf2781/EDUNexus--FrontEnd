@@ -14,9 +14,6 @@ function FilterSection({
   const handleSubjectClick = (subjectId) => {
     setSelectedSubject(prev => prev === subjectId ? null : subjectId);
   };
-  // const handlePriceClick = (priceId) => {
-  //   setSelectedPrice(prev => prev === priceId ? null : priceId);
-  // };
 
   return (
     <div className='flex flex-col gap-4'> 
@@ -55,44 +52,6 @@ function FilterSection({
           ))}
         </div>
       </FilterContainer>
-      
-      {/* <FilterContainer 
-        title="PRICE"
-        showFilters={showFilters}
-        setShowFilters={setShowFilters}
-      >
-        <div className='flex flex-col gap-1 mx-2'>
-          <div className='flex items-center gap-2'>
-            <div className='flex items-center p-2 w-1/2 h-10 border border-gray-200 gap-1'>
-              <span className='text-dark font-semibold'>$</span>
-              <input
-                type="number"
-                min={0}
-                className='w-full h-full outline-none border-none text-sm'
-                placeholder='min'
-              />
-            </div>
-            <div className='flex items-center p-2 w-1/2 h-10 border border-gray-200 gap-1'>
-              <span className='text-dark font-semibold'>$</span>
-              <input
-                type="number"
-                min={0}
-                className='w-full h-full outline-none border-none text-sm'
-                placeholder='max'
-              />
-            </div>
-          </div>
-          {prices.map(price => (
-            <FilterTopic
-              key={price.id}
-              topic={price}
-              isSelected={selectedPrice === (price.id)}
-              onToggle={handlePriceClick}
-              groupName="price"
-            />
-          ))}
-        </div>
-      </FilterContainer> */}
     </div>
   )
 }
