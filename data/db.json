@@ -464,10 +464,7 @@
       "website": "https://www.omarfathy.dev",
       "description": "Omar is a Flutter developer helping students build mobile apps from scratch.",
       "email": "omar.fathy@example.com",
-      "status": "Pending"
-      "description": "Omar is a Flutter developer helping students...",
-      "email": "omar.fathy@example.com",
-      "status": "Deactivated",
+      "status": "Pending",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1oY_cJt2iPp1giM1v4nz5L9rh23I_2e-V"
     },
