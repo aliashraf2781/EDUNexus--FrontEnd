@@ -16,7 +16,6 @@ function VideoJSPlayer({ options }) {
           console.log("Player ready ✅");
         }
       ));
-
       player.on("timeupdate", () => {
         if (!player.paused()) {
           lastTimeRef.current = Math.max(
@@ -42,12 +41,14 @@ function VideoJSPlayer({ options }) {
   }, [options]);
 
   return (
+
     <div data-vjs-player className="w-full max-w-3xl mx-auto">
       <video
         ref={videoRef}
         className="video-js vjs-big-play-centered w-full h-full"
         controls
       />
+
     </div>
   );
 }

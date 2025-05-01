@@ -397,6 +397,7 @@
       "students": "236,568",
       "courses": "09",
       "website": "https://www.vakoshvili.com",
+
       "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case...",
       "email": "Vako.Shvili@example.com",
       "status": "Active",
@@ -417,6 +418,7 @@
       "status": "Active",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1GfOeY91PAs8RxlNkO68FfFv0PmrUwGje"
+
     },
     {
       "id": "3",
@@ -427,11 +429,13 @@
       "students": "23,400",
       "courses": "06",
       "website": "https://www.ahmeddev.com",
+
       "description": "Ahmed has 8+ years of experience in MERN stack...",
       "email": "ahmed.elsayed@example.com",
       "status": "Active",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1y5mx8Aar8t-SO8_cqD3KO8hbHjsq3nmb"
+
     },
     {
       "id": "4",
@@ -442,6 +446,7 @@
       "students": "15,000",
       "courses": "03",
       "website": "https://www.monakhalil.com",
+
       "description": "Mona teaches data analysis using Python, Excel...",
       "email": "mona.khalil@example.com",
       "status": "Active",
@@ -457,6 +462,9 @@
       "students": "8,750",
       "courses": "02",
       "website": "https://www.omarfathy.dev",
+      "description": "Omar is a Flutter developer helping students build mobile apps from scratch.",
+      "email": "omar.fathy@example.com",
+      "status": "Pending"
       "description": "Omar is a Flutter developer helping students...",
       "email": "omar.fathy@example.com",
       "status": "Deactivated",
@@ -472,6 +480,7 @@
       "students": "29,500",
       "courses": "04",
       "website": "https://www.salma-secure.com",
+
       "description": "Salma focuses on ethical hacking, network security...",
       "email": "salma.hassan@example.com",
       "status": "Deactivated",
@@ -487,6 +496,7 @@
       "students": "11,800",
       "courses": "03",
       "website": "https://www.mnour.ai",
+
       "description": "Mohamed helps beginners master ML and AI...",
       "email": "mohamed.nour@example.com",
       "status": "Pending",
@@ -507,6 +517,7 @@
       "status": "Active",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1xk41zYk5oRBxOq8ORe92wKK0rTSmnoDT"
+
     },
     {
       "id": "9",
@@ -522,6 +533,7 @@
       "status": "Deactivated",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1l28x9lxJzFfRO8TtY88QyJWxIYlTAlBu"
+
     },
     {
       "id": "10",
@@ -534,9 +546,62 @@
       "website": "https://www.nourfrontend.com",
       "description": "Nourhan creates beginner-friendly React and HTML/CSS tutorials.",
       "email": "nourhan.adel@example.com",
-      "status": "Active",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1-D0aPqgh1jFqQO7tIHkSM4djdSg17jV9"
+      "status": "Active"
+    },
+    {
+      "id": "11",
+      "name": "Youssef Gamal",
+      "title": "Game Developer & Instructor",
+      "image": "https://source.unsplash.com/random/200x200?person-9",
+      "courseRating": 4.3,
+      "students": "6,700",
+      "courses": "01",
+      "website": "https://www.gamedev-eg.com",
+      "description": "Youssef teaches Unity and game design in Arabic and English.",
+      "email": "youssef.gamal@example.com",
+      "status": "Pending"
+    },
+    {
+      "id": "12",
+      "name": "Aya Hossam",
+      "title": "Backend Developer (Node.js)",
+      "image": "https://source.unsplash.com/random/200x200?woman-10",
+      "courseRating": 4.5,
+      "students": "10,900",
+      "courses": "03",
+      "website": "https://www.ayabackend.dev",
+      "description": "Aya teaches API development, MongoDB, and authentication.",
+      "email": "aya.hossam@example.com",
+      "status": "Active"
+    },
+    {
+      "id": 1746087559031,
+      "name": "Saad",
+      "title": "Arabic Teacher",
+      "image": "SDA",
+      "courseRating": 0,
+      "students": "0",
+      "courses": "0",
+      "website": "DSA",
+      "description": "SAD",
+      "email": "saad_nsr@hotmail.com",
+      "status": "Pending",
+      "driveLink": "SDA"
+    },
+    {
+      "id": 1746088278526,
+      "name": "Saad",
+      "title": "Arabic Teacher",
+      "email": "saad_nsr@hotmail.com",
+      "image": "https://drive.google.com/drive/u/0/",
+      "description": "i AM AN SFDSAPOFJDASDPOFJDSPF",
+      "website": "https://drive.google.com/drive/u/0/",
+      "driveLink": "https://drive.google.com/drive/u/0/",
+      "courseRating": 0,
+      "students": "0",
+      "courses": "0",
+      "status": "Pending"
+
     }
   ],
   "students": [

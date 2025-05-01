@@ -1,83 +1,66 @@
-import React from "react";
-import {
-  SkipBack,
-  Pause,
-  SkipForward,
-  Volume2,
-  Captions,
-  Settings,
-  Maximize,
-  FileText,
-} from "lucide-react";
-import createdBy1 from "../../assets/courses images/createdBy1.png";
-import createdBy2 from "../../assets/courses images/createdBy2.png";
-import avatar1 from "../../assets/courses images/avatar1.png";
-import avatar2 from "../../assets/courses images/avatar2.png";
-import instructor1 from "../../assets/courses images/instructor1.png";
-import VideoJSPlayer from "../VideoPlayer.jsx/VideoPlayer";
+import React from 'react'
+import {SkipBack, Pause, SkipForward, Volume2, Captions, Settings, Maximize, FileText} from 'lucide-react'
+import createdBy1  from '../../assets/courses images/createdBy1.png';
+import createdBy2  from '../../assets/courses images/createdBy2.png';
+import avatar1  from '../../assets/courses images/avatar1.png';
+import avatar2  from '../../assets/courses images/avatar2.png';
+import instructor1  from '../../assets/courses images/instructor1.png';
+import VideoJSPlayer from '../VideoPlayer.jsx/VideoPlayer';
+
 
 function LessonDetails({ lesson }) {
-  return (
-    <div className="flex flex-col gap-4">
-      {/* <div style={{backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent), url("src/assets/courses images/lessonImage.png")', backgroundSize: 'cover'}} className='relative w-full h-[250px] lg:h-[400px]'>
-            <div className='flex flex-col bottom-0 absolute w-full px-3 py-2 gap-2'>
-                <div className='w-full h-[2.5px] bg-light flex'>
-                    <div className='w-[30%] h-[2.5px] bg-primary'></div>
-                    <div className='w-[20%] h-[2.5px] bg-gray-300'></div>
-                </div>
-                <div className='w-full py-1 flex justify-between gap-2'>
-                    <div className='flex gap-3 items-center'>
-                        <div className='flex items-center gap-1.5'>
-                            <SkipBack size={15} color='white' fill='white'/>
-                            <Pause size={15} color='white' fill='white'/>
-                            <SkipForward size={15} color='white' fill='white'/>
-                        </div>
-                        <div className='text-white text-xs'>
-                            1:25 / 9:15
-                        </div>
+    // const [isChecked, setIsChecked] = useState(false);
+    // const handleVideoEnd = () => {
+    //     setIsChecked(true);
+    // }
 
+
+  return (
+    <div className='flex flex-col gap-4'>
+
+        <div className=' w-full pb-5'>
+        <VideoJSPlayer options={{
+        controls: true,
+        autoplay: false,
+        preload: "auto",
+         fluid: false,
+        width: 640,
+        height: 360,
+        sources: [{
+            src: 'https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4 ',
+            type: 'video/mp4'
+        }]
+      }} />
+      <h1 className='text-white'>
+      sadjknsakjd
+
+      </h1>
+         </div>
+        <span className='text-dark text-2xl font-semibold'>{lesson.lessonTitle}</span>
+        <div className='flex justify-between items-center'>
+            <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2'>
+                   <div className="w-7 h-7 rounded-full relative">
+                        <img src={createdBy2} alt="Avatar" className="w-full h-full object-cover" />
                     </div>
-                    <div className='flex items-center gap-2'>
-                        <Volume2 size={17} color='white'/>
-                        <Captions size={17} color='white'/>
-                        <Settings size={17} color='white'/>
-                        <Maximize size={17} color='white'/>
+                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
+                        <img src={createdBy1} alt="Avatar" className="w-full h-full object-cover" />
                     </div>
+                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
+                        <img src={avatar1} alt="Avatar" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
+                        <img src={avatar2} alt="Avatar" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
+                        <img src={instructor1} alt="Avatar" className="w-full h-full object-cover" />
+                    </div> 
                 </div>
-            </div>
-        </div> */}
-      {/* add video  */}
-      <div className=" w-full pb-5">
-        <VideoJSPlayer
-          options={{
-            controls: true,
-            autoplay: false,
-            preload: "auto",
-            fluid: true, // <-- TURN THIS OFF
-            width: 640,
-            height: 360,
-            sources: [
-              {
-                src: "https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4 ",
-                type: "video/mp4",
-              },
-            ],
-          }}
-        />
-        sadjknsakjd
-      </div>
-      <span className="text-dark text-2xl font-semibold">
-        {lesson.lessonTitle}
-      </span>
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full relative">
-              <img
-                src={createdBy2}
-                alt="Avatar"
-                className="w-full h-full object-cover"
-              />
+                <div className='flex flex-col'>
+                    <span className='text-dark text-sm font-semibold'>{lesson.studentsWatching}</span>
+                    <span className='text-gray-600 text-xs'>Students Watching</span>
+                </div>
+
             </div>
             <div className="w-7 h-7 rounded-full relative ml-[-20px]">
               <img
