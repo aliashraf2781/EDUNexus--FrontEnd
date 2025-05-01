@@ -1,9 +1,15 @@
 import React from 'react'
 import { Star, UsersRound, CirclePlay } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 function InstructorCard({instructor}) {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/instructor-profile/${instructor.id}`);
+    };
+
   return (
-    <div className='w-full h-fit border border-gray-200 flex items-start py-2 px-1'>
+    <div className='w-full h-fit border border-gray-200 flex items-start py-2 px-1' onClick={handleClick}>
         <div className='w-1/4 p-4'>
             <img src={`../../../${instructor.image}`} alt="instructor1" width={120} height={120} />
         </div>

@@ -1,172 +1,53 @@
-import React, { useState } from 'react'
-import { Cpu, ChevronDown } from 'lucide-react'
+import React from 'react'
 import FilterContainer from '../FilterContainer/FilterContainer'
 import FilterTopic from '../FilterTopic/FilterTopic'
 
 
-function FilterSection({ showFilters, setShowFilters, categories, courseLevels, tools, prices }) {
-  const [openTopics, setOpenTopics] = useState({})
-  const [selectedTopics, setSelectedTopics] = useState([])
-  const [selectedLevels, setSelectedLevels] = useState([])
-  const [selectedTools, setSelectedTools] = useState([])
-  const [selectedPrice, setSelectedPrice] = useState([])
-
-  const handleTopicClick = (topicId) => {
-    setSelectedTopics(prev => 
-      prev.includes(topicId) 
-        ? prev.filter(id => id !== topicId)
-        : [...prev, topicId]
-    )
-  }
-
-  const handleLevelClick = (levelId) => {
-    setSelectedLevels(prev => 
-      prev.includes(levelId) 
-        ? prev.filter(id => id !== levelId)
-        : [...prev, levelId]
-    )
-  }
-
-  const handleToolClick = (toolId) => {
-    setSelectedTools(prev => 
-      prev.includes(toolId) 
-        ? prev.filter(id => id !== toolId)
-        : [...prev, toolId]
-    )
-  }
-  
-  const handlePriceClick = (priceId) => {
-    setSelectedPrice(prev => 
-      prev.includes(priceId) 
-        ? prev.filter(id => id !== priceId)
-        : [...prev, priceId]
-    )
-  }
-
-  const toggleTopics = (categoryId) => {
-    setOpenTopics(prev => ({
-      ...prev,
-      [categoryId]: !prev[categoryId]
-    }))
-  }
+function FilterSection({
+  showFilters, setShowFilters,
+  grades, subjects,selectedGrade, setSelectedGrade,
+  selectedSubject, setSelectedSubject,
+}) {
+  const handleGradeClick = (gradeId) => {
+    setSelectedGrade(prev => prev === gradeId ? null : gradeId);
+  };
+  const handleSubjectClick = (subjectId) => {
+    setSelectedSubject(prev => prev === subjectId ? null : subjectId);
+  };
 
   return (
     <div className='flex flex-col gap-4'> 
       <FilterContainer 
-        title="CATEGORY"
-        showFilters={showFilters}
-        setShowFilters={setShowFilters}
-      >
-        {categories.map(category => (
-          <div key={category.id} 
-            className={`flex flex-col rounded-sm transition-colors duration-200 bg-white`}
-            onClick={(e) => {
-              e.preventDefault()
-              toggleTopics(category.id)
-            }}
-          >
-            <label className='flex items-center justify-between p-2 cursor-pointer'>
-              <div className='flex items-center gap-2'>
-                <Cpu size={20} className={`transition-colors duration-100
-                  ${openTopics[category.id] ? 'text-primary' : 'text-light'}`}
-                />
-                <span className='transition-colors duration-200 text-dark'>
-                  {category.name}
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <ChevronDown 
-                  size={16} 
-                  className={`cursor-pointer transition-all duration-200
-                    ${openTopics[category.id] 
-                      ? 'rotate-180 text-primary' 
-                      : 'text-light'}`}
-                />
-              </div>
-            </label>
-
-            {openTopics[category.id] && (
-              <div className='flex flex-col gap-1 mt-1 mx-2 mb-2'>
-                {category.topics?.map(topic => (
-                  <FilterTopic
-                    key={topic.id}
-                    topic={topic}
-                    isSelected={selectedTopics.includes(topic.id)}
-                    onToggle={handleTopicClick}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </FilterContainer>
-
-      <FilterContainer 
-        title="COURSE LEVEL"
+        title="GRADES"
         showFilters={showFilters}
         setShowFilters={setShowFilters}
       >
         <div className='flex flex-col gap-1 mt-1 mx-2 mb-2'>
-          {courseLevels.map(level => (
+          {grades.map(grade => (
             <FilterTopic
-              key={level.id}
-              topic={level}
-              isSelected={selectedLevels.includes(level.id)}
-              onToggle={handleLevelClick}
+              key={grade.id}
+              topic={grade}
+              isSelected={selectedGrade === grade.id}
+              groupName="grade"
+              onToggle={handleGradeClick}
             />
           ))}
         </div>
       </FilterContainer>
-      
+
       <FilterContainer 
-        title="TOOLS"
+        title="Subjects"
         showFilters={showFilters}
         setShowFilters={setShowFilters}
       >
         <div className='flex flex-col gap-1 mt-1 mx-2 mb-2'>
-          {tools.map(tool => (
+          {subjects.map(subject => (
             <FilterTopic
-              key={tool.id}
-              topic={tool}
-              isSelected={selectedTools.includes(tool.id)}
-              onToggle={handleToolClick}
-            />
-          ))}
-        </div>
-      </FilterContainer>
-      
-      <FilterContainer 
-        title="PRICE"
-        showFilters={showFilters}
-        setShowFilters={setShowFilters}
-      >
-        <div className='flex flex-col gap-1 mx-2'>
-          <div className='flex items-center gap-2'>
-            <div className='flex items-center p-2 w-1/2 h-10 border border-gray-200 gap-1'>
-              <span className='text-dark font-semibold'>$</span>
-              <input
-                type="number"
-                min={0}
-                className='w-full h-full outline-none border-none text-sm'
-                placeholder='min'
-              />
-            </div>
-            <div className='flex items-center p-2 w-1/2 h-10 border border-gray-200 gap-1'>
-              <span className='text-dark font-semibold'>$</span>
-              <input
-                type="number"
-                min={0}
-                className='w-full h-full outline-none border-none text-sm'
-                placeholder='max'
-              />
-            </div>
-          </div>
-          {prices.map(price => (
-            <FilterTopic
-              key={price.id}
-              topic={price}
-              isSelected={selectedPrice.includes(price.id)}
-              onToggle={handlePriceClick}
+              key={subject.id}
+              topic={subject}
+              isSelected={selectedSubject === subject.id}
+              groupName="subject"
+              onToggle={handleSubjectClick}
             />
           ))}
         </div>
