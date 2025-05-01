@@ -5,7 +5,7 @@ function InstructorProfileCard() {
   return (
     <div className="flex gap-3 bg-white border-[1.5px] border-secondary p-4 flex-col lg:flex-row">
         <div className='p-2'>
-            <img src="src/assets/courses images/instructor1.png" alt="instructor" width={140} height={140}/>
+            <img src={`../../../src/assets/courses images/instructor1.png`} alt="instructor" width={140} height={140}/>
         </div>
         <div className='flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-40'>
             <div className='flex flex-col gap-1.5 py-2'>

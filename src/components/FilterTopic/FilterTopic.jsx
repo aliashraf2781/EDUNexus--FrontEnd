@@ -1,50 +1,31 @@
 import React from 'react'
 
-function FilterTopic({ topic, isSelected, onToggle }) {
+function FilterTopic({ topic, isSelected, onToggle, groupName }) {
   return (
     <label 
       className='flex items-center justify-between py-2 cursor-pointer'
-      onClick={(e) => e.stopPropagation()}
+      // onClick={(e) => e.stopPropagation()}
     >
       <div className='flex items-center gap-2'>
-        <div className="relative">
+        <div className="relative w-5 h-5">
           <input
-            type="checkbox"
+            type="radio"
+            name={groupName}
             checked={isSelected}
-            onChange={(e) => {
-              e.stopPropagation()
-              onToggle(topic.id)
-            }}
-            className="appearance-none w-4 h-4 border border-light 
-              checked:bg-primary checked:border-primary
-              transition-colors duration-200 cursor-pointer"
-            style={{ borderRadius: 0 }}
+            onChange={() => (onToggle(topic.id), console.log("Radio changed:", topic.id))}
+            className="peer absolute w-full h-full opacity-0 cursor-pointer"
           />
-          {isSelected && (
-            <svg 
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 text-white pointer-events-none" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="4" 
-              strokeLinecap="square" 
-              strokeLinejoin="square"
-            >
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-          )}
+          <div className="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center">
+            <div className={`w-3 h-3 rounded-full bg-primary transition-transform duration-200 
+              ${isSelected ? 'scale-100' : 'scale-0'}`} />
+          </div>
         </div>
-        <span className={`text-sm transition-colors duration-200
+        <span className={`text-md transition-colors duration-200
           ${isSelected ? 'text-primary font-semibold' : 'text-gray-600'}`}
         >
           {topic.name}
         </span>
       </div>
-      <span className={`text-sm text-gray-500
-        ${isSelected ? 'text-gray-700 font-semibold' : ''}`}
-      >
-        ({topic.count})
-      </span>
     </label>
   )
 }
