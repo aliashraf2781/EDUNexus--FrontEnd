@@ -42,8 +42,12 @@ function VideoJSPlayer({ options }) {
   }, [options]);
 
   return (
-    <div data-vjs-player>
-      <video ref={videoRef} className="video-js vjs-big-play-centered" />
+    <div data-vjs-player className="w-full max-w-3xl mx-auto">
+      <video
+        ref={videoRef}
+        className="video-js vjs-big-play-centered w-full h-full"
+        controls
+      />
     </div>
   );
 }

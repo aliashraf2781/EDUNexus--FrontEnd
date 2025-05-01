@@ -24,3 +24,6 @@
 .Assignment-items::-webkit-scrollbar-thumb:hover {
   background: #d63a1c;
 }
+video{
+  display: block !important ;
+}
