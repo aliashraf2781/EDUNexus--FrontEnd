@@ -27,6 +27,8 @@ import ApplicationReview from "./pages/InstructorReviewPage/InstructorReviewPage
 import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
 import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
+import OrganizationDashboard from './Components/Layout/OrganizationDashboard';
+
 const route = createBrowserRouter([
   {
     path: "/",
@@ -121,6 +123,13 @@ const route = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path:"organization-dashboard",
+    element:<OrganizationDashboard/>,
+    
+  },
+
   {
     path: "login",
     element: <Login />,
