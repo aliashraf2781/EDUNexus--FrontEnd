@@ -1,282 +1,595 @@
-
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Development",
       "count": 4235,
       "topics": [
-        { "id": 11, "name": "Web Development", "count": 2100 },
-        { "id": 12, "name": "Mobile Development", "count": 1235 },
-        { "id": 13, "name": "Game Development", "count": 900 }
+        {
+          "id": 11,
+          "name": "Web Development",
+          "count": 2100
+        },
+        {
+          "id": 12,
+          "name": "Mobile Development",
+          "count": 1235
+        },
+        {
+          "id": 13,
+          "name": "Game Development",
+          "count": 900
+        }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Business",
       "count": 3454,
       "topics": [
-        { "id": 21, "name": "Entrepreneurship", "count": 1500 },
-        { "id": 22, "name": "Marketing", "count": 1200 },
-        { "id": 23, "name": "Finance", "count": 754 }
+        {
+          "id": 21,
+          "name": "Entrepreneurship",
+          "count": 1500
+        },
+        {
+          "id": 22,
+          "name": "Marketing",
+          "count": 1200
+        },
+        {
+          "id": 23,
+          "name": "Finance",
+          "count": 754
+        }
       ]
     }
   ],
   "courseLevels": [
-    { "id": 1, "name": "All Level", "count": 3214 },
-    { "id": 2, "name": "Beginner", "count": 1234 },
-    { "id": 3, "name": "Intermediate", "count": 2341 },
-    { "id": 4, "name": "Expert", "count": 1432 }
+    {
+      "id": "1",
+      "name": "All Level",
+      "count": 3214
+    },
+    {
+      "id": "2",
+      "name": "Beginner",
+      "count": 1234
+    },
+    {
+      "id": "3",
+      "name": "Intermediate",
+      "count": 2341
+    },
+    {
+      "id": "4",
+      "name": "Expert",
+      "count": 1432
+    }
   ],
   "tools": [
-    { "id": 1, "name": "HTML 5", "count": 3214 },
-    { "id": 2, "name": "CSS 3", "count": 1234 },
-    { "id": 3, "name": "React", "count": 2341 },
-    { "id": 4, "name": "Node.js", "count": 1432 }
+    {
+      "id": "1",
+      "name": "HTML 5",
+      "count": 3214
+    },
+    {
+      "id": "2",
+      "name": "CSS 3",
+      "count": 1234
+    },
+    {
+      "id": "3",
+      "name": "React",
+      "count": 2341
+    },
+    {
+      "id": "4",
+      "name": "Node.js",
+      "count": 1432
+    }
   ],
   "prices": [
-    { "id": 1, "name": "Paid", "count": 1234 },
-    { "id": 2, "name": "Free", "count": 3214 }
+    {
+      "id": "1",
+      "name": "Paid",
+      "count": 1234
+    },
+    {
+      "id": "2",
+      "name": "Free",
+      "count": 3214
+    }
+  ],
+  "subjects": [
+    {
+      "id": "1",
+      "name": "Arabic Language"
+    },
+    {
+      "id": "2",
+      "name": "Mathematics"
+    },
+    {
+      "id": "3",
+      "name": "Science"
+    },
+    {
+      "id": "4",
+      "name": "English Language"
+    },
+    {
+      "id": "5",
+      "name": "Social Studies"
+    },
+    {
+      "id": "6",
+      "name": "Physics"
+    },
+    {
+      "id": "7",
+      "name": "Chemistry"
+    },
+    {
+      "id": "8",
+      "name": "Biology"
+    },
+    {
+      "id": "9",
+      "name": "Philosophy and Logic"
+    },
+    {
+      "id": "10",
+      "name": "Psychology and Sociology"
+    },
+    {
+      "id": "11",
+      "name": "History"
+    },
+    {
+      "id": "12",
+      "name": "Geography"
+    },
+    {
+      "id": "13",
+      "name": "Computer Science"
+    }
+  ],
+  "grades": [
+    {
+      "id": "1",
+      "name": "Grade 1"
+    },
+    {
+      "id": "2",
+      "name": "Grade 2"
+    },
+    {
+      "id": "3",
+      "name": "Grade 3"
+    },
+    {
+      "id": "4",
+      "name": "Grade 4"
+    },
+    {
+      "id": "5",
+      "name": "Grade 5"
+    },
+    {
+      "id": "6",
+      "name": "Grade 6"
+    },
+    {
+      "id": "7",
+      "name": "Grade 7"
+    },
+    {
+      "id": "8",
+      "name": "Grade 8"
+    },
+    {
+      "id": "9",
+      "name": "Grade 9"
+    },
+    {
+      "id": "10",
+      "name": "Grade 10"
+    },
+    {
+      "id": "11",
+      "name": "Grade 11"
+    },
+    {
+      "id": "12",
+      "name": "Grade 12"
+    }
   ],
   "courses": [
     {
-      "id": 1,
-      "title": "Complete Blender Creator: Learn 3D Modelling for Beginners",
-      "category": "DEVELOPMENTS",
-      "price": 49,
-      "rating": 4.9,
-      "students": 197637,
-      "image": "src/assets/courses images/course1.png",
-      "progress": 75,
-      "shortDescription": "Learn 3D modeling with Blender from scratch.",
-      "longDescription": "Dive into the world of 3D modeling with Blender, the industry-standard open-source software. In this comprehensive course, you'll learn everything from basic navigation to creating detailed characters, environments, and animations. Whether you are aiming to become a 3D artist, game developer, or animator, this course provides the perfect foundation."  
-    },
-    {
-      "id": 2,
-      "title": "React for Beginners",
-      "category": "DEVELOPMENTS",
-      "price": 39,
-      "rating": 4.7,
-      "students": 95637,
-      "image": "src/assets/courses images/course2.png",
+      "id": "1",
+      "title": "Introduction to Science for Grade 4",
+      "subject_id": 3,
+      "grade": 4,
+      "instructor_id": 3,
+      "price": 30,
+      "rating": 4.8,
+      "students": 22000,
+      "image_url": "src/assets/courses images/course1.jpeg",
       "progress": 50,
-      "shortDescription": "Master React basics and build modern web apps.",
-      "longDescription": "Start your journey into web development by mastering React, one of the most popular JavaScript libraries. This beginner-friendly course covers fundamental concepts like components, props, state management, and React Router, preparing you to build dynamic and modern web applications from scratch."
+      "shortDescription": "Learn the basics of natural science with fun activities.",
+      "longDescription": "This course introduces Grade 4 students to the wonders of science through engaging experiments and simple explanations about matter, energy, and ecosystems.",
+      "created_at": "2024-08-15T14:23:11Z"
     },
     {
-      "id": 3,
-      "title": "Digital Marketing Masterclass",
-      "category": "BUSINESS",
-      "price": 29,
-      "rating": 4.8,
-      "students": 123012,
-      "image": "src/assets/courses images/course3.png",
-      "progress": 80,
-      "shortDescription": "Become a digital marketing expert.",
-      "longDescription": "Transform your career by mastering the essential skills of digital marketing. This all-in-one masterclass covers SEO, content marketing, Google Ads, social media strategies, email marketing, and analytics, helping you craft effective marketing campaigns and boost business growth."
-    },
-    {
-      "id": 4,
-      "title": "Introduction to Python Programming",
-      "category": "DEVELOPMENTS",
-      "price": 35,
-      "rating": 4.6,
-      "students": 78412,
-      "image": "src/assets/courses images/course4.png",
-      "progress": 60,
-      "shortDescription": "Learn Python programming fundamentals.",
-      "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
-    },
-    {
-      "id": 5,
-      "title": "Financial Analysis for Beginners",
-      "category": "BUSINESS",
-      "price": 45,
-      "rating": 4.9,
-      "students": 45600,
-      "image": "src/assets/courses images/course5.png",
-      "progress": 5,
-      "shortDescription": "Learn Python programming fundamentals.",
-      "longDescription": "Learn to program with Python, one of the most versatile and beginner-friendly languages in the world. Through practical examples and projects, you'll build a strong foundation in programming basics, data structures, algorithms, and scripting for automation and data analysis."
-    },
-    {
-      "id": 6,
-      "title": "Mastering CSS and Flexbox",
-      "category": "DEVELOPMENTS",
+      "id": "2",
+      "title": "Mathematics Basics for Grade 2",
+      "subject_id": 2,
+      "grade": 2,
+      "instructor_id": 2,
       "price": 25,
-      "rating": 4.5,
-      "students": 67899,
-      "image": "src/assets/courses images/course6.png",
-      "progress": 40,
-      "shortDescription": "CSS and Flexbox mastery for web design.",
-      "longDescription": "Master the art of building responsive and visually stunning web pages with CSS and Flexbox. This course provides hands-on experience with layout techniques, animations, and real-world projects to help you create professional, mobile-friendly websites with confidence."
-    },
-    {
-      "id": 7,
-      "title": "Entrepreneurship Crash Course",
-      "category": "BUSINESS",
-      "price": 59,
-      "rating": 4.7,
-      "students": 90321,
-      "image": "src/assets/courses images/course7.png",
-      "progress": 76,
-      "shortDescription": "Kickstart your entrepreneurship journey.",
-      "longDescription": "Launch your business idea with confidence! This crash course covers the essentials of entrepreneurship, from idea validation and business planning to funding, marketing, and scaling your startup. Get the practical skills and mindset you need to thrive as an entrepreneur."
-    },
-    {
-      "id": 8,
-      "title": "Full-Stack Web Development Bootcamp",
-      "category": "DEVELOPMENTS",
-      "price": 89,
-      "rating": 4.8,
-      "students": 210300,
-      "image": "src/assets/courses images/course8.png",
+      "rating": 4.6,
+      "students": 18000,
+      "image_url": "src/assets/courses images/course2.jpeg",
       "progress": 65,
-      "shortDescription": "Full-stack web development training.",
-      "longDescription": "Become a full-stack web developer with this intensive bootcamp! Learn front-end development with HTML, CSS, JavaScript, and React, and back-end development with Node.js, Express, and MongoDB. Build and deploy real-world projects, and prepare for a career in tech."
+      "shortDescription": "Simple addition, subtraction, and shapes.",
+      "longDescription": "A fun-filled course for young learners to understand numbers, addition, subtraction, and basic geometry concepts through games and real-life examples.",
+      "created_at": "2024-11-09T09:37:45Z"
     },
     {
-      "id": 9,
-      "title": "JavaScript ES6+ Guide",
-      "category": "DEVELOPMENTS",
-      "price": 34,
-      "rating": 4.6,
-      "students": 45670,
-      "image": "src/assets/courses images/course9.png",
-      "progress": 77,
-      "shortDescription": "Advanced JavaScript ES6+ techniques.",
-      "longDescription": "Level up your JavaScript skills with a deep dive into ES6+ features. This course covers everything from arrow functions, destructuring, and modules, to promises, async/await, and modern best practices, enabling you to write cleaner, more efficient code."
-    },
-    {
-      "id": 10,
-      "title": "Marketing Strategies in 2025",
-      "category": "BUSINESS",
-      "price": 42,
+      "id": "3",
+      "title": "English Skills for Grade 5",
+      "subject_id": 4,
+      "grade": 5,
+      "instructor_id": 4,
+      "price": 35,
       "rating": 4.7,
-      "students": 87564,
-      "image": "src/assets/courses images/course10.png",
-      "progress": 75,
-      "shortDescription": "Master marketing strategies for 2025.",
-      "longDescription": "Stay ahead of the curve with the latest marketing strategies tailored for 2025 and beyond. Learn about AI-driven marketing, personalized customer journeys, content marketing innovations, and how to leverage new platforms to maximize brand reach and engagement."
+      "students": 25000,
+      "image_url": "src/assets/courses images/course3.jpeg",
+      "progress": 45,
+      "shortDescription": "Boost your English reading and writing.",
+      "longDescription": "Designed for Grade 5 students, this course focuses on building vocabulary, grammar, reading comprehension, and writing simple essays through interactive activities.",
+      "created_at": "2024-12-25T12:10:03Z"
     },
     {
-      "id": 11,
-      "title": "Node.js & Express from Scratch",
-      "category": "DEVELOPMENTS",
-      "price": 38,
+      "id": "4",
+      "title": "Geography for Grade 8",
+      "subject_id": 12,
+      "grade": 8,
+      "instructor_id": 12,
+      "price": 40,
       "rating": 4.5,
-      "students": 63450,
-      "image": "src/assets/courses images/course11.png",
-      "progress": 88,
-      "shortDescription": "Node.js & Express backend development.",
-      "longDescription": "Learn how to build powerful and scalable web applications with Node.js and Express. This course covers server-side development, RESTful APIs, authentication, middleware, and deploying your applications to the cloud. Perfect for aspiring back-end developers!"
+      "students": 14000,
+      "image_url": "src/assets/courses images/course4.jpeg",
+      "progress": 30,
+      "shortDescription": "Explore continents, oceans, and climates.",
+      "longDescription": "This course takes students on a journey around the world to learn about continents, major rivers, oceans, and global climate patterns with fun map activities.",
+      "created_at": "2024-06-02T08:44:51Z"
     },
     {
-      "id": 12,
-      "title": "Excel for Business Analysis",
-      "category": "BUSINESS",
-      "price": 31,
+      "id": "5",
+      "title": "Physics Basics for Grade 10",
+      "subject_id": 6,
+      "grade": 10,
+      "instructor_id": 6,
+      "price": 60,
+      "rating": 4.9,
+      "students": 19500,
+      "image_url": "src/assets/courses images/course5.jpeg",
+      "progress": 55,
+      "shortDescription": "Fundamentals of forces, motion, and energy.",
+      "longDescription": "Learn the basic principles of physics including force, motion, work, and energy with real-world examples and experiments explained in simple terms.",
+      "created_at": "2024-09-27T17:30:16Z"
+    },
+    {
+      "id": "6",
+      "title": "Computer Skills for Grade 6",
+      "subject_id": 13,
+      "grade": 6,
+      "instructor_id": 13,
+      "price": 30,
+      "rating": 4.4,
+      "students": 12500,
+      "image_url": "src/assets/courses images/course6.png",
+      "progress": 40,
+      "shortDescription": "Basic computer operations and typing skills.",
+      "longDescription": "A beginner-friendly course teaching students the basics of using computers, typing skills, file management, and internet safety tips.",
+      "created_at": "2025-01-19T11:22:18Z"
+    },
+    {
+      "id": "7",
+      "title": "Chemistry Essentials for Grade 11",
+      "subject_id": 7,
+      "grade": 11,
+      "instructor_id": 7,
+      "price": 65,
+      "rating": 4.7,
+      "students": 17500,
+      "image_url": "src/assets/courses images/course7.jpeg",
+      "progress": 70,
+      "shortDescription": "Master chemical equations and bonding.",
+      "longDescription": "An intensive course covering chemical equations, molecular bonding, and the periodic table essentials for Grade 11 science students.",
+      "created_at": "2024-07-08T19:55:02Z"
+    },
+    {
+      "id": "8",
+      "title": "Social Studies for Grade 7",
+      "subject_id": 5,
+      "grade": 7,
+      "instructor_id": 5,
+      "price": 45,
+      "rating": 4.5,
+      "students": 15000,
+      "image_url": "src/assets/courses images/course8.jpeg",
+      "progress": 60,
+      "shortDescription": "Discover ancient civilizations and cultures.",
+      "longDescription": "Students will explore major civilizations, ancient societies, and world religions with engaging storytelling, interactive activities, and quizzes.",
+      "created_at": "2025-02-14T10:05:31Z"
+    },
+    {
+      "id": "9",
+      "title": "Biology: Cells and Systems for Grade 10",
+      "subject_id": 8,
+      "grade": 10,
+      "instructor_id": 8,
+      "price": 55,
       "rating": 4.6,
-      "students": 74210,
-      "image": "src/assets/courses images/course12.png",
-      "shortDescription": "Excel for business insights and analysis.",
-      "longDescription": "Harness the full potential of Microsoft Excel for business analysis and decision-making. This course teaches advanced Excel functions, data visualization, PivotTables, VLOOKUP, and scenario analysis to help you make data-driven business decisions confidently."
+      "students": 16000,
+      "image_url": "src/assets/courses images/course9.jpeg",
+      "progress": 50,
+      "shortDescription": "Study cells, tissues, and human body systems.",
+      "longDescription": "An exciting introduction to biology that covers cellular structure, plant and human tissues, and body systems for high school beginners.",
+      "created_at": "2024-10-22T15:48:07Z"
     },
     {
-      "id": 21,
-      "title": "Machine Learning A-Z™: Hands-On Python & R In Data...",
-      "category": "DESIGN",
-      "price": 57,
-      "rating": "5.0",
-      "students": "265.7K",
-      "image": "src/assets/courses images/relatedCourse1.png",
-      "shortDescription": "Master Machine Learning with hands-on projects in Python and R.",
-      "longDescription": "This comprehensive course walks you through the most important machine learning concepts, algorithms, and practical projects. Learn how to build predictive models, perform deep analysis, and apply machine learning techniques using Python and R. Perfect for both beginners and professionals looking to enhance their data science skills."
+      "id": "10",
+      "title": "History of Egypt for Grade 9",
+      "subject_id": 11,
+      "grade": 9,
+      "instructor_id": 11,
+      "price": 50,
+      "rating": 4.5,
+      "students": 13000,
+      "image_url": "src/assets/courses images/course10.jpeg",
+      "progress": 35,
+      "shortDescription": "Ancient Egypt to modern times.",
+      "longDescription": "This course guides students through the fascinating history of Egypt, from the pharaohs to the present day, with maps, timelines, and visual documentaries.",
+      "created_at": "2024-05-03T07:14:39Z"
     },
     {
-      "id": 22,
-      "title": "The Complete 2021 Web Development Bootcamp",
-      "category": "DEVELOPMENTS",
-      "price": 57,
-      "rating": "5.0",
-      "students": "265.7K",
-      "image": "src/assets/courses images/relatedCourse2.png",
-      "shortDescription": "Become a full-stack web developer from scratch.",
-      "longDescription": "This bootcamp takes you from beginner to professional web developer. You’ll master HTML, CSS, JavaScript, Node.js, React, MongoDB, and more through hands-on projects and real-world examples. Ideal for anyone looking to build a career in web development or launch their own websites and apps."
+      "id": "11",
+      "title": "Philosophy and Logic for Grade 12",
+      "subject_id": 9,
+      "grade": 12,
+      "instructor_id": 9,
+      "price": 70,
+      "rating": 4.7,
+      "students": 11000,
+      "image_url": "src/assets/courses images/course11.jpeg",
+      "progress": 65,
+      "shortDescription": "Learn critical thinking and logic foundations.",
+      "longDescription": "Teaches students how to think logically, reason critically, and analyze arguments systematically, preparing them for university-level thinking.",
+      "created_at": "2025-03-04T18:32:55Z"
     },
     {
-      "id": 33,
-      "title": "Learn Python Programming Masterclass",
-      "category": "BUSINESS",
-      "price": 57,
-      "rating": "5.0",
-      "students": "265.7K",
-      "image": "src/assets/courses images/relatedCourse3.png",
-      "shortDescription": "Master Python programming from beginner to advanced.",
-      "longDescription": "This masterclass is your complete guide to becoming proficient in Python. Starting with the basics, you'll progress to advanced topics like object-oriented programming, file handling, error management, and working with external libraries. Whether you aim to develop apps, automate tasks, or dive into AI, this course sets the perfect foundation."
-    },
-    {
-      "id": 44,
-      "title": "The Complete Digital Marketing Course - 12 Courses in 1",
-      "category": "MARKETING",
-      "price": 57,
-      "rating": "5.0",
-      "students": "265.7K",
-      "image": "src/assets/courses images/relatedCourse4.png",
-      "shortDescription": "Learn all aspects of digital marketing in one complete course.",
-      "longDescription": "Covering SEO, YouTube Marketing, Facebook Marketing, Google Analytics, Email Marketing, and more, this course combines 12 mini-courses into one mega-package. Ideal for business owners, marketers, and anyone looking to grow their brand or career online with powerful digital marketing strategies."
-    },
-    {
-      "id": 55,
-      "title": "Reiki Level I, II and Master/Teacher Program",
-      "category": "IT & SOFTWARE",
-      "price": 57,
-      "rating": "5.0",
-      "students": "265.7K",
-      "image": "src/assets/courses images/relatedCourse5.png",
-      "shortDescription": "Become a certified Reiki healer from beginner to Master level.",
-      "longDescription": "Discover the powerful healing technique of Reiki and earn certifications for Level I, II, and Master/Teacher. Learn how to channel energy for self-healing and helping others, master advanced Reiki practices, and explore the spiritual journey of becoming a Reiki Master with professional guidance."
+      "id": "12",
+      "title": "Arabic Reading Skills for Grade 3",
+      "subject_id": 1,
+      "grade": 3,
+      "instructor_id": 1,
+      "price": 28,
+      "rating": 4.6,
+      "students": 17000,
+      "image_url": "src/assets/courses images/course12.png",
+      "progress": 55,
+      "shortDescription": "Enhance your Arabic reading and comprehension.",
+      "longDescription": "Aimed at Grade 3 students to strengthen their Arabic reading comprehension, vocabulary, and storytelling skills through fun exercises.",
+      "created_at": "2024-12-03T13:39:22Z"
     }
   ],
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Vako Shvili",
       "title": "Web Designer & Best-Selling Instructor",
       "image": "src/assets/courses images/instructor1.png",
       "courseRating": 4.9,
       "students": "236,568",
       "courses": "09",
-      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
+      "website": "https://www.vakoshvili.com",
+      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed...",
+      "email": "Vako.Shvili@example.com",
+      "status": "Active"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Nima Tahami",
       "title": "Entrepreneur & Designer • Founder of ShiftRide",
       "image": "src/assets/courses images/instructor2.png",
       "courseRating": 4.6,
       "students": "5,342",
       "courses": "01",
-      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both..."
+      "website": "https://www.nimatahami.com",
+      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both...",
+      "email": "Nima.Tahami@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "name": "Ahmed El-Sayed",
+      "title": "Full-Stack Web Developer",
+      "image": "https://source.unsplash.com/random/200x200?person-1",
+      "courseRating": 4.8,
+      "students": "23,400",
+      "courses": "06",
+      "website": "https://www.ahmeddev.com",
+      "description": "Ahmed has 8+ years of experience in MERN stack and teaches practical development skills.",
+      "email": "ahmed.elsayed@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Mona Khalil",
+      "title": "Data Analyst & Python Instructor",
+      "image": "https://source.unsplash.com/random/200x200?woman-2",
+      "courseRating": 4.7,
+      "students": "15,000",
+      "courses": "03",
+      "website": "https://www.monakhalil.com",
+      "description": "Mona teaches data analysis using Python, Excel, and Power BI to thousands of learners.",
+      "email": "mona.khalil@example.com",
+      "status": "Pending"
+    },
+    {
+      "id": "5",
+      "name": "Omar Fathy",
+      "title": "Mobile App Developer",
+      "image": "https://source.unsplash.com/random/200x200?person-3",
+      "courseRating": 4.5,
+      "students": "8,750",
+      "courses": "02",
+      "website": "https://www.omarfathy.dev",
+      "description": "Omar is a Flutter developer helping students build mobile apps from scratch.",
+      "email": "omar.fathy@example.com",
+      "status": "Pending"
+    },
+    {
+      "id": "6",
+      "name": "Salma Hassan",
+      "title": "Cybersecurity Trainer",
+      "image": "https://source.unsplash.com/random/200x200?woman-4",
+      "courseRating": 4.9,
+      "students": "29,500",
+      "courses": "04",
+      "website": "https://www.salma-secure.com",
+      "description": "Salma focuses on ethical hacking, network security, and practical labs.",
+      "email": "salma.hassan@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "7",
+      "name": "Mohamed Nour",
+      "title": "Machine Learning Engineer",
+      "image": "https://source.unsplash.com/random/200x200?person-5",
+      "courseRating": 4.6,
+      "students": "11,800",
+      "courses": "03",
+      "website": "https://www.mnour.ai",
+      "description": "Mohamed helps beginners master ML and AI through hands-on projects.",
+      "email": "mohamed.nour@example.com",
+      "status": "Pending"
+    },
+    {
+      "id": "8",
+      "name": "Heba El-Masry",
+      "title": "UI/UX Designer & Mentor",
+      "image": "https://source.unsplash.com/random/200x200?woman-6",
+      "courseRating": 4.7,
+      "students": "17,250",
+      "courses": "05",
+      "website": "https://www.heba.design",
+      "description": "Heba simplifies UI/UX for designers with practical Figma and design thinking courses.",
+      "email": "heba.masry@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "9",
+      "name": "Tarek Mostafa",
+      "title": "DevOps & Cloud Specialist",
+      "image": "https://source.unsplash.com/random/200x200?person-7",
+      "courseRating": 4.4,
+      "students": "9,300",
+      "courses": "02",
+      "website": "https://www.tarekcloud.io",
+      "description": "Tarek teaches Docker, Kubernetes, AWS, and CI/CD for real-world deployment.",
+      "email": "tarek.mostafa@example.com",
+      "status": "Deactivated"
+    },
+    {
+      "id": "10",
+      "name": "Nourhan Adel",
+      "title": "Frontend Developer",
+      "image": "https://source.unsplash.com/random/200x200?woman-8",
+      "courseRating": 4.6,
+      "students": "13,200",
+      "courses": "04",
+      "website": "https://www.nourfrontend.com",
+      "description": "Nourhan creates beginner-friendly React and HTML/CSS tutorials.",
+      "email": "nourhan.adel@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "11",
+      "name": "Youssef Gamal",
+      "title": "Game Developer & Instructor",
+      "image": "https://source.unsplash.com/random/200x200?person-9",
+      "courseRating": 4.3,
+      "students": "6,700",
+      "courses": "01",
+      "website": "https://www.gamedev-eg.com",
+      "description": "Youssef teaches Unity and game design in Arabic and English.",
+      "email": "youssef.gamal@example.com",
+      "status": "Pending"
+    },
+    {
+      "id": "12",
+      "name": "Aya Hossam",
+      "title": "Backend Developer (Node.js)",
+      "image": "https://source.unsplash.com/random/200x200?woman-10",
+      "courseRating": 4.5,
+      "students": "10,900",
+      "courses": "03",
+      "website": "https://www.ayabackend.dev",
+      "description": "Aya teaches API development, MongoDB, and authentication.",
+      "email": "aya.hossam@example.com",
+      "status": "Active"
+    },
+    {
+      "id": 1746087559031,
+      "name": "Saad",
+      "title": "Arabic Teacher",
+      "image": "SDA",
+      "courseRating": 0,
+      "students": "0",
+      "courses": "0",
+      "website": "DSA",
+      "description": "SAD",
+      "email": "saad_nsr@hotmail.com",
+      "status": "Pending",
+      "driveLink": "SDA"
+    },
+    {
+      "id": 1746088278526,
+      "name": "Saad",
+      "title": "Arabic Teacher",
+      "email": "saad_nsr@hotmail.com",
+      "image": "https://drive.google.com/drive/u/0/",
+      "description": "i AM AN SFDSAPOFJDASDPOFJDSPF",
+      "website": "https://drive.google.com/drive/u/0/",
+      "driveLink": "https://drive.google.com/drive/u/0/",
+      "courseRating": 0,
+      "students": "0",
+      "courses": "0",
+      "status": "Pending"
     }
   ],
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Guy Hawkins",
       "image": "src/assets/courses images/avatar1.png",
       "date": "1 week ago",
       "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Dianne Russell",
       "image": "src/assets/courses images/avatar2.png",
       "date": "51 mins ago",
       "comment": "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Eleanor Pena",
       "image": "src/assets/courses images/avatar3.png",
       "date": "1 days ago",
@@ -285,7 +598,7 @@
   ],
   "lesson": [
     {
-      "id": 1,
+      "id": "1",
       "courseTitle": "Complete Website Responsive Design: from Figma to Webflow to Website Design",
       "lessonTitle": "2. Sign up in Webflow",
       "sections": 6,
@@ -301,6 +614,101 @@
       "fileName": "Create account on webflow.pdf",
       "fileSize": "12.6 MB"
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "instructor@example.com",
+      "password": "password123",
+      "role": "instructor"
+    },
+    {
+      "id": "2",
+      "email": "student@example.com",
+      "password": "student123",
+      "role": "student"
+    },
+    {
+      "id": "3",
+      "email": "organization@example.com",
+      "password": "org123456",
+      "role": "organization"
+    },
+    {
+      "id": "1745894743704",
+      "username": "shrouk",
+      "email": "shrouk@gmail.com",
+      "password": "123456",
+      "role": "student"
+    },
+    {
+      "id": "1745895082722",
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1745895766436",
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Responsive Web Design means?",
+      "options": [
+        "Fixed layout",
+        "Separate sites",
+        "Only media queries",
+        "Adaptive design"
+      ],
+      "correctAnswer": "Adaptive design",
+      "id": "03e3"
+    },
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "HighText Machine Language",
+        "HyperText Markup Language",
+        "HyperTool Markup Language",
+        "None"
+      ],
+      "correctAnswer": "HyperText Markup Language",
+      "id": "29dd"
+    },
+    {
+      "question": "Which CSS property changes the text color?",
+      "options": [
+        "text-style",
+        "color",
+        "font-color",
+        "text-color"
+      ],
+      "correctAnswer": "color",
+      "id": "f40d"
+    },
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "options": [
+        "<js>",
+        "<scripting>",
+        "<script>",
+        "<javascript>"
+      ],
+      "correctAnswer": "<script>",
+      "id": "c1ea"
+    },
+    {
+      "question": "Which tag is used to define an image in HTML?",
+      "options": [
+        "<img>",
+        "<image>",
+        "<picture>",
+        "<photo>"
+      ],
+      "correctAnswer": "<img>",
+      "id": "1182"
+    }
   ]
 }
-
