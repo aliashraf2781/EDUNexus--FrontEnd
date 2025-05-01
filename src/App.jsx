@@ -19,7 +19,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-
 import ContactUs from "./pages/ContactSreen/contactus";
 import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
 import InstructorsPage from "./pages/AdminDashboardPages/InstructorsPage/InstructorsPage";
