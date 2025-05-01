@@ -397,9 +397,12 @@
       "students": "236,568",
       "courses": "09",
       "website": "https://www.vakoshvili.com",
-      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed...",
+
+      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case...",
       "email": "Vako.Shvili@example.com",
-      "status": "Active"
+      "status": "Active",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1F_1vTRh2RV5eYPAJdkW0vmsmZaG7ow4H"
     },
     {
       "id": "2",
@@ -410,9 +413,12 @@
       "students": "5,342",
       "courses": "01",
       "website": "https://www.nimatahami.com",
-      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both...",
+      "description": "I'm an entrepreneur & designer with a high passion...",
       "email": "Nima.Tahami@example.com",
-      "status": "Active"
+      "status": "Active",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1GfOeY91PAs8RxlNkO68FfFv0PmrUwGje"
+
     },
     {
       "id": "3",
@@ -423,9 +429,13 @@
       "students": "23,400",
       "courses": "06",
       "website": "https://www.ahmeddev.com",
-      "description": "Ahmed has 8+ years of experience in MERN stack and teaches practical development skills.",
+
+      "description": "Ahmed has 8+ years of experience in MERN stack...",
       "email": "ahmed.elsayed@example.com",
-      "status": "Active"
+      "status": "Active",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1y5mx8Aar8t-SO8_cqD3KO8hbHjsq3nmb"
+
     },
     {
       "id": "4",
@@ -436,9 +446,12 @@
       "students": "15,000",
       "courses": "03",
       "website": "https://www.monakhalil.com",
-      "description": "Mona teaches data analysis using Python, Excel, and Power BI to thousands of learners.",
+
+      "description": "Mona teaches data analysis using Python, Excel...",
       "email": "mona.khalil@example.com",
-      "status": "Pending"
+      "status": "Active",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1zKh5xlYFqbPguL_XFL2vK5FGH7H1t8o3"
     },
     {
       "id": "5",
@@ -452,6 +465,11 @@
       "description": "Omar is a Flutter developer helping students build mobile apps from scratch.",
       "email": "omar.fathy@example.com",
       "status": "Pending"
+      "description": "Omar is a Flutter developer helping students...",
+      "email": "omar.fathy@example.com",
+      "status": "Deactivated",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1oY_cJt2iPp1giM1v4nz5L9rh23I_2e-V"
     },
     {
       "id": "6",
@@ -462,9 +480,12 @@
       "students": "29,500",
       "courses": "04",
       "website": "https://www.salma-secure.com",
-      "description": "Salma focuses on ethical hacking, network security, and practical labs.",
+
+      "description": "Salma focuses on ethical hacking, network security...",
       "email": "salma.hassan@example.com",
-      "status": "Active"
+      "status": "Deactivated",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1Bnd_xlFG-PxF1FzJytzP_DVmYhBz8bdM"
     },
     {
       "id": "7",
@@ -475,9 +496,12 @@
       "students": "11,800",
       "courses": "03",
       "website": "https://www.mnour.ai",
-      "description": "Mohamed helps beginners master ML and AI through hands-on projects.",
+
+      "description": "Mohamed helps beginners master ML and AI...",
       "email": "mohamed.nour@example.com",
-      "status": "Pending"
+      "status": "Pending",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1dV8Fxw2ruOswqGp9rsprTHLRb7_JZ6eA"
     },
     {
       "id": "8",
@@ -488,9 +512,12 @@
       "students": "17,250",
       "courses": "05",
       "website": "https://www.heba.design",
-      "description": "Heba simplifies UI/UX for designers with practical Figma and design thinking courses.",
+      "description": "Heba simplifies UI/UX for designers with practical...",
       "email": "heba.masry@example.com",
-      "status": "Active"
+      "status": "Active",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1xk41zYk5oRBxOq8ORe92wKK0rTSmnoDT"
+
     },
     {
       "id": "9",
@@ -501,9 +528,12 @@
       "students": "9,300",
       "courses": "02",
       "website": "https://www.tarekcloud.io",
-      "description": "Tarek teaches Docker, Kubernetes, AWS, and CI/CD for real-world deployment.",
+      "description": "Tarek teaches Docker, Kubernetes, AWS, and CI/CD...",
       "email": "tarek.mostafa@example.com",
-      "status": "Deactivated"
+      "status": "Deactivated",
+      "password": "123456",
+      "driveLink": "https://drive.google.com/drive/folders/1l28x9lxJzFfRO8TtY88QyJWxIYlTAlBu"
+
     },
     {
       "id": "10",
@@ -571,6 +601,7 @@
       "students": "0",
       "courses": "0",
       "status": "Pending"
+
     }
   ],
   "students": [

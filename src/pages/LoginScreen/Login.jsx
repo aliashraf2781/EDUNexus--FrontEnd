@@ -133,10 +133,12 @@ const Login = () => {
               {/* Role Selection */}
               <div className="flex flex-col gap-2 text-sm text-dark">
                 <div className="flex items-center gap-4">
-                  <label className="flex items-center gap-2">
+
+                  {/* <label className="flex items-center gap-2">
                     <Field type="radio" name="role" value="instructor" />
                     Instructor
-                  </label>
+                  </label> */}
+
                   <label className="flex items-center gap-2">
                     <Field type="radio" name="role" value="student" />
                     Student
@@ -177,6 +179,13 @@ const Login = () => {
                 Don't have an account?{" "}
                 <Link to="/signup" className="text-indigo-500 hover:underline">
                   Create an account
+                </Link>
+
+              </p>
+              <p className="text-sm text-center text-dark">
+                Are you an instructor?{" "}
+                <Link to="/instructorLogIn" className="text-indigo-500 hover:underline">
+                  Log In Now!
                 </Link>
               </p>
 
