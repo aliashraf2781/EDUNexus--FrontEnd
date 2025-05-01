@@ -27,7 +27,8 @@ import ApplicationReview from "./pages/InstructorReviewPage/InstructorReviewPage
 import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
 import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
-import OrganizationDashboard from './Components/Layout/OrganizationDashboard';
+
+import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
 
 const route = createBrowserRouter([
   {
@@ -125,9 +126,8 @@ const route = createBrowserRouter([
   },
 
   {
-    path:"organization-dashboard",
-    element:<OrganizationDashboard/>,
-    
+    path: "organization-dashboard",
+    element: <OrganizationDashboard />,
   },
 
   {
@@ -149,16 +149,16 @@ const route = createBrowserRouter([
   },
   {
     path: "/instructorLogIn",
-    element: <InstructorLogin/>,
+    element: <InstructorLogin />,
   },
   {
-    path:"/application-review",
-    element:<ApplicationReview/>
+    path: "/application-review",
+    element: <ApplicationReview />,
   },
   {
-    path:"/deactivated",
-    element:<AccountDeactivated/>
-  }
+    path: "/deactivated",
+    element: <AccountDeactivated />,
+  },
 ]);
 function App() {
   return (
