@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @theme {
   --color-primary: #ff6636;
   --color-secondary: #ffeee8;
@@ -24,6 +23,10 @@
 .Assignment-items::-webkit-scrollbar-thumb:hover {
   background: #d63a1c;
 }
-video{
-  display: block !important ;
+
+video {
+  display: block !important;
+  background: red !important;
+  width: 100% !important;
+  height: 100% !important;
 }

@@ -8,6 +8,7 @@ import {
   Settings,
   Maximize,
   FileText,
+  Video,
 } from "lucide-react";
 import createdBy1 from "../../assets/courses images/createdBy1.png";
 import createdBy2 from "../../assets/courses images/createdBy2.png";
@@ -15,6 +16,7 @@ import avatar1 from "../../assets/courses images/avatar1.png";
 import avatar2 from "../../assets/courses images/avatar2.png";
 import instructor1 from "../../assets/courses images/instructor1.png";
 import VideoJSPlayer from "../VideoPlayer.jsx/VideoPlayer";
+import VideoPlayer from "../VideoPlayer.jsx/VideoPlayer";
 
 function LessonDetails({ lesson }) {
   // const [isChecked, setIsChecked] = useState(false);
@@ -26,23 +28,20 @@ function LessonDetails({ lesson }) {
     <>
       <div className="flex flex-col gap-4">
         <div className="w-full pb-5">
-          <VideoJSPlayer
-            options={{
-              controls: true,
-              autoplay: false,
-              preload: "auto",
-              fluid: false,
-              width: 640,
-              height: 360,
-              sources: [
-                {
-                  src: "https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4 ",
-                  type: "video/mp4",
-                },
-              ],
-            }}
-          />
-          <h1 className="text-white">sadjknsakjd</h1>
+        
+            <VideoPlayer videoSrc={'https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4'}/>
+            {/* <VideoJSPlayer options={{
+         controls: true,
+         autoplay: false,
+         preload: "auto",
+         fluid: false,
+         width: 640,
+         height: 360,
+        sources: [{
+          src: 'https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4',
+          type: 'video/mp4'
+        }]
+      }} /> */}
         </div>
         <span className="text-dark text-2xl font-semibold">
           {lesson.lessonTitle}
@@ -93,34 +92,7 @@ function LessonDetails({ lesson }) {
               <span className="text-gray-600 text-xs">Students Watching</span>
             </div>
           </div>
-          <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-            <img
-              src={createdBy1}
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-            <img
-              src={avatar1}
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-            <img
-              src={avatar2}
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-            <img
-              src={instructor1}
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          
         </div>
         <div className="flex flex-col">
           <span className="text-dark text-sm font-semibold">

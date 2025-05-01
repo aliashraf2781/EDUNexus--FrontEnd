@@ -37,7 +37,7 @@ export default function InstructorTable({
                     )}&body=Dear%20${encodeURIComponent(
                       instructor.name
                     )}%2C%0D%0A%0D%0A`}
-                    className="px-2 py-1 text-green-600 bg-green-100 hover:bg-green-200 rounded"
+                    className="px-3 py-2 text-green-600 ring-1 ring-green-500 bg-green-50 font-semibold hover:bg-green-100 hover:shadow-sm hover:ring-green-600 hover:ring rounded w-max"
                     rel="noopener noreferrer"
                   >
                     Send Email
@@ -49,7 +49,7 @@ export default function InstructorTable({
                       setDeletingInstructorId(instructor.id);
                       setShowDeleteModal(true);
                     }}
-                    className="px-2 py-1 text-red-600 bg-red-100 hover:bg-red-200 rounded"
+                    className="px-3 py-2 text-red-600 bg-red-50 ring-1 ring-red-500 font-semibold hover:ring-current hover:bg-red-100 hover:shadow-sm rounded"
                   >
                     Delete
                   </button>
@@ -57,12 +57,14 @@ export default function InstructorTable({
                   {/* Status Buttons */}
                   {["Active", "Pending", "Deactivated"].map((status) => (
                     <button
+                      type="button"
                       key={status}
                       onClick={(e) => {
                         e.preventDefault();
+
                         updateStatus(instructor.id, status);
                       }}
-                      className={`px-2 py-1 rounded ${
+                      className={`px-2 py-1 rounded font-bold ${
                         instructor.status === status
                           ? "bg-orange-500 text-white"
                           : "bg-gray-100 hover:bg-gray-200"
