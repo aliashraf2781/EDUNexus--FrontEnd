@@ -19,6 +19,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
+
 import ContactUs from "./pages/ContactSreen/contactus";
 import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
 import InstructorsPage from "./pages/AdminDashboardPages/InstructorsPage/InstructorsPage";
@@ -27,6 +28,9 @@ import ApplicationReview from "./pages/InstructorReviewPage/InstructorReviewPage
 import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
 import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
+
+import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
+
 const route = createBrowserRouter([
   {
     path: "/",
@@ -121,6 +125,12 @@ const route = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: "organization-dashboard",
+    element: <OrganizationDashboard />,
+  },
+
   {
     path: "login",
     element: <Login />,
@@ -140,16 +150,16 @@ const route = createBrowserRouter([
   },
   {
     path: "/instructorLogIn",
-    element: <InstructorLogin/>,
+    element: <InstructorLogin />,
   },
   {
-    path:"/application-review",
-    element:<ApplicationReview/>
+    path: "/application-review",
+    element: <ApplicationReview />,
   },
   {
-    path:"/deactivated",
-    element:<AccountDeactivated/>
-  }
+    path: "/deactivated",
+    element: <AccountDeactivated />,
+  },
 ]);
 function App() {
   return (
