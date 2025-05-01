@@ -19,7 +19,14 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-import ContactUs from "./pages/ContactSreen/contactus"
+import ContactUs from "./pages/ContactSreen/contactus";
+import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
+import InstructorsPage from "./pages/AdminDashboardPages/InstructorsPage/InstructorsPage";
+import RegisterInstructor from "./pages/InstructorRegister/InstructorRegister";
+import ApplicationReview from "./pages/InstructorReviewPage/InstructorReviewPage";
+import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
+import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
+import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +46,7 @@ const route = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <ContactUs/>,
+        element: <ContactUs />,
       },
       {
         path: "student-dashboard",
@@ -94,7 +101,7 @@ const route = createBrowserRouter([
       {
         index: true,
         // path: "dashboard",
-        element: <StudentDashboard />,
+        element: <Dashboard />,
       },
       {
         path: "profile",
@@ -122,6 +129,27 @@ const route = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [{ index: true, element: <InstructorsPage /> }],
+  },
+  {
+    path: "/instructorRegister",
+    element: <RegisterInstructor />,
+  },
+  {
+    path: "/instructorLogIn",
+    element: <InstructorLogin/>,
+  },
+  {
+    path:"/application-review",
+    element:<ApplicationReview/>
+  },
+  {
+    path:"/deactivated",
+    element:<AccountDeactivated/>
+  }
 ]);
 function App() {
   return (

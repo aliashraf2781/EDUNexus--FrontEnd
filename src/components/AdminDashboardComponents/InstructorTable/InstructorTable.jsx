@@ -1,0 +1,92 @@
+export default function InstructorTable({
+  instructors,
+  updateStatus,
+  setEditingInstructor,
+  setDeletingInstructorId,
+  setShowDeleteModal,
+}) {
+  return (
+    <div className="bg-white p-4 rounded shadow overflow-x-auto">
+      <h3 className="text-lg font-semibold mb-4">Manage Instructors</h3>
+      <table className="min-w-full text-sm text-left">
+        <thead>
+          <tr className="text-gray-500 border-b">
+            <th className="py-2 px-4">Name</th>
+            <th className="py-2 px-4">Email</th>
+            <th className="py-2 px-4">Status</th>
+            <th className="py-2 px-4">Actions</th>
+            <th className="py-2 px-4">CV Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {instructors.map((instructor) => (
+            <tr key={instructor.id} className="border-b">
+              <td className="py-2 px-4">{instructor.name}</td>
+              <td className="py-2 px-4">{instructor.email}</td>
+              <td className="py-2 px-4 capitalize">{instructor.status}</td>
+              <td className="py-2 px-4">
+                <div className="flex gap-2">
+                  {/* Edit Button */}
+
+                  <a
+                    target="_blank"
+                    href={`mailto:${
+                      instructor.email
+                    }?subject=Hello%20${encodeURIComponent(
+                      instructor.name
+                    )}&body=Dear%20${encodeURIComponent(
+                      instructor.name
+                    )}%2C%0D%0A%0D%0A`}
+                    className="px-2 py-1 text-green-600 bg-green-100 hover:bg-green-200 rounded"
+                    rel="noopener noreferrer"
+                  >
+                    Send Email
+                  </a>
+
+                  {/* Delete Button */}
+                  <button
+                    onClick={() => {
+                      setDeletingInstructorId(instructor.id);
+                      setShowDeleteModal(true);
+                    }}
+                    className="px-2 py-1 text-red-600 bg-red-100 hover:bg-red-200 rounded"
+                  >
+                    Delete
+                  </button>
+
+                  {/* Status Buttons */}
+                  {["Active", "Pending", "Deactivated"].map((status) => (
+                    <button
+                      key={status}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        updateStatus(instructor.id, status);
+                      }}
+                      className={`px-2 py-1 rounded ${
+                        instructor.status === status
+                          ? "bg-orange-500 text-white"
+                          : "bg-gray-100 hover:bg-gray-200"
+                      }`}
+                    >
+                      {status}
+                    </button>
+                  ))}
+                </div>
+              </td>
+              <td className="py-2 px-4">
+                {" "}
+                <a
+                  href={`${instructor.driveLink}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {instructor.driveLink}
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}

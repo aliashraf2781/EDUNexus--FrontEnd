@@ -48,7 +48,7 @@ export default function TeachingStepsComponent() {
               <ArrowRight className="h-4 w-4" />
             </span>
             <span className="text-xs font-semibold sm:text-sm  transition-all group-hover:me-4">
-              <Link to="/signup">
+              <Link to="/instructorRegister">
               Start Teaching</Link>
             </span>
           </a>
