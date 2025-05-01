@@ -13,6 +13,7 @@ import Login from "./pages/LoginScreen/login";
 import CreateCoursePage from "./pages/CreateCoursePage/CreateCoursePage";
 import InsProfileSettings from "./pages/insProfileSetting/SettingsPage";
 import Layout from "./Components/Layout/Layout";
+import FavoriteCourses from "./pages/FavoriteCourses/FavoriteCourses";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
@@ -62,7 +63,11 @@ const route = createBrowserRouter([
         element: <CourseNotfication />,
       },
       {
-        path: "instructor-profile",
+        path: "favorite-courses",
+        element: <FavoriteCourses />,
+      },
+      {
+        path: "instructor-profile/:id",
         element: <InsProfile />,
       },
       {

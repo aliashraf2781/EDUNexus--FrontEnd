@@ -5,6 +5,7 @@ import createdBy2  from '../../assets/courses images/createdBy2.png';
 import avatar1  from '../../assets/courses images/avatar1.png';
 import avatar2  from '../../assets/courses images/avatar2.png';
 import instructor1  from '../../assets/courses images/instructor1.png';
+import VideoJSPlayer from '../VideoPlayer.jsx/VideoPlayer';
 
 function LessonDetails({ lesson }) {
   return (
@@ -38,7 +39,16 @@ function LessonDetails({ lesson }) {
         </div> */}
          {/* add video  */}
          <div className=' w-full pb-5'>
-            <video className='w-full ' src="https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4" controls></video>
+         <VideoJSPlayer options={{
+        controls: true,
+        responsive: true,
+        fluid: true,
+        sources: [{
+          src: 'https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4',
+          type: 'video/mp4'
+        }]
+      }} />
+      sadjknsakjd
          </div>
         <span className='text-dark text-2xl font-semibold'>{lesson.lessonTitle}</span>
         <div className='flex justify-between items-center'>

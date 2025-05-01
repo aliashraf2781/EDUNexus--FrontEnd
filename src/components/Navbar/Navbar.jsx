@@ -144,7 +144,9 @@ export default function Navbar() {
               <NavLink to={"course-notifation"}>
                 <Bell className="cursor-pointer h-5 w-5" />
               </NavLink>
-              <Heart className="cursor-pointer h-5 w-5" />
+              <NavLink to={"favorite-courses"}>
+                <Heart className="cursor-pointer h-5 w-5" />
+              </NavLink>
               <ShoppingCart className="cursor-pointer h-5 w-5" />
             </div>
 
