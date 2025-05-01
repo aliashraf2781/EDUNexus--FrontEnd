@@ -397,10 +397,9 @@
       "students": "236,568",
       "courses": "09",
       "website": "https://www.vakoshvili.com",
-
       "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case...",
       "email": "Vako.Shvili@example.com",
-      "status": "Active",
+      "status": "Pending",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1F_1vTRh2RV5eYPAJdkW0vmsmZaG7ow4H"
     },
@@ -415,10 +414,9 @@
       "website": "https://www.nimatahami.com",
       "description": "I'm an entrepreneur & designer with a high passion...",
       "email": "Nima.Tahami@example.com",
-      "status": "Active",
+      "status": "Pending",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1GfOeY91PAs8RxlNkO68FfFv0PmrUwGje"
-
     },
     {
       "id": "3",
@@ -429,13 +427,11 @@
       "students": "23,400",
       "courses": "06",
       "website": "https://www.ahmeddev.com",
-
       "description": "Ahmed has 8+ years of experience in MERN stack...",
       "email": "ahmed.elsayed@example.com",
-      "status": "Active",
+      "status": "Pending",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1y5mx8Aar8t-SO8_cqD3KO8hbHjsq3nmb"
-
     },
     {
       "id": "4",
@@ -446,7 +442,6 @@
       "students": "15,000",
       "courses": "03",
       "website": "https://www.monakhalil.com",
-
       "description": "Mona teaches data analysis using Python, Excel...",
       "email": "mona.khalil@example.com",
       "status": "Active",
@@ -477,7 +472,6 @@
       "students": "29,500",
       "courses": "04",
       "website": "https://www.salma-secure.com",
-
       "description": "Salma focuses on ethical hacking, network security...",
       "email": "salma.hassan@example.com",
       "status": "Deactivated",
@@ -493,7 +487,6 @@
       "students": "11,800",
       "courses": "03",
       "website": "https://www.mnour.ai",
-
       "description": "Mohamed helps beginners master ML and AI...",
       "email": "mohamed.nour@example.com",
       "status": "Pending",
@@ -514,7 +507,6 @@
       "status": "Active",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1xk41zYk5oRBxOq8ORe92wKK0rTSmnoDT"
-
     },
     {
       "id": "9",
@@ -530,7 +522,6 @@
       "status": "Deactivated",
       "password": "123456",
       "driveLink": "https://drive.google.com/drive/folders/1l28x9lxJzFfRO8TtY88QyJWxIYlTAlBu"
-
     },
     {
       "id": "10",
@@ -572,7 +563,7 @@
       "status": "Active"
     },
     {
-      "id": 1746087559031,
+      "id": "1746087559031",
       "name": "Saad",
       "title": "Arabic Teacher",
       "image": "SDA",
@@ -586,7 +577,7 @@
       "driveLink": "SDA"
     },
     {
-      "id": 1746088278526,
+      "id": "1746088278526",
       "name": "Saad",
       "title": "Arabic Teacher",
       "email": "saad_nsr@hotmail.com",
@@ -598,7 +589,21 @@
       "students": "0",
       "courses": "0",
       "status": "Pending"
-
+    },
+    {
+      "id": "1746099620071",
+      "name": "ali",
+      "title": "ali",
+      "email": "aaaaaa30101975@gmail.com",
+      "password": "123123",
+      "image": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
+      "description": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
+      "website": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
+      "driveLink": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
+      "courseRating": 0,
+      "students": "0",
+      "courses": "0",
+      "status": "Active"
     }
   ],
   "students": [
