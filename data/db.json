@@ -80,7 +80,8 @@
       "progress": 50,
       "shortDescription": "Learn the basics of natural science with fun activities.",
       "longDescription": "This course introduces Grade 4 students to the wonders of science through engaging experiments and simple explanations about matter, energy, and ecosystems.",
-      "created_at": "2024-08-15T14:23:11Z"
+      "created_at": "2024-08-15T14:23:11Z",
+      "duration":"9h 37m"
     },
     {
       "id": 2,
@@ -95,7 +96,8 @@
       "progress": 65,
       "shortDescription": "Simple addition, subtraction, and shapes.",
       "longDescription": "A fun-filled course for young learners to understand numbers, addition, subtraction, and basic geometry concepts through games and real-life examples.",
-      "created_at": "2024-11-09T09:37:45Z"
+      "created_at": "2024-11-09T09:37:45Z",
+      "duration": "11h 15m"
     },
     {
       "id": 3,
@@ -110,7 +112,8 @@
       "progress": 45,
       "shortDescription": "Boost your English reading and writing.",
       "longDescription": "Designed for Grade 5 students, this course focuses on building vocabulary, grammar, reading comprehension, and writing simple essays through interactive activities.",
-      "created_at": "2024-12-25T12:10:03Z"
+      "created_at": "2024-12-25T12:10:03Z",
+      "duration": "8h 45m"
     },
     {
       "id": 4,
@@ -125,7 +128,8 @@
       "progress": 30,
       "shortDescription": "Explore continents, oceans, and climates.",
       "longDescription": "This course takes students on a journey around the world to learn about continents, major rivers, oceans, and global climate patterns with fun map activities.",
-      "created_at": "2024-06-02T08:44:51Z"
+      "created_at": "2024-06-02T08:44:51Z",
+      "duration": "12h 20m"
     },
     {
       "id": 5,
@@ -140,7 +144,8 @@
       "progress": 55,
       "shortDescription": "Fundamentals of forces, motion, and energy.",
       "longDescription": "Learn the basic principles of physics including force, motion, work, and energy with real-world examples and experiments explained in simple terms.",
-      "created_at": "2024-09-27T17:30:16Z"
+      "created_at": "2024-09-27T17:30:16Z",
+      "duration": "10h 50m"
     },
     {
       "id": 6,
@@ -155,7 +160,8 @@
       "progress": 40,
       "shortDescription": "Basic computer operations and typing skills.",
       "longDescription": "A beginner-friendly course teaching students the basics of using computers, typing skills, file management, and internet safety tips.",
-      "created_at": "2025-01-19T11:22:18Z"
+      "created_at": "2025-01-19T11:22:18Z",
+      "duration": "6h 30m"
     },
     {
       "id": 7,
@@ -170,7 +176,8 @@
       "progress": 70,
       "shortDescription": "Master chemical equations and bonding.",
       "longDescription": "An intensive course covering chemical equations, molecular bonding, and the periodic table essentials for Grade 11 science students.",
-      "created_at": "2024-07-08T19:55:02Z"
+      "created_at": "2024-07-08T19:55:02Z",
+      "duration": "14h 10m"
     },
     {
       "id": 8,
@@ -185,7 +192,8 @@
       "progress": 60,
       "shortDescription": "Discover ancient civilizations and cultures.",
       "longDescription": "Students will explore major civilizations, ancient societies, and world religions with engaging storytelling, interactive activities, and quizzes.",
-      "created_at": "2025-02-14T10:05:31Z"
+      "created_at": "2025-02-14T10:05:31Z",
+      "duration": "9h 40m"
     },
     {
       "id": 9,
@@ -200,7 +208,8 @@
       "progress": 50,
       "shortDescription": "Study cells, tissues, and human body systems.",
       "longDescription": "An exciting introduction to biology that covers cellular structure, plant and human tissues, and body systems for high school beginners.",
-      "created_at": "2024-10-22T15:48:07Z"
+      "created_at": "2024-10-22T15:48:07Z",
+      "duration": "11h 15m"
     },
     {
       "id": 10,
@@ -215,7 +224,8 @@
       "progress": 35,
       "shortDescription": "Ancient Egypt to modern times.",
       "longDescription": "This course guides students through the fascinating history of Egypt, from the pharaohs to the present day, with maps, timelines, and visual documentaries.",
-      "created_at": "2024-05-03T07:14:39Z"
+      "created_at": "2024-05-03T07:14:39Z",
+      "duration": "9h 45m"
     },
     {
       "id": 11,
@@ -230,7 +240,8 @@
       "progress": 65,
       "shortDescription": "Learn critical thinking and logic foundations.",
       "longDescription": "Teaches students how to think logically, reason critically, and analyze arguments systematically, preparing them for university-level thinking.",
-      "created_at": "2025-03-04T18:32:55Z"
+      "created_at": "2025-03-04T18:32:55Z",
+      "duration": "13h 20m"
     },
     {
       "id": 12,
@@ -245,33 +256,144 @@
       "progress": 55,
       "shortDescription": "Enhance your Arabic reading and comprehension.",
       "longDescription": "Aimed at Grade 3 students to strengthen their Arabic reading comprehension, vocabulary, and storytelling skills through fun exercises.",
-      "created_at": "2024-12-03T13:39:22Z"
+      "created_at": "2024-12-03T13:39:22Z",
+      "duration": "7h 30m"
     }
   ],
-  "instructors": [
+  "instructors" : [
     {
       "id": 1,
-      "name": "Vako Shvili",
-      "title": "Web Designer & Best-Selling Instructor",
-      "image": "src/assets/courses images/instructor1.png",
-      "courseRating": 4.9,
-      "students": "236,568",
-      "courses": "09",
-      "website": "https://www.vakoshvili.com",
-      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case, and quit his job, or more like got himself fired from his own startup. He decided to work on his dream: be his own boss, travel the world, only do the work he enjoyed..."
+      "name": "Mr. Ahmed Ali",
+      "subject": "Arabic",
+      "avatar": "src/assets/courses images/instructor1.png",
+      "bio": "Ahmed is a seasoned Arabic language teacher with 10+ years of experience in developing reading skills.",
+      "students": 17000,
+      "numberOfCourses": 1,
+      "website": "https://ahmedali-arabic.com",
+      "rating": 4.8
     },
     {
       "id": 2,
-      "name": "Nima Tahami",
-      "title": "Entrepreneur & Designer • Founder of ShiftRide",
-      "image": "src/assets/courses images/instructor2.png",
-      "courseRating": 4.6,
-      "students": "5,342",
-      "courses": "01",
-      "website": "https://www.nimatahami.com",
-      "description": "I'm an entrepreneur & designer with a high passion for building products of all sorts and seeing ideas come to life. As a serial entrepreneur, I've designed and built projects in fields ranging from fashion to technology. I have over 10 years of experience in both..."
+      "name": "Ms. Salma Youssef",
+      "subject": "Mathematics",
+      "avatar": "src/assets/courses images/instructor2.png",
+      "bio": "Salma specializes in early grade math education with an engaging, game-based approach.",
+      "students": 18000,
+      "numberOfCourses": 1,
+      "website": "https://salmasmathschool.com",
+      "rating": 4.9
+    },
+    {
+      "id": 3,
+      "name": "Dr. Hany Samir",
+      "subject": "Science",
+      "avatar": "src/assets/courses images/instructor3.png",
+      "bio": "Dr. Hany brings science to life through fun experiments and relatable examples for kids.",
+      "students": 22000,
+      "numberOfCourses": 1,
+      "website": "https://hanyscienceacademy.org",
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "name": "Mrs. Layla Hassan",
+      "subject": "English",
+      "avatar": "src/assets/courses images/instructor4.png",
+      "bio": "Layla is passionate about helping children master English through reading and writing workshops.",
+      "students": 25000,
+      "numberOfCourses": 1,
+      "website": "https://englishwithlayla.com",
+      "rating": 5.0
+    },
+    {
+      "id": 5,
+      "name": "Mr. Tamer Fathy",
+      "subject": "Social Studies",
+      "avatar": "src/assets/courses images/instructor5.jpeg",
+      "bio": "Tamer makes history and culture fun and accessible for young minds.",
+      "students": 15000,
+      "numberOfCourses": 1,
+      "website": "https://socialstudies-tamer.com",
+      "rating": 4.6
+    },
+    {
+      "id": 6,
+      "name": "Dr. Sara Adel",
+      "subject": "Physics",
+      "avatar": "src/assets/courses images/instructor6.png",
+      "bio": "Sara simplifies physics for high schoolers using visuals, real-world applications, and interactive tools.",
+      "students": 19500,
+      "numberOfCourses": 1,
+      "website": "https://physicswithsara.com",
+      "rating": 4.8
+    },
+    {
+      "id": 7,
+      "name": "Prof. Nourhan Ezz",
+      "subject": "Chemistry",
+      "avatar": "src/assets/courses images/instructor7.png",
+      "bio": "Nourhan helps students unlock the mysteries of chemistry through logic and visualization.",
+      "students": 17500,
+      "numberOfCourses": 1,
+      "website": "https://nourhanchem.com",
+      "rating": 4.7
+    },
+    {
+      "id": 8,
+      "name": "Mr. Khaled Mostafa",
+      "subject": "Biology",
+      "avatar": "src/assets/courses images/instructor8.jpeg",
+      "bio": "Khaled is known for making biology relatable with models, diagrams, and student participation.",
+      "students": 16000,
+      "numberOfCourses": 1,
+      "website": "https://biowithkhaled.com",
+      "rating": 4.9
+    },
+    {
+      "id": 9,
+      "name": "Dr. Hoda Selim",
+      "subject": "Philosophy",
+      "avatar": "src/assets/courses images/instructor9.jpeg",
+      "bio": "Hoda encourages young adults to think critically and logically through structured discussions.",
+      "students": 11000,
+      "numberOfCourses": 1,
+      "website": "https://philosophy-hoda.com",
+      "rating": 4.5
+    },
+    {
+      "id": 10,
+      "name": "Ms. Yara Fouad",
+      "subject": "History",
+      "avatar": "src/assets/courses images/instructor10.jpeg",
+      "bio": "Yara makes Egypt’s rich history come alive with storytelling and visuals.",
+      "students": 13000,
+      "numberOfCourses": 1,
+      "website": "https://egyptianhistorybyyara.com",
+      "rating": 4.6
+    },
+    {
+      "id": 11,
+      "name": "Dr. Ayman Saber",
+      "subject": "Geography",
+      "avatar": "src/assets/courses images/instructor11.jpeg",
+      "bio": "Ayman uses maps, apps, and case studies to teach students about our planet’s geography.",
+      "students": 14000,
+      "numberOfCourses": 1,
+      "website": "https://geographywithayman.com",
+      "rating": 4.7
+    },
+    {
+      "id": 12,
+      "name": "Eng. Rami Elsheikh",
+      "subject": "Computer Skills",
+      "avatar": "src/assets/courses images/instructor12.jpeg",
+      "bio": "Rami teaches digital literacy to kids, including typing, browsing, and basic coding.",
+      "students": 12500,
+      "numberOfCourses": 1,
+      "website": "https://digitalkids-rami.com",
+      "rating": 4.8
     }
-  ],
+  ],  
   "students": [
     {
       "id": 1,

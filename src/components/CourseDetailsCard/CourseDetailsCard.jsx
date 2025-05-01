@@ -1,14 +1,10 @@
 import React from 'react'
 import { AlarmClock, Clock3, ChartNoAxesColumnIncreasing, UsersRound, BookText, 
-    NotepadText, DollarSign, Trophy, TvMinimal, Layers, Copy, Facebook, Twitter, Mail, MessageCircleCode } from 'lucide-react'
-import CurriculumSection from '../CurriculumSection/CurriculumSection'
-import {  Link, NavLink } from 'react-router'
-
-
-
-
+    DollarSign, Trophy, TvMinimal, Layers, Copy, Facebook, Twitter, Mail, MessageCircleCode } from 'lucide-react'
+import {  useFavorites } from '../../context/FavoriteContext';
 
 function CourseDetailsCard({course}) {
+    const { isFavorite, toggleFavorite } = useFavorites();
   return (
     <>
         <div className='w-full h-75 bg-gray-100 pr-27 pt-15 lg:flex flex-1 flex-col gap-4 py-2 pr-l hidden'>
@@ -17,7 +13,7 @@ function CourseDetailsCard({course}) {
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
                             <span className='text-dark text-2xl'>${course[0].price}</span>
-                            <span className='text-light text-md line-through'>${course[0].price + 20}</span>
+                            <span className='text-light text-md line-through'>${course[0].price + (course[0].price * 0.56)}</span>
                         </div>
                         <div className='flex items-center bg-secondary py-1 px-2 gap-1 text-[#4484E3]'>
                             <span className='text-sm'>56%</span>
@@ -35,51 +31,48 @@ function CourseDetailsCard({course}) {
                             <Clock3 size={19} className=' text-light'/>
                             <span>Course Duration</span>
                         </div>
-                        <span className='text-light text-sm'>6 month</span>
+                        <span className='text-light text-sm'>{course[0].duration}</span>
                     </div>
                     <div className='flex justify-between items-center'>
                         <div className='text-dark text-md gap-2 flex items-center'>
                             <ChartNoAxesColumnIncreasing size={20} className=' text-light'/>
-                            <span>Course Level</span>
+                            <span>Course Grade</span>
                         </div>
-                        <span className='text-light text-sm'>Beginner and Intermediate</span>
+                        <span className='text-light text-sm'>{course[0].grade}</span>
                     </div>
                     <div className='flex justify-between items-center'>
                         <div className='text-dark text-md gap-2 flex items-center'>
                             <UsersRound size={19} className=' text-light'/>
                             <span>Students Enrolled</span>
                         </div>
-                        <span className='text-light text-sm'>66,345,124</span>
+                        <span className='text-light text-sm'>{course[0].students}</span>
                     </div>
                     <div className='flex justify-between items-center'>
                         <div className='text-dark text-md gap-2 flex items-center'>
                             <BookText size={20} className=' text-light'/>
                             <span>Language</span>
                         </div>
-                        <span className='text-light text-sm'>Mandarin</span>
-                    </div>
-                    <div className='flex justify-between items-center'>
-                        <div className='text-dark text-md gap-2 flex items-center'>
-                            <NotepadText size={20} className=' text-light'/>
-                            <span>Subtitle Language</span>
-                        </div>
-                        <span className='text-light text-sm'>English</span>
+                        <span className='text-light text-sm'>Arabic</span>
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-6 px-5'>
                     <button className='bg-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
                         Add To Cart
                     </button>
-
-                    <Link to='/course-lesson' >
-                        <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
-                            Buy Now
-                        </button>
-                    </Link>
-
+                    <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
+                        Buy Now
+                    </button>
                     <div className='flex gap-2 items-center '>
-                        <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Add To Wishlist</button>
-                        <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Gift Course</button>
+                        <button 
+                            className='w-full border border-light py-2 text-sm cursor-pointer'
+                            onClick={() => {toggleFavorite(course[0])}}
+                        >
+                            {isFavorite(course[0].id) ? (
+                                <span className='text-[#4484E3] font-bold'>Remove From Favorites</span>) : (
+                                <span className='text-dark font-semibold'>Add To Favorites</span>)
+                            }  
+                        </button>
+                        {/* <button className='w-1/2 border border-light py-2 text-dark text-sm font-semibold cursor-pointer'>Gift Course</button> */}
                     </div>
                     <div className='text-light text-sm'>
                         <span className='font-semibold'>Note: </span>
@@ -111,10 +104,6 @@ function CourseDetailsCard({course}) {
                         <span>Access on mobile, tablet and TV</span>
                     </div>
                     <div className='gap-2 flex items-center'>
-                        <NotepadText size={19} className=' text-'/>
-                        <span>English subtitles</span>
-                    </div>
-                    <div className='gap-2 flex items-center'>
                         <Layers size={19} className=' text-'/>
                         <span>100% online course</span>
                     </div>
@@ -124,20 +113,20 @@ function CourseDetailsCard({course}) {
                         Share this course:
                     </div>
                     <div className='flex gap-1 items-center'>
-                        <div className='w-1/3 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark'>
+                        <div className='w-1/3 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark cursor-pointer'>
                             <Copy size={14}/>
                             <span className='text-sm'>Copy link</span>
                         </div>
-                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark'>
+                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark cursor-pointer'>
                             <Facebook size={16} fill='dark'/>
                         </div>
-                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark'>
+                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark cursor-pointer'>
                             <Twitter size={16} fill='dark'/>
                         </div>
-                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark'>
+                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark cursor-pointer'>
                             <Mail size={16}/>
                         </div>
-                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark'>
+                        <div className='w-1/8 flex items-center justify-center gap-1 h-10 bg-gray-100 text-dark cursor-pointer'>
                             <MessageCircleCode size={16}/>
                         </div>
                     </div> 

@@ -1,10 +1,5 @@
 import React from 'react'
-import {SkipBack, Pause, SkipForward, Volume2, Captions, Settings, Maximize, FileText} from 'lucide-react'
-import createdBy1  from '../../assets/courses images/createdBy1.png';
-import createdBy2  from '../../assets/courses images/createdBy2.png';
-import avatar1  from '../../assets/courses images/avatar1.png';
-import avatar2  from '../../assets/courses images/avatar2.png';
-import instructor1  from '../../assets/courses images/instructor1.png';
+import {FileText} from 'lucide-react'
 
 function LessonDetails({ lesson }) {
   return (
@@ -41,42 +36,7 @@ function LessonDetails({ lesson }) {
             <video className='w-full ' src="https://res.cloudinary.com/dksy9zof4/video/upload/v1745369509/cxlffkcrvo1ebq70lq6h.mp4" controls></video>
          </div>
         <span className='text-dark text-2xl font-semibold'>{lesson.lessonTitle}</span>
-        <div className='flex justify-between items-center'>
-            <div className='flex items-center gap-2'>
-                <div className='flex items-center gap-2'>
-                   <div className="w-7 h-7 rounded-full relative">
-                        <img src={createdBy2} alt="Avatar" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-                        <img src={createdBy1} alt="Avatar" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-                        <img src={avatar1} alt="Avatar" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-                        <img src={avatar2} alt="Avatar" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-7 h-7 rounded-full relative ml-[-20px]">
-                        <img src={instructor1} alt="Avatar" className="w-full h-full object-cover" />
-                    </div> 
-                </div>
-                <div className='flex flex-col'>
-                    <span className='text-dark text-sm font-semibold'>{lesson.studentsWatching}</span>
-                    <span className='text-gray-600 text-xs'>Students Watching</span>
-                </div>
-            </div>
-            <div className='flex items-end gap-3'>
-                <div className='flex gap-1 items-center'>
-                    <span className='text-xs text-gray-600'>Last updated:</span>
-                    <span className='text-xs text-dark'>{lesson.lastUpdated}</span>
-                </div>
-                <div className='flex gap-1 items-center'>
-                    <span className='text-xs text-gray-600'>Comments</span>
-                    <span className='text-xs text-dark'>{lesson.comments}</span>
-                </div>
-            </div>
-        </div>
-        <div className='flex items-center justify-start w-full border-y border-gray-200 lg:text-sm text-xs'>
+        <div className='flex items-center justify-start w-full border-b border-gray-200 lg:text-sm text-xs'>
             <div className='text-gray-600 flex lg:py-3 py-2 lg:px-6 px-2 justify-center font-semibold lg:hidden cursor-pointer'>Course Content</div>
             <div className='text-dark border-b-3 border-[#4484E3] flex lg:py-3 py-2 lg:px-6 px-2 justify-center font-semibold cursor-pointer'>Description</div>
             <div className='text-gray-600 flex lg:py-3 py-2 lg:px-6 px-2 justify-center font-semibold cursor-pointer'>Lectures Notes</div>
@@ -102,7 +62,7 @@ function LessonDetails({ lesson }) {
             </div>
         </div>
         <div className='flex flex-col gap-4 py-2'>
-            <span className='text-dark text-2xl font-semibold'>Attach Files <span className='font-normal'>{lesson.attachFiles}</span></span>
+            <span className='text-dark text-2xl font-semibold'>Attach Files</span>
             <div className='flex bg-gray-200 w-full py-4 px-5 justify-between items-center'>
                 <div className='flex gap-3 items-center'>
                     <FileText size={50} color='#5183C4'/>

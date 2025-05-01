@@ -31,3 +31,7 @@ export const getAllSubjects = () => {
 export const getAllGrades = () => {
     return api.get('/grades');
 };
+
+export const getAllInstructors = () => {
+    return api.get('/instructors');
+};
