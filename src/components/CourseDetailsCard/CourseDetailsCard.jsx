@@ -1,19 +1,21 @@
 import React from 'react'
 import { AlarmClock, Clock3, ChartNoAxesColumnIncreasing, UsersRound, BookText, 
     DollarSign, Trophy, TvMinimal, Layers, Copy, Facebook, Twitter, Mail, MessageCircleCode } from 'lucide-react'
-import {  useFavorites } from '../../context/FavoriteContext';
+import { useFavorites } from '../../context/FavoriteContext';
+import { useCart } from '../../context/CartContext';
 
 function CourseDetailsCard({course}) {
     const { isFavorite, toggleFavorite } = useFavorites();
+    const { addToCart, inCart } = useCart();
   return (
     <>
-        <div className='w-full h-75 bg-gray-100 pr-27 pt-15 lg:flex flex-1 flex-col gap-4 py-2 pr-l hidden'>
+        <div className='w-full h-60 bg-gray-100 pr-27 pt-15 lg:flex flex-1 flex-col gap-4 py-2 pr-l hidden'>
             <div className="flex flex-col flex-1 shadow-lg overflow-hidden bg-white w-sm max-w-sm absolute border border-gray-200 py-3">
                 <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-3 px-5'>
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
                             <span className='text-dark text-2xl'>${course[0].price}</span>
-                            <span className='text-light text-md line-through'>${course[0].price + (course[0].price * 0.56)}</span>
+                            <span className='text-light text-md line-through'>${course[0].price + (Math.round(course[0].price * 0.56))}</span>
                         </div>
                         <div className='flex items-center bg-secondary py-1 px-2 gap-1 text-[#4484E3]'>
                             <span className='text-sm'>56%</span>
@@ -56,9 +58,18 @@ function CourseDetailsCard({course}) {
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-6 px-5'>
-                    <button className='bg-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
-                        Add To Cart
-                    </button>
+                    <div onClick={() => addToCart(course[0])}>
+                        {inCart(course[0].id)
+                        ? (
+                            <button className='bg-white border-2 border-primary text-primary w-full cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
+                                Remove From Cart
+                            </button> )
+                        : (
+                            <span className='bg-primary border-2 border-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
+                                Add To Cart
+                            </span> )
+                        } 
+                    </div>
                     <button className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>
                         Buy Now
                     </button>

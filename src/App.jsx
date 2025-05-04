@@ -20,6 +20,8 @@ import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
 import ContactUs from "./pages/ContactSreen/contactus"
+import Cart from "./pages/Cart/Cart";
+import AddPromoCode from "./pages/AddPromoCode/AddPromoCode";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -64,6 +66,10 @@ const route = createBrowserRouter([
       {
         path: "favorite-courses",
         element: <FavoriteCourses />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
       },
       {
         path: "instructor-profile/:id",
@@ -111,6 +117,10 @@ const route = createBrowserRouter([
       {
         path: "create-quiz",
         element: <InsQuizEditor />,
+      },
+      {
+        path: "add-promocode",
+        element: <AddPromoCode />,
       },
     ],
   },

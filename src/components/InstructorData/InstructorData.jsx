@@ -17,11 +17,11 @@ function InstructorData({courses, students, instructor}) {
     let subject = ''
   return (
     <div className="flex gap-5">
-        <div className='md:flex flex-col gap-2.5 border-[1.5px] border-gray-200 p-4 hidden lg:block lg:w-[40%] h-fit'>
-            <span className='text-dark text-xl font-semibold my-2'>ABOUT ME</span>
-            <p className='text-gray-600 text-sm'>{instructor?.bio}</p>
+        <div className='lg:flex flex-col gap-2.5 border-[1.5px] border-gray-200 p-4 hidden lg:w-[30%] h-fit'>
+            <span className='text-dark text-xl font-semibold my-1'>ABOUT ME</span>
+            <p className='text-gray-600 text-md'>{instructor?.bio}</p>
         </div>
-        <div className='lg:w-[60%] w-full justify-center flex flex-col gap-8 px-5'>
+        <div className='lg:w-[70%] w-full justify-center flex flex-col gap-8'>
             <div className='w-full border-b-[1.5px] border-gray-200 flex items-center'>
                 <div 
                     className={`text-md lg:px-14 px-10 lg:py-4 py-2 h-full cursor-pointer

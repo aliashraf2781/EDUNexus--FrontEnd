@@ -35,3 +35,11 @@ export const getAllGrades = () => {
 export const getAllInstructors = () => {
     return api.get('/instructors');
 };
+
+export const getAllPromocodes = () => {
+    return api.get('/promocodes');
+};
+
+export const addPromocodes = (promoData) => {
+    return api.post('/promocodes', promoData);
+};

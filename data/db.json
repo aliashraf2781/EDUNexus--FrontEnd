@@ -5,9 +5,21 @@
       "name": "Development",
       "count": 4235,
       "topics": [
-        { "id": 11, "name": "Web Development", "count": 2100 },
-        { "id": 12, "name": "Mobile Development", "count": 1235 },
-        { "id": 13, "name": "Game Development", "count": 900 }
+        {
+          "id": 11,
+          "name": "Web Development",
+          "count": 2100
+        },
+        {
+          "id": 12,
+          "name": "Mobile Development",
+          "count": 1235
+        },
+        {
+          "id": 13,
+          "name": "Game Development",
+          "count": 900
+        }
       ]
     },
     {
@@ -15,56 +27,183 @@
       "name": "Business",
       "count": 3454,
       "topics": [
-        { "id": 21, "name": "Entrepreneurship", "count": 1500 },
-        { "id": 22, "name": "Marketing", "count": 1200 },
-        { "id": 23, "name": "Finance", "count": 754 }
+        {
+          "id": 21,
+          "name": "Entrepreneurship",
+          "count": 1500
+        },
+        {
+          "id": 22,
+          "name": "Marketing",
+          "count": 1200
+        },
+        {
+          "id": 23,
+          "name": "Finance",
+          "count": 754
+        }
       ]
     }
   ],
   "courseLevels": [
-    { "id": 1, "name": "All Level", "count": 3214 },
-    { "id": 2, "name": "Beginner", "count": 1234 },
-    { "id": 3, "name": "Intermediate", "count": 2341 },
-    { "id": 4, "name": "Expert", "count": 1432 }
+    {
+      "id": 1,
+      "name": "All Level",
+      "count": 3214
+    },
+    {
+      "id": 2,
+      "name": "Beginner",
+      "count": 1234
+    },
+    {
+      "id": 3,
+      "name": "Intermediate",
+      "count": 2341
+    },
+    {
+      "id": 4,
+      "name": "Expert",
+      "count": 1432
+    }
   ],
   "tools": [
-    { "id": 1, "name": "HTML 5", "count": 3214 },
-    { "id": 2, "name": "CSS 3", "count": 1234 },
-    { "id": 3, "name": "React", "count": 2341 },
-    { "id": 4, "name": "Node.js", "count": 1432 }
+    {
+      "id": 1,
+      "name": "HTML 5",
+      "count": 3214
+    },
+    {
+      "id": 2,
+      "name": "CSS 3",
+      "count": 1234
+    },
+    {
+      "id": 3,
+      "name": "React",
+      "count": 2341
+    },
+    {
+      "id": 4,
+      "name": "Node.js",
+      "count": 1432
+    }
   ],
   "prices": [
-    { "id": 1, "name": "Paid", "count": 1234 },
-    { "id": 2, "name": "Free", "count": 3214 }
+    {
+      "id": 1,
+      "name": "Paid",
+      "count": 1234
+    },
+    {
+      "id": 2,
+      "name": "Free",
+      "count": 3214
+    }
   ],
   "subjects": [
-    { "id": 1, "name": "Arabic Language" },
-    { "id": 2, "name": "Mathematics" },
-    { "id": 3, "name": "Science" },
-    { "id": 4, "name": "English Language" },
-    { "id": 5, "name": "Social Studies" },
-    { "id": 6, "name": "Physics" },
-    { "id": 7, "name": "Chemistry" },
-    { "id": 8, "name": "Biology" },
-    { "id": 9, "name": "Philosophy and Logic" },
-    { "id": 10, "name": "Psychology and Sociology" },
-    { "id": 11, "name": "History" },
-    { "id": 12, "name": "Geography" },
-    { "id": 13, "name": "Computer Science" }
+    {
+      "id": 1,
+      "name": "Arabic Language"
+    },
+    {
+      "id": 2,
+      "name": "Mathematics"
+    },
+    {
+      "id": 3,
+      "name": "Science"
+    },
+    {
+      "id": 4,
+      "name": "English Language"
+    },
+    {
+      "id": 5,
+      "name": "Social Studies"
+    },
+    {
+      "id": 6,
+      "name": "Physics"
+    },
+    {
+      "id": 7,
+      "name": "Chemistry"
+    },
+    {
+      "id": 8,
+      "name": "Biology"
+    },
+    {
+      "id": 9,
+      "name": "Philosophy and Logic"
+    },
+    {
+      "id": 10,
+      "name": "Psychology and Sociology"
+    },
+    {
+      "id": 11,
+      "name": "History"
+    },
+    {
+      "id": 12,
+      "name": "Geography"
+    },
+    {
+      "id": 13,
+      "name": "Computer Science"
+    }
   ],
   "grades": [
-    { "id": 1, "name": "Grade 1" },
-    { "id": 2, "name": "Grade 2" },
-    { "id": 3, "name": "Grade 3" },
-    { "id": 4, "name": "Grade 4" },
-    { "id": 5, "name": "Grade 5" },
-    { "id": 6, "name": "Grade 6" },
-    { "id": 7, "name": "Grade 7" },
-    { "id": 8, "name": "Grade 8" },
-    { "id": 9, "name": "Grade 9" },
-    { "id": 10, "name": "Grade 10" },
-    { "id": 11, "name": "Grade 11" },
-    { "id": 12, "name": "Grade 12" }
+    {
+      "id": 1,
+      "name": "Grade 1"
+    },
+    {
+      "id": 2,
+      "name": "Grade 2"
+    },
+    {
+      "id": 3,
+      "name": "Grade 3"
+    },
+    {
+      "id": 4,
+      "name": "Grade 4"
+    },
+    {
+      "id": 5,
+      "name": "Grade 5"
+    },
+    {
+      "id": 6,
+      "name": "Grade 6"
+    },
+    {
+      "id": 7,
+      "name": "Grade 7"
+    },
+    {
+      "id": 8,
+      "name": "Grade 8"
+    },
+    {
+      "id": 9,
+      "name": "Grade 9"
+    },
+    {
+      "id": 10,
+      "name": "Grade 10"
+    },
+    {
+      "id": 11,
+      "name": "Grade 11"
+    },
+    {
+      "id": 12,
+      "name": "Grade 12"
+    }
   ],
   "courses": [
     {
@@ -81,7 +220,7 @@
       "shortDescription": "Learn the basics of natural science with fun activities.",
       "longDescription": "This course introduces Grade 4 students to the wonders of science through engaging experiments and simple explanations about matter, energy, and ecosystems.",
       "created_at": "2024-08-15T14:23:11Z",
-      "duration":"9h 37m"
+      "duration": "9h 37m"
     },
     {
       "id": 2,
@@ -120,7 +259,7 @@
       "title": "Geography for Grade 8",
       "subject_id": 12,
       "grade": 8,
-      "instructor_id": 12,
+      "instructor_id": 11,
       "price": 40,
       "rating": 4.5,
       "students": 14000,
@@ -152,7 +291,7 @@
       "title": "Computer Skills for Grade 6",
       "subject_id": 13,
       "grade": 6,
-      "instructor_id": 13,
+      "instructor_id": 12,
       "price": 30,
       "rating": 4.4,
       "students": 12500,
@@ -260,7 +399,7 @@
       "duration": "7h 30m"
     }
   ],
-  "instructors" : [
+  "instructors": [
     {
       "id": 1,
       "name": "Mr. Ahmed Ali",
@@ -303,7 +442,7 @@
       "students": 25000,
       "numberOfCourses": 1,
       "website": "https://englishwithlayla.com",
-      "rating": 5.0
+      "rating": 5
     },
     {
       "id": 5,
@@ -393,7 +532,7 @@
       "website": "https://digitalkids-rami.com",
       "rating": 4.8
     }
-  ],  
+  ],
   "students": [
     {
       "id": 1,
@@ -435,6 +574,19 @@
       "fileName": "Create account on webflow.pdf",
       "fileSize": "12.6 MB"
     }
+  ],
+  "promocodes": [
+    {
+      "id": "ac89",
+      "code": "SAVE25",
+      "discount": 25,
+      "courseId": 7
+    },
+    {
+      "id": "4315",
+      "code": "FULL",
+      "discount": 100,
+      "courseId": 5
+    }
   ]
 }
-

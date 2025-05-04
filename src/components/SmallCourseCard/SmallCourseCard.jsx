@@ -10,8 +10,10 @@ function CourseCard({ course, subject }) {
 
   return (
     <div className='w-auto cursor-pointer border-[1.5px] border-[#E9EAF0]' onClick={handleClick}>
-        <img src={`../../../${course?.image_url}`} alt='Course Image' width={270} height={230} className='object-cover w-full'/>
-        <div className='flex flex-col h-[180px]'>
+        <div className="h-[120px] relative">
+            <img src={`../../../${course?.image_url}`} alt='Course Image' width={270} height={230} className='object-cover h-full w-full'/>
+        </div>
+        <div className='flex flex-col h-[160px]'>
             <div className='px-4 py-4 flex flex-col gap-3 h-[130px]'>
                 <div className='flex justify-between'>
                     <div className={`md:text-[10px] text-[8px] px-2 flex items-center justify-center font-semibold
