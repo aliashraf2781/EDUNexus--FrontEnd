@@ -11,7 +11,7 @@ import CreateCoursePage from './pages/CreateCoursePage/CreateCoursePage';
 function App() {
   return (
     <>
-     <CreateCoursePage/>
+     <StudentDashboard/>
     </>
   );
 }

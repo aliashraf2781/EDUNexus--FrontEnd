@@ -47,7 +47,6 @@
       "students": 197637,
       "image": "src/assets/courses images/course1.png",
       "progress": 75
-
     },
     {
       "id": 2,
@@ -67,7 +66,7 @@
       "rating": 4.8,
       "students": 123012,
       "image": "src/assets/courses images/course3.png",
-       "progress": 80
+      "progress": 80
     },
     {
       "id": 4,
@@ -97,7 +96,7 @@
       "rating": 4.5,
       "students": 67899,
       "image": "src/assets/courses images/course6.png",
-       "progress": 40
+      "progress": 40
     },
     {
       "id": 7,
@@ -127,7 +126,7 @@
       "rating": 4.6,
       "students": 45670,
       "image": "src/assets/courses images/course9.png",
-       "progress": 77
+      "progress": 77
     },
     {
       "id": 10,
@@ -147,7 +146,7 @@
       "rating": 4.5,
       "students": 63450,
       "image": "src/assets/courses images/course11.png",
-       "progress": 88
+      "progress": 88
     },
     {
       "id": 12,
@@ -157,6 +156,38 @@
       "rating": 4.6,
       "students": 74210,
       "image": "src/assets/courses images/course12.png"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "title": "The Ultimate Drawing Course - Beginner to Advanced",
+      "price": 37,
+      "oldPrice": 49,
+      "rating": 4.6,
+      "reviews": 444,
+      "instructor": ["Harry Potter", "John Wick"],
+      "image": "src/assets/courses images/course4.png"
+    },
+    {
+      "id": 2,
+      "title": "Digital Marketing Masterclass - 23 Courses in 1",
+      "price": 24,
+      "oldPrice": null,
+      "rating": 4.8,
+      "reviews": 444,
+      "instructor": ["Nobody"],
+      "image": "src/assets/courses images/course10.png"
+    },
+    {
+      "id": 3,
+      "title": "Angular - The Complete Guide (2021 Edition)",
+      "price": 13,
+      "oldPrice": null,
+      "rating": 4.7,
+      "reviews": 444,
+      "instructor": ["Kevin Gilbert"],
+      "image": "src/assets/courses images/course2.png"
     }
   ]
 }

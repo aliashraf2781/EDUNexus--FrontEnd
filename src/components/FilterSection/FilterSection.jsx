@@ -19,10 +19,10 @@ function FilterSection({ showFilters, setShowFilters }) {
   useEffect(() => {
     const fetchData = async () => {
       const [catRes, levelRes, toolsRes, priceRes] = await Promise.all([
-        fetch('http://localhost:3002/categories'),
-        fetch('http://localhost:3002/courseLevels'),
-        fetch('http://localhost:3002/tools'),
-        fetch('http://localhost:3002/prices'),
+        fetch('http://localhost:3010/categories'),
+        fetch('http://localhost:3010/courseLevels'),
+        fetch('http://localhost:3010/tools'),
+        fetch('http://localhost:3010/prices'),
       ])
       const [catData, levelData, toolsData, priceData] = await Promise.all([
         catRes.json(),
