@@ -7,7 +7,7 @@ const EnrolledCourses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://localhost:3002/courses");
+        const response = await fetch("http://localhost:3010/courses");
         const data = await response.json();
         setCourses(data);
       } catch (error) {

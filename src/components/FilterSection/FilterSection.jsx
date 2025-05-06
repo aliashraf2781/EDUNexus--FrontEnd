@@ -2,7 +2,6 @@ import React from 'react'
 import FilterContainer from '../FilterContainer/FilterContainer'
 import FilterTopic from '../FilterTopic/FilterTopic'
 
-
 function FilterSection({
   showFilters, setShowFilters,
   grades, subjects,selectedGrade, setSelectedGrade,
