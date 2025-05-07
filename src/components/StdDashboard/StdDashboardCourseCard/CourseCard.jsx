@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 const CourseCard = ({ image, category, title, progress }) => {
   const [started, setStarted] = useState(false);
 
   return (
-    <div className="bg-white overflow-hidden shadow-md hover:shadow-lg transition duration-300 w-full">
+    <NavLink
+      to={"course-lesson"}
+      className="bg-white overflow-hidden shadow-md hover:shadow-lg transition duration-300 w-full"
+    >
       <img src={image} alt={title} className="w-full h-50 object-cover" />
       <div className="p-4 space-y-2">
         <p className="text-xs text-gray-500">{category}</p>
@@ -40,7 +44,7 @@ const CourseCard = ({ image, category, title, progress }) => {
           </>
         )}
       </div>
-    </div>
+    </NavLink>
   );
 };
 

@@ -1,7 +1,9 @@
 import React from "react";
 import woman from "../../assets/teachingSteps/woman.svg";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 ArrowRight;
+
 export default function TeachingStepsComponent() {
   return (
     <div className="py-16 flex flex-col xl:flex-row justify-between items-center">
@@ -46,7 +48,8 @@ export default function TeachingStepsComponent() {
               <ArrowRight className="h-4 w-4" />
             </span>
             <span className="text-xs font-semibold sm:text-sm  transition-all group-hover:me-4">
-              Start Teaching
+              <Link to="/instructorRegister">
+              Start Teaching</Link>
             </span>
           </a>
         </span>

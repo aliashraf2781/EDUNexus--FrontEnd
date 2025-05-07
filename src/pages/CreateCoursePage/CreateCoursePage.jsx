@@ -19,12 +19,12 @@ const CreateCoursePage = () => {
 
         <BasicInformation />
         <div className="flex flex-col lg:flex-row space-x-4">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full ">
             <CourseThumbnail />
           </div>
-          <div className="w-full lg:w-1/2">
+          {/* <div className="w-full lg:w-1/2">
             <CourseTrailer />
-          </div>
+          </div> */}
         </div>
 
         <CourseLectures />
