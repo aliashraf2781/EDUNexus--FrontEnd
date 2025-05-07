@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Development",
       "count": 4235,
       "topics": [
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Business",
       "count": 3454,
       "topics": [
@@ -47,56 +47,56 @@
   ],
   "courseLevels": [
     {
-      "id": 1,
+      "id": "1",
       "name": "All Level",
       "count": 3214
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Beginner",
       "count": 1234
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Intermediate",
       "count": 2341
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Expert",
       "count": 1432
     }
   ],
   "tools": [
     {
-      "id": 1,
+      "id": "1",
       "name": "HTML 5",
       "count": 3214
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "CSS 3",
       "count": 1234
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "React",
       "count": 2341
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Node.js",
       "count": 1432
     }
   ],
   "prices": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Paid",
       "count": 1234
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Free",
       "count": 3214
     }
@@ -588,5 +588,134 @@
       "discount": 100,
       "courseId": 5
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "instructor@example.com",
+      "password": "password123",
+      "role": "instructor"
+    },
+    {
+      "id": "2",
+      "email": "student@example.com",
+      "password": "student123",
+      "role": "student"
+    },
+    {
+      "id": "3",
+      "email": "organization@example.com",
+      "password": "org123456",
+      "role": "organization"
+    },
+    {
+      "id": "1745894743704",
+      "username": "shrouk",
+      "email": "shrouk@gmail.com",
+      "password": "123456",
+      "role": "student"
+    },
+    {
+      "id": "1745895082722",
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1745895766436",
+      "username": "shrouq.kamel123@gmail.com",
+      "email": "shrouk.kamel123@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Responsive Web Design means?",
+      "options": [
+        "Fixed layout",
+        "Separate sites",
+        "Only media queries",
+        "Adaptive design"
+      ],
+      "correctAnswer": "Adaptive design",
+      "id": "03e3"
+    },
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "HighText Machine Language",
+        "HyperText Markup Language",
+        "HyperTool Markup Language",
+        "None"
+      ],
+      "correctAnswer": "HyperText Markup Language",
+      "id": "29dd"
+    },
+    {
+      "question": "Which CSS property changes the text color?",
+      "options": [
+        "text-style",
+        "color",
+        "font-color",
+        "text-color"
+      ],
+      "correctAnswer": "color",
+      "id": "f40d"
+    },
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "options": [
+        "<js>",
+        "<scripting>",
+        "<script>",
+        "<javascript>"
+      ],
+      "correctAnswer": "<script>",
+      "id": "c1ea"
+    },
+    {
+      "question": "Which tag is used to define an image in HTML?",
+      "options": [
+        "<img>",
+        "<image>",
+        "<picture>",
+        "<photo>"
+      ],
+      "correctAnswer": "<img>",
+      "id": "1182"
+    }
+  ], 
+   "wishlist": [
+    {
+      "id": 1,
+      "title": "The Ultimate Drawing Course - Beginner to Advanced",
+      "price": 37,
+      "oldPrice": 49,
+      "rating": 4.6,
+      "reviews": 444,
+      "instructor": ["Harry Potter", "John Wick"],
+      "image": "src/assets/courses images/course4.png"
+    },
+    {
+      "id": 2,
+      "title": "Digital Marketing Masterclass - 23 Courses in 1",
+      "price": 24,
+      "oldPrice": null,
+      "rating": 4.8,
+      "reviews": 444,
+      "instructor": ["Nobody"],
+      "image": "src/assets/courses images/course10.png"
+    },
+    {
+      "id": 3,
+      "title": "Angular - The Complete Guide (2021 Edition)",
+      "price": 13,
+      "oldPrice": null,
+      "rating": 4.7,
+      "reviews": 444,
+      "instructor": ["Kevin Gilbert"],
+      "image": "src/assets/courses images/course2.png"
+    }
   ]
 }
+

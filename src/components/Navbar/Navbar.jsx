@@ -63,7 +63,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"signup"}
+                  to={"instructorRegister"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >

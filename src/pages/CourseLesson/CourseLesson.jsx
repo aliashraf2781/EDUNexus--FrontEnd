@@ -3,12 +3,12 @@ import {ArrowLeft, FolderOpen, CirclePlay, Clock3} from 'lucide-react'
 import LessonDetails from '../../components/LessonDetails/LessonDetails'
 import CourseContent from '../../components/CourseContent/CourseContent'
 import LessonComments from '../../components/LessonComments/LessonComments'
-import AIAssistant from '../../components/AIAssistant/AIAssistant'
+// import AIAssistant from '../../components/AIAssistant/AIAssistant'
 import { getLessons } from '../../api/courses'
 
 function CourseLesson() {
     const [lesson, setLesson] = useState([]);
-
+    const [finished , setFinished] = useState(false);
      useEffect(() => {
         const fetchData = async () => {
           const allLessons = await getLessons();
@@ -60,7 +60,7 @@ function CourseLesson() {
                 <div className='hidden lg:block lg:w-[40%]'>
                     <CourseContent />
                 </div>
-                <AIAssistant />
+                {/* <AIAssistant /> */}
             </div>
         </div>
         

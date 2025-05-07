@@ -1,55 +1,61 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [users, setUsers] = useState([]); 
-  const [error, setError] = useState(""); 
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const [showPassword, setShowPassword] = useState(false); // To toggle password visibility
+  const [users, setUsers] = useState([]); // To store users fetched from the backend
+  const [error, setError] = useState(""); // To store error messages
+  const navigate = useNavigate();
 
   useEffect(() => {
+    // Fetch users data from the API when the component is mounted
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3001/users"); 
+        const response = await fetch("http://localhost:3001/users");
         const data = await response.json();
-        setUsers(data); 
+        setUsers(data); // Store users in the state
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching users:", error); // Log errors in case fetching fails
       }
     };
 
-    fetchUsers(); 
-  }, []);
+    fetchUsers();
+  }, []); // Empty dependency array means this runs once when the component is mounted
 
-  // Validation Schema using Yup
+  // Form validation schema using Yup
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
-      .email("Please enter a valid email address")
-      .required("Email is required"),
+      .email("Please enter a valid email address") // Email validation
+      .required("Email is required"), // Email is a required field
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
+      .min(6, "Password must be at least 6 characters") // Password must have a minimum length
+      .required("Password is required"), // Password is a required field
     role: Yup.string()
-      .oneOf(["instructor", "student", "organization"], "Please select a role")
-      .required("Role is required"),
+      .oneOf(["instructor", "student", "organization"], "Please select a role") // Role must be one of the specified values
+      .required("Role is required"), // Role is a required field
   });
 
-  // Handle user login and check if user exists in FakeAPI
-  const handleLogin = async (values) => {
-    const { email, password } = values;
+  // Handle login when form is submitted
+  const handleLogin = (values) => {
+    const { email, password, role } = values;
 
-    // Check if the user exists
-    const user = users.find((user) => user.email === email && user.password === password);
+    // Check if the user exists in the fetched users
+    const user = users.find(
+      (user) =>
+        user.email === email &&
+        user.password === password &&
+        user.role === role
+    );
 
     if (user) {
-      setError(""); // Clear any previous error
-      console.log("User logged in:", user); 
-      navigate(""); // Redirect to home page on successful login
-      // You can proceed to your next step, e.g., redirect user
+      setError(""); // Clear any previous error messages
+      console.log("User logged in:", user); // Log the logged-in user
+      navigate("/"); // Redirect after successful login
     } else {
-      setError("Invalid email or password!"); // Display error if user is not found
+      setError("Invalid email, password, or role!"); // Show error message if credentials are incorrect
     }
   };
 
@@ -62,18 +68,12 @@ const Login = () => {
           Login to your Account
         </h2>
 
-        {/* Display Error Message */}
-        {error && <div className="text-red-500 mb-4">{error}</div>}
+        {error && <div className="text-red-500 mb-4">{error}</div>} {/* Show error if exists */}
 
         <Formik
-          initialValues={{
-            email: "",
-            password: "",
-            remember: false,
-            role: "",
-          }}
+          initialValues={{ email: "", password: "", remember: false, role: "" }}
           validationSchema={LoginSchema}
-          onSubmit={handleLogin} // Call handleLogin on form submit
+          onSubmit={handleLogin} // Handle form submission
         >
           {({ errors, touched }) => (
             <Form className="space-y-5 w-full max-w-sm">
@@ -101,7 +101,7 @@ const Login = () => {
               <div className="relative">
                 <Lock className="absolute left-3 top-3.5 text-light" size={20} />
                 <Field
-                  type={showPassword ? "text" : "password"}
+                  type={showPassword ? "text" : "password"} // Toggle password visibility
                   name="password"
                   placeholder="Password"
                   className={`pl-10 pr-10 py-2 w-full border ${
@@ -114,13 +114,13 @@ const Login = () => {
                   <Eye
                     className="absolute right-3 top-3.5 text-light cursor-pointer"
                     size={20}
-                    onClick={() => setShowPassword(false)}
+                    onClick={() => setShowPassword(false)} // Hide password
                   />
                 ) : (
                   <EyeOff
                     className="absolute right-3 top-3.5 text-light cursor-pointer"
                     size={20}
-                    onClick={() => setShowPassword(true)}
+                    onClick={() => setShowPassword(true)} // Show password
                   />
                 )}
                 <ErrorMessage
@@ -130,39 +130,43 @@ const Login = () => {
                 />
               </div>
 
-              {/* Role Selection - Radio Buttons */}
-              <div className="flex items-center justify-between text-sm text-dark">
-                <label className="flex items-center gap-2">
-                  <Field type="radio" name="role" value="instructor" />
-                  Instructor
-                </label>
-                <label className="flex items-center gap-2">
-                  <Field type="radio" name="role" value="student" />
-                  Student
-                </label>
-                <label className="flex items-center gap-2">
-                  <Field type="radio" name="role" value="organization" />
-                  Organization
-                </label>
-              </div>
-              <ErrorMessage
-                name="role"
-                component="div"
-                className="text-red-500 text-sm"
-              />
+              {/* Role Selection */}
+              <div className="flex flex-col gap-2 text-sm text-dark">
+                <div className="flex items-center gap-4">
 
-              {/* Remember Me & Forgot Password */}
+                  {/* <label className="flex items-center gap-2">
+                    <Field type="radio" name="role" value="instructor" />
+                    Instructor
+                  </label> */}
+
+                  <label className="flex items-center gap-2">
+                    <Field type="radio" name="role" value="student" />
+                    Student
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <Field type="radio" name="role" value="organization" />
+                    Organization
+                  </label>
+                </div>
+                <ErrorMessage
+                  name="role"
+                  component="div"
+                  className="text-red-500 text-sm"
+                />
+              </div>
+
+              {/* Remember Me and Forgot Password */}
               <div className="flex items-center justify-between text-sm text-dark">
                 <label className="flex items-center gap-2">
                   <Field type="checkbox" name="remember" className="accent-primary" />
                   Remember me
                 </label>
-                <a href="#" className="text-indigo-500 hover:underline">
+                <Link to="/forgot-password" className="text-indigo-500 hover:underline">
                   Forgot Password?
-                </a>
+                </Link>
               </div>
 
-              {/* Login Button */}
+              {/* Submit Button */}
               <button
                 type="submit"
                 className="w-full bg-primary text-white py-2 rounded-md font-semibold hover:brightness-90 transition"
@@ -170,12 +174,19 @@ const Login = () => {
                 LOG IN
               </button>
 
-              {/* Create Account */}
+              {/* Create Account Link */}
               <p className="text-sm text-center text-dark">
                 Don't have an account?{" "}
-                <a href="#" className="text-indigo-500 hover:underline">
+                <Link to="/signup" className="text-indigo-500 hover:underline">
                   Create an account
-                </a>
+                </Link>
+
+              </p>
+              <p className="text-sm text-center text-dark">
+                Are you an instructor?{" "}
+                <Link to="/instructorLogIn" className="text-indigo-500 hover:underline">
+                  Log In Now!
+                </Link>
               </p>
 
               {/* Divider */}
@@ -185,7 +196,7 @@ const Login = () => {
                 <div className="h-px flex-1 bg-secondary"></div>
               </div>
 
-              {/* Google Button */}
+              {/* Google Auth Button */}
               <button
                 type="button"
                 className="w-full border border-secondary py-2 rounded-md flex items-center justify-center gap-3 text-sm font-medium hover:bg-gray-100 transition"
@@ -205,7 +216,7 @@ const Login = () => {
       {/* Right Section - Image */}
       <div className="w-full lg:w-1/2 bg-primary flex items-center justify-center py-12">
         <img
-          src="./Login.png"
+          src="/Login.png" // Make sure the image is inside the public folder
           alt="Login Illustration"
           className="w-3/4 h-3/4 object-contain rounded-full"
         />
