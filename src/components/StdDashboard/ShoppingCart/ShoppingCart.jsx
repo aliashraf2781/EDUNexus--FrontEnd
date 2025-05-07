@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCheckCircle } from "react-icons/fa";
+import { CheckCircle } from "lucide-react";
 
 const initialCourses = [
   {
@@ -108,7 +108,7 @@ const ShoppingCart = () => {
             </div>
           )}
           <p className="text-sm text-gray-500 flex items-center gap-2">
-            <FaCheckCircle className="text-green-500" />
+            <CheckCircle className="text-green-500" />
             Lifetime access & certificates included
           </p>
           <button

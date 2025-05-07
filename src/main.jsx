@@ -4,12 +4,15 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { FavoriteProvider } from "./context/FavoriteContext";
 import "./index.css";
+import { Provider } from "react-redux";
+import { store } from "./store.js";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FavoriteProvider>
-      <App />
-    </FavoriteProvider>
-  </StrictMode> ,
-   
-)
+    <Provider store={store}>
+      <FavoriteProvider>
+        <App />
+      </FavoriteProvider>
+    </Provider>
+  </StrictMode>
+);

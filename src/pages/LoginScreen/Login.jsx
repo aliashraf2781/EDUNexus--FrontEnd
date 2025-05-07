@@ -1,29 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import * as Yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
+import { useLoginMutation } from "../../services/apiSlice";
 
 const Login = () => {
+  const [login, { isLoading }] = useLoginMutation();
   const [showPassword, setShowPassword] = useState(false); // To toggle password visibility
-  const [users, setUsers] = useState([]); // To store users fetched from the backend
+
   const [error, setError] = useState(""); // To store error messages
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Fetch users data from the API when the component is mounted
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/users");
-        const data = await response.json();
-        setUsers(data); // Store users in the state
-      } catch (error) {
-        console.error("Error fetching users:", error); // Log errors in case fetching fails
+  const handleLogin = async (values) => {
+    const { email, password } = values;
+    try {
+      const res = await login({ email, password }).unwrap();
+      if (res.user.role == "student") {
+        localStorage.setItem("token", res.token);
+        localStorage.setItem("role", res.user.role);
+        setError("");
+        navigate("/student-dashboard");
+      } else {
+        setError("Wrong Role , you aren't student");
       }
-    };
-
-    fetchUsers();
-  }, []); // Empty dependency array means this runs once when the component is mounted
+      console.log("Login Successfully", res);
+    } catch (err) {
+      console.log(err);
+      setError("Login Failed : email or password may be incorrect");
+    }
+  };
 
   // Form validation schema using Yup
   const LoginSchema = Yup.object().shape({
@@ -38,27 +44,6 @@ const Login = () => {
       .required("Role is required"), // Role is a required field
   });
 
-  // Handle login when form is submitted
-  const handleLogin = (values) => {
-    const { email, password, role } = values;
-
-    // Check if the user exists in the fetched users
-    const user = users.find(
-      (user) =>
-        user.email === email &&
-        user.password === password &&
-        user.role === role
-    );
-
-    if (user) {
-      setError(""); // Clear any previous error messages
-      console.log("User logged in:", user); // Log the logged-in user
-      navigate("/"); // Redirect after successful login
-    } else {
-      setError("Invalid email, password, or role!"); // Show error message if credentials are incorrect
-    }
-  };
-
   return (
     <div className="flex flex-col lg:flex-row min-h-screen w-full">
       {/* Left Section - Form */}
@@ -67,9 +52,8 @@ const Login = () => {
         <h2 className="text-2xl font-semibold mb-6 text-center text-dark">
           Login to your Account
         </h2>
-
-        {error && <div className="text-red-500 mb-4">{error}</div>} {/* Show error if exists */}
-
+        {error && <div className="text-red-500 mb-4">{error}</div>}{" "}
+        {/* Show error if exists */}
         <Formik
           initialValues={{ email: "", password: "", remember: false, role: "" }}
           validationSchema={LoginSchema}
@@ -79,7 +63,10 @@ const Login = () => {
             <Form className="space-y-5 w-full max-w-sm">
               {/* Email Field */}
               <div className="relative">
-                <Mail className="absolute left-3 top-3.5 text-light" size={20} />
+                <Mail
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="email"
                   name="email"
@@ -99,7 +86,10 @@ const Login = () => {
 
               {/* Password Field */}
               <div className="relative">
-                <Lock className="absolute left-3 top-3.5 text-light" size={20} />
+                <Lock
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type={showPassword ? "text" : "password"} // Toggle password visibility
                   name="password"
@@ -133,7 +123,6 @@ const Login = () => {
               {/* Role Selection */}
               <div className="flex flex-col gap-2 text-sm text-dark">
                 <div className="flex items-center gap-4">
-
                   {/* <label className="flex items-center gap-2">
                     <Field type="radio" name="role" value="instructor" />
                     Instructor
@@ -158,12 +147,19 @@ const Login = () => {
               {/* Remember Me and Forgot Password */}
               <div className="flex items-center justify-between text-sm text-dark">
                 <label className="flex items-center gap-2">
-                  <Field type="checkbox" name="remember" className="accent-primary" />
+                  <Field
+                    type="checkbox"
+                    name="remember"
+                    className="accent-primary"
+                  />
                   Remember me
                 </label>
-                <Link to="/forgot-password" className="text-indigo-500 hover:underline">
+                {/* <Link
+                  to="/forgot-password"
+                  className="text-indigo-500 hover:underline"
+                >
                   Forgot Password?
-                </Link>
+                </Link> */}
               </div>
 
               {/* Submit Button */}
@@ -171,7 +167,16 @@ const Login = () => {
                 type="submit"
                 className="w-full bg-primary text-white py-2 rounded-md font-semibold hover:brightness-90 transition"
               >
-                LOG IN
+                 {isLoading ? (
+                  <>
+                    <div className="flex justify-center gap-2">
+                      <Loader2 className="animate-spin text-gray-500" /> Logging
+                      in ...
+                    </div>
+                  </>
+                ) : (
+                  "Log In"
+                )}
               </button>
 
               {/* Create Account Link */}
@@ -180,24 +185,26 @@ const Login = () => {
                 <Link to="/signup" className="text-indigo-500 hover:underline">
                   Create an account
                 </Link>
-
               </p>
               <p className="text-sm text-center text-dark">
                 Are you an instructor?{" "}
-                <Link to="/instructorLogIn" className="text-indigo-500 hover:underline">
+                <Link
+                  to="/instructorLogIn"
+                  className="text-indigo-500 hover:underline"
+                >
                   Log In Now!
                 </Link>
               </p>
 
               {/* Divider */}
-              <div className="flex items-center justify-center gap-2 text-sm text-light">
+              {/* <div className="flex items-center justify-center gap-2 text-sm text-light">
                 <div className="h-px flex-1 bg-secondary"></div>
                 OR
                 <div className="h-px flex-1 bg-secondary"></div>
-              </div>
+              </div> */}
 
               {/* Google Auth Button */}
-              <button
+              {/* <button
                 type="button"
                 className="w-full border border-secondary py-2 rounded-md flex items-center justify-center gap-3 text-sm font-medium hover:bg-gray-100 transition"
               >
@@ -207,7 +214,7 @@ const Login = () => {
                   className="w-5 h-5"
                 />
                 Continue with Google
-              </button>
+              </button> */}
             </Form>
           )}
         </Formik>
