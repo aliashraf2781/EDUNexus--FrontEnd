@@ -10,10 +10,13 @@ import {
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router";
+import { useRegisterMutation } from "../../services/apiSlice";
+import { useState } from "react";
 
 export default function RegisterInstructor() {
+  const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  const [register, { isLoading }] = useRegisterMutation();
   const initialValues = {
     name: "",
     title: "",
@@ -23,10 +26,8 @@ export default function RegisterInstructor() {
     description: "",
     website: "",
     driveLink: "",
-    courseRating: 0,
-    students: "0",
-    courses: "0",
-    status: "Pending",
+    status: "pending",
+    role: "instructor",
   };
 
   const validationSchema = Yup.object().shape({
@@ -49,25 +50,14 @@ export default function RegisterInstructor() {
   });
 
   const handleSubmit = async (values, { resetForm }) => {
-    const newInstructor = {
-      ...values,
-      id: String(Date.now()),
-    };
-
     try {
-      const res = await fetch("http://localhost:3001/instructors", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newInstructor),
-      });
-
-      if (!res.ok) throw new Error("Failed to register");
-
+      const res = await register(values).unwrap();
       resetForm();
       navigate("/application-review");
-    } catch (error) {
-      alert("Error registering instructor");
-      console.error(error);
+      setError("");
+    } catch (err) {
+      console.log("Error Registering", err);
+      setError("Registration failed. Please try again.");
     }
   };
 
@@ -78,7 +68,7 @@ export default function RegisterInstructor() {
         <h2 className="text-2xl font-semibold mb-6 w-full text-center text-dark">
           Register as an Instructor
         </h2>
-
+        {error && <div className="text-red-500 mb-4">{error}</div>}
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}

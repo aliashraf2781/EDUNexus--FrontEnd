@@ -29,8 +29,18 @@ import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
 
 import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
+import Unauthorized from "./pages/UnauthorizedPage/UnauthorizedPage";
+import {
+  InstructorRoute,
+  StudentRoute,
+} from "./components/ProtectedRoute/ProtectedRoute";
 
 const route = createBrowserRouter([
+  {
+    path: "/unauthorized",
+    element: <Layout />,
+    children: [{ index: true, element: <Unauthorized /> }],
+  },
   {
     path: "/",
     element: <Layout />,
@@ -53,7 +63,12 @@ const route = createBrowserRouter([
       },
       {
         path: "student-dashboard",
-        element: <StudentDashboard />,
+        element: (
+          <StudentRoute>
+            {" "}
+            <StudentDashboard />
+          </StudentRoute>
+        ),
       },
       {
         path: "course-details/:id",
@@ -61,19 +76,35 @@ const route = createBrowserRouter([
       },
       {
         path: "course-lesson",
-        element: <CourseLesson />,
+        element: (
+          <StudentRoute>
+            <CourseLesson />
+          </StudentRoute>
+        ),
       },
       {
         path: "quiz",
-        element: <Quiz />,
+        element: (
+          <StudentRoute>
+            <Quiz />
+          </StudentRoute>
+        ),
       },
       {
         path: "course-notifation",
-        element: <CourseNotfication />,
+        element: (
+          <StudentRoute>
+            <CourseNotfication />
+          </StudentRoute>
+        ),
       },
       {
         path: "favorite-courses",
-        element: <FavoriteCourses />,
+        element: (
+          <StudentRoute>
+            <FavoriteCourses />
+          </StudentRoute>
+        ),
       },
       {
         path: "instructor-profile/:id",
@@ -81,15 +112,28 @@ const route = createBrowserRouter([
       },
       {
         path: "instructor-quiz-editor",
-        element: <InsQuizEditor />,
+        element: (
+          <InstructorRoute>
+            {" "}
+            <InsQuizEditor />
+          </InstructorRoute>
+        ),
       },
       {
         path: "student-dashboard",
-        element: <StudentDashboard />,
+        element: (
+          <StudentRoute>
+            <StudentDashboard />
+          </StudentRoute>
+        ),
       },
       {
         path: "instructor-profile-settings",
-        element: <InsProfileSettings />,
+        element: (
+          <InstructorRoute>
+            <InsProfileSettings />
+          </InstructorRoute>
+        ),
       },
     ],
   },
@@ -99,11 +143,15 @@ const route = createBrowserRouter([
   },
   {
     path: "instructor",
-    element: <DashboardLayout />,
+    element: (
+      <InstructorRoute>
+        <DashboardLayout />
+      </InstructorRoute>
+    ),
+
     children: [
       {
         index: true,
-        // path: "dashboard",
         element: <Dashboard />,
       },
       {
