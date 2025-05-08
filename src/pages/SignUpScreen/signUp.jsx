@@ -2,9 +2,11 @@ import { User, Mail, Lock } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { NavLink, useNavigate } from "react-router-dom"; // ✅ Import for navigation
+import { useState } from "react"; // ✅ لإدارة حالة اللودينج
 
 export default function SignupPage() {
   const navigate = useNavigate(); // ✅ Initialize navigate function
+  const [isSubmitting, setIsSubmitting] = useState(false); // ✅ لودينج
 
   // Define validation schema using Yup
   const SignupSchema = Yup.object().shape({
@@ -28,30 +30,31 @@ export default function SignupPage() {
 
   // Handle signup form submission
   const handleSignup = async (values) => {
-    
+    setIsSubmitting(true); // ✅ بدأ التحميل
     try {
-      // const response = await fetch("http://localhost:3001/users", {
-      const response = await fetch("https://rat-intent-hideously.ngrok-free.app/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "ngrok-skip-browser-warning": true,
-        },
-        body: JSON.stringify({
-          // id: Date.now(),
-          name: values.username,
-          email: values.email,
-          password: values.password,
-          role: "student", // Assuming the default role is 'student'
-        }),
-      });
+      const response = await fetch(
+        "https://rat-intent-hideously.ngrok-free.app/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": true,
+          },
+          body: JSON.stringify({
+            name: values.username,
+            email: values.email,
+            password: values.password,
+            role: "student",
+          }),
+        }
+      );
 
       if (response.ok) {
         const newUser = await response.json();
         console.log("User created:", newUser);
         alert("Account created successfully!");
+        localStorage.setItem("user", JSON.stringify(newUser)); // أو newUser.token لو عندك توكن
 
-        // ✅ Redirect to the dashboard after successful signup
         navigate("/");
       } else {
         alert("Error creating account.");
@@ -59,6 +62,8 @@ export default function SignupPage() {
     } catch (error) {
       console.error("Error during signup:", error);
       alert("An error occurred during signup.");
+    } finally {
+      setIsSubmitting(false); // ✅ وقف التحميل
     }
   };
 
@@ -199,9 +204,14 @@ export default function SignupPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:brightness-90"
+                disabled={isSubmitting} // ✅ تعطيل الزر أثناء اللودينج
+                className={`w-full font-semibold py-2 rounded-md hover:brightness-90 ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-primary text-white"
+                }`}
               >
-                SIGN UP
+                {isSubmitting ? "Creating..." : "SIGN UP"}
               </button>
 
               {/* Login Link */}

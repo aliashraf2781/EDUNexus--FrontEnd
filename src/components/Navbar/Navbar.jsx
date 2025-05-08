@@ -10,10 +10,22 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { clearToken } from "../../services/authSlice";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    dispatch(clearToken());
+    navigate("/login");
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -83,18 +95,6 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <div className="flex gap-2 sm:gap-4">
-              <select className="text-xs sm:text-sm rounded border-gray-300 shadow-sm text-gray-400 p-1">
-                <option value="">USD</option>
-                <option value="">EGP</option>
-              </select>
-
-              <select className="text-xs sm:text-sm rounded border-gray-300 shadow-sm text-gray-400 p-1">
-                <option value="">English</option>
-                <option value="">Arabic</option>
-              </select>
-            </div>
-
             <button
               className="block rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 md:hidden"
               onClick={toggleMenu}
@@ -154,29 +154,25 @@ export default function Navbar() {
             </div>
 
             <div className="flex flex-row items-center gap-2 sm:gap-3">
-              <NavLink
-                to={"/signup"}
-                className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-orange-100 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-primary focus:ring-2"
-              >
-                <span className="absolute -end-full transition-all group-hover:end-4">
-                  <UserPlus className="h-4 w-4" />
-                </span>
-                <span className="text-xs sm:text-sm font-bold transition-all group-hover:me-4">
-                  Create Account
-                </span>
-              </NavLink>
-
-              <NavLink
-                to={"/login"}
-                className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-primary px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-white focus:ring-2"
-              >
-                <span className="absolute -end-full transition-all group-hover:end-4">
-                  <LogIn className="h-4 w-4" />
-                </span>
-                <span className="text-xs sm:text-sm font-bold transition-all group-hover:me-4">
-                  Sign In
-                </span>
-              </NavLink>
+              {!token ? (
+                <>
+                  <NavLink to={"signup"} className="...">
+                    <span className="...">Create Account</span>
+                  </NavLink>
+                  <NavLink to={"/login"} className="...">
+                    <span className="...">Sign In</span>
+                  </NavLink>
+                </>
+              ) : (
+                <button
+                  onClick={() => {
+                    handleLogout();
+                  }}
+                  className="bg-red-500 text-white px-4 py-2 rounded"
+                >
+                  Logout
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import CourseDetails from "./pages/CourseDetails/CourseDetails";
 import CourseLesson from "./pages/CourseLesson/CourseLesson";
-import CourseList from "./pages/CourseList/CourseList";
+// import CourseList from "./pages/CourseList/CourseList";
 import CourseNotfication from "./pages/CourseNotification/CourseNotification";
 import InsProfile from "./pages/InstructorProfile/InstructorProfile";
 import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
@@ -19,7 +19,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-import ContactUs from "./pages/ContactSreen/contactus"
+import ContactUs from "./pages/ContactSreen/contactus";
 import Cart from "./pages/Cart/Cart";
 import AddPromoCode from "./pages/AddPromoCode/AddPromoCode";
 import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
@@ -32,7 +32,6 @@ import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivate
 
 import OrganizationLayout from "./components/Layout/OrganizationDashboardLayout";
 import OrganizationDashboard from "./pages/OrgDashboard/index";
-import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
 import Unauthorized from "./pages/UnauthorizedPage/UnauthorizedPage";
 import {
   InstructorRoute,
@@ -53,10 +52,10 @@ const route = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "courses",
-        element: <CourseList />,
-      },
+      // {
+      //   path: "courses",
+      //   element: <CourseList />,
+      // },
       {
         path: "about",
         element: <About />,
@@ -69,7 +68,6 @@ const route = createBrowserRouter([
         path: "student-dashboard",
         element: (
           <StudentRoute>
-            {" "}
             <StudentDashboard />
           </StudentRoute>
         ),

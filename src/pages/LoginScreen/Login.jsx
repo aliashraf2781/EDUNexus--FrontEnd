@@ -4,6 +4,8 @@ import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import * as Yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
 import { useLoginMutation } from "../../services/apiSlice";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../services/authSlice";
 
 const Login = () => {
   const [login, { isLoading }] = useLoginMutation();
@@ -12,22 +14,24 @@ const Login = () => {
   const [error, setError] = useState(""); // To store error messages
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const handleLogin = async (values) => {
     const { email, password } = values;
     try {
       const res = await login({ email, password }).unwrap();
-      if (res.user.role == "student") {
+      if (res.user.role === "student") {
         localStorage.setItem("token", res.token);
-        localStorage.setItem("role", res.user.role);
+        dispatch(setToken(res.token)); // 👈 دي أهم خطوة
+
         setError("");
         navigate("/student-dashboard");
       } else {
-        setError("Wrong Role , you aren't student");
+        setError("Wrong Role, you aren't student");
       }
-      console.log("Login Successfully", res);
     } catch (err) {
       console.log(err);
-      setError("Login Failed : email or password may be incorrect");
+      setError("Login Failed: email or password may be incorrect");
     }
   };
 
@@ -167,7 +171,7 @@ const Login = () => {
                 type="submit"
                 className="w-full bg-primary text-white py-2 rounded-md font-semibold hover:brightness-90 transition"
               >
-                 {isLoading ? (
+                {isLoading ? (
                   <>
                     <div className="flex justify-center gap-2">
                       <Loader2 className="animate-spin text-gray-500" /> Logging
