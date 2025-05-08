@@ -90,7 +90,6 @@ function CourseDetails() {
             <span className=' text-primary text-md font-semibold'>Load More</span>
             <Loader className='text-primary mt-1' size={20} />
           </div>
-
           <div className='md:px-27 px-7 py-7 flex flex-col gap-6'>
             <div className='flex gap-3 justify-between items-start'>
               <span className='text-primary text-4xl font-semibold'>Related Courses</span>
@@ -106,7 +105,6 @@ function CourseDetails() {
             <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4'>
               {relatedCourses.map((course) => (
                 <SmallCourseCard key={course._id} course={course} />
-              ))}
             </div>
           </div>
         </div>

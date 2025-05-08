@@ -103,111 +103,111 @@
   ],
   "subjects": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Arabic Language"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Mathematics"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Science"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "English Language"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Social Studies"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Physics"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Chemistry"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Biology"
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Philosophy and Logic"
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Psychology and Sociology"
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "History"
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Geography"
     },
     {
-      "id": "13",
+      "id": 13,
       "name": "Computer Science"
     }
   ],
   "grades": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Grade 1"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Grade 2"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Grade 3"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Grade 4"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Grade 5"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Grade 6"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Grade 7"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Grade 8"
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Grade 9"
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Grade 10"
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Grade 11"
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Grade 12"
     }
   ],
   "courses": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Introduction to Science for Grade 4",
       "subject_id": 3,
       "grade": 4,
@@ -219,10 +219,11 @@
       "progress": 50,
       "shortDescription": "Learn the basics of natural science with fun activities.",
       "longDescription": "This course introduces Grade 4 students to the wonders of science through engaging experiments and simple explanations about matter, energy, and ecosystems.",
-      "created_at": "2024-08-15T14:23:11Z"
+      "created_at": "2024-08-15T14:23:11Z",
+      "duration": "9h 37m"
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Mathematics Basics for Grade 2",
       "subject_id": 2,
       "grade": 2,
@@ -234,10 +235,11 @@
       "progress": 65,
       "shortDescription": "Simple addition, subtraction, and shapes.",
       "longDescription": "A fun-filled course for young learners to understand numbers, addition, subtraction, and basic geometry concepts through games and real-life examples.",
-      "created_at": "2024-11-09T09:37:45Z"
+      "created_at": "2024-11-09T09:37:45Z",
+      "duration": "11h 15m"
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "English Skills for Grade 5",
       "subject_id": 4,
       "grade": 5,
@@ -249,14 +251,15 @@
       "progress": 45,
       "shortDescription": "Boost your English reading and writing.",
       "longDescription": "Designed for Grade 5 students, this course focuses on building vocabulary, grammar, reading comprehension, and writing simple essays through interactive activities.",
-      "created_at": "2024-12-25T12:10:03Z"
+      "created_at": "2024-12-25T12:10:03Z",
+      "duration": "8h 45m"
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "Geography for Grade 8",
       "subject_id": 12,
       "grade": 8,
-      "instructor_id": 12,
+      "instructor_id": 11,
       "price": 40,
       "rating": 4.5,
       "students": 14000,
@@ -264,10 +267,11 @@
       "progress": 30,
       "shortDescription": "Explore continents, oceans, and climates.",
       "longDescription": "This course takes students on a journey around the world to learn about continents, major rivers, oceans, and global climate patterns with fun map activities.",
-      "created_at": "2024-06-02T08:44:51Z"
+      "created_at": "2024-06-02T08:44:51Z",
+      "duration": "12h 20m"
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "Physics Basics for Grade 10",
       "subject_id": 6,
       "grade": 10,
@@ -279,14 +283,15 @@
       "progress": 55,
       "shortDescription": "Fundamentals of forces, motion, and energy.",
       "longDescription": "Learn the basic principles of physics including force, motion, work, and energy with real-world examples and experiments explained in simple terms.",
-      "created_at": "2024-09-27T17:30:16Z"
+      "created_at": "2024-09-27T17:30:16Z",
+      "duration": "10h 50m"
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "Computer Skills for Grade 6",
       "subject_id": 13,
       "grade": 6,
-      "instructor_id": 13,
+      "instructor_id": 12,
       "price": 30,
       "rating": 4.4,
       "students": 12500,
@@ -294,10 +299,11 @@
       "progress": 40,
       "shortDescription": "Basic computer operations and typing skills.",
       "longDescription": "A beginner-friendly course teaching students the basics of using computers, typing skills, file management, and internet safety tips.",
-      "created_at": "2025-01-19T11:22:18Z"
+      "created_at": "2025-01-19T11:22:18Z",
+      "duration": "6h 30m"
     },
     {
-      "id": "7",
+      "id": 7,
       "title": "Chemistry Essentials for Grade 11",
       "subject_id": 7,
       "grade": 11,
@@ -309,10 +315,11 @@
       "progress": 70,
       "shortDescription": "Master chemical equations and bonding.",
       "longDescription": "An intensive course covering chemical equations, molecular bonding, and the periodic table essentials for Grade 11 science students.",
-      "created_at": "2024-07-08T19:55:02Z"
+      "created_at": "2024-07-08T19:55:02Z",
+      "duration": "14h 10m"
     },
     {
-      "id": "8",
+      "id": 8,
       "title": "Social Studies for Grade 7",
       "subject_id": 5,
       "grade": 7,
@@ -324,10 +331,11 @@
       "progress": 60,
       "shortDescription": "Discover ancient civilizations and cultures.",
       "longDescription": "Students will explore major civilizations, ancient societies, and world religions with engaging storytelling, interactive activities, and quizzes.",
-      "created_at": "2025-02-14T10:05:31Z"
+      "created_at": "2025-02-14T10:05:31Z",
+      "duration": "9h 40m"
     },
     {
-      "id": "9",
+      "id": 9,
       "title": "Biology: Cells and Systems for Grade 10",
       "subject_id": 8,
       "grade": 10,
@@ -339,10 +347,11 @@
       "progress": 50,
       "shortDescription": "Study cells, tissues, and human body systems.",
       "longDescription": "An exciting introduction to biology that covers cellular structure, plant and human tissues, and body systems for high school beginners.",
-      "created_at": "2024-10-22T15:48:07Z"
+      "created_at": "2024-10-22T15:48:07Z",
+      "duration": "11h 15m"
     },
     {
-      "id": "10",
+      "id": 10,
       "title": "History of Egypt for Grade 9",
       "subject_id": 11,
       "grade": 9,
@@ -354,10 +363,11 @@
       "progress": 35,
       "shortDescription": "Ancient Egypt to modern times.",
       "longDescription": "This course guides students through the fascinating history of Egypt, from the pharaohs to the present day, with maps, timelines, and visual documentaries.",
-      "created_at": "2024-05-03T07:14:39Z"
+      "created_at": "2024-05-03T07:14:39Z",
+      "duration": "9h 45m"
     },
     {
-      "id": "11",
+      "id": 11,
       "title": "Philosophy and Logic for Grade 12",
       "subject_id": 9,
       "grade": 12,
@@ -369,10 +379,11 @@
       "progress": 65,
       "shortDescription": "Learn critical thinking and logic foundations.",
       "longDescription": "Teaches students how to think logically, reason critically, and analyze arguments systematically, preparing them for university-level thinking.",
-      "created_at": "2025-03-04T18:32:55Z"
+      "created_at": "2025-03-04T18:32:55Z",
+      "duration": "13h 20m"
     },
     {
-      "id": "12",
+      "id": 12,
       "title": "Arabic Reading Skills for Grade 3",
       "subject_id": 1,
       "grade": 3,
@@ -384,260 +395,161 @@
       "progress": 55,
       "shortDescription": "Enhance your Arabic reading and comprehension.",
       "longDescription": "Aimed at Grade 3 students to strengthen their Arabic reading comprehension, vocabulary, and storytelling skills through fun exercises.",
-      "created_at": "2024-12-03T13:39:22Z"
+      "created_at": "2024-12-03T13:39:22Z",
+      "duration": "7h 30m"
     }
   ],
   "instructors": [
     {
-      "id": "1",
-      "name": "Vako Shvili",
-      "title": "Web Designer & Best-Selling Instructor",
-      "image": "src/assets/courses images/instructor1.png",
-      "courseRating": 4.9,
-      "students": "236,568",
-      "courses": "09",
-      "website": "https://www.vakoshvili.com",
-      "description": "One day Vako had enough with the 9-to-5 grind, or more like 9-to-9 in his case...",
-      "email": "Vako.Shvili@example.com",
-      "status": "Active",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1F_1vTRh2RV5eYPAJdkW0vmsmZaG7ow4H"
+      "id": 1,
+      "name": "Mr. Ahmed Ali",
+      "subject": "Arabic",
+      "avatar": "src/assets/courses images/instructor1.png",
+      "bio": "Ahmed is a seasoned Arabic language teacher with 10+ years of experience in developing reading skills.",
+      "students": 17000,
+      "numberOfCourses": 1,
+      "website": "https://ahmedali-arabic.com",
+      "rating": 4.8
     },
     {
-      "id": "2",
-      "name": "Nima Tahami",
-      "title": "Entrepreneur & Designer • Founder of ShiftRide",
-      "image": "src/assets/courses images/instructor2.png",
-      "courseRating": 4.6,
-      "students": "5,342",
-      "courses": "01",
-      "website": "https://www.nimatahami.com",
-      "description": "I'm an entrepreneur & designer with a high passion...",
-      "email": "Nima.Tahami@example.com",
-      "status": "Pending",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1GfOeY91PAs8RxlNkO68FfFv0PmrUwGje"
+      "id": 2,
+      "name": "Ms. Salma Youssef",
+      "subject": "Mathematics",
+      "avatar": "src/assets/courses images/instructor2.png",
+      "bio": "Salma specializes in early grade math education with an engaging, game-based approach.",
+      "students": 18000,
+      "numberOfCourses": 1,
+      "website": "https://salmasmathschool.com",
+      "rating": 4.9
     },
     {
-      "id": "3",
-      "name": "Ahmed El-Sayed",
-      "title": "Full-Stack Web Developer",
-      "image": "https://source.unsplash.com/random/200x200?person-1",
-      "courseRating": 4.8,
-      "students": "23,400",
-      "courses": "06",
-      "website": "https://www.ahmeddev.com",
-      "description": "Ahmed has 8+ years of experience in MERN stack...",
-      "email": "ahmed.elsayed@example.com",
-      "status": "Pending",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1y5mx8Aar8t-SO8_cqD3KO8hbHjsq3nmb"
+      "id": 3,
+      "name": "Dr. Hany Samir",
+      "subject": "Science",
+      "avatar": "src/assets/courses images/instructor3.png",
+      "bio": "Dr. Hany brings science to life through fun experiments and relatable examples for kids.",
+      "students": 22000,
+      "numberOfCourses": 1,
+      "website": "https://hanyscienceacademy.org",
+      "rating": 4.7
     },
     {
-      "id": "4",
-      "name": "Mona Khalil",
-      "title": "Data Analyst & Python Instructor",
-      "image": "https://source.unsplash.com/random/200x200?woman-2",
-      "courseRating": 4.7,
-      "students": "15,000",
-      "courses": "03",
-      "website": "https://www.monakhalil.com",
-      "description": "Mona teaches data analysis using Python, Excel...",
-      "email": "mona.khalil@example.com",
-      "status": "Active",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1zKh5xlYFqbPguL_XFL2vK5FGH7H1t8o3"
+      "id": 4,
+      "name": "Mrs. Layla Hassan",
+      "subject": "English",
+      "avatar": "src/assets/courses images/instructor4.png",
+      "bio": "Layla is passionate about helping children master English through reading and writing workshops.",
+      "students": 25000,
+      "numberOfCourses": 1,
+      "website": "https://englishwithlayla.com",
+      "rating": 5
     },
     {
-      "id": "5",
-      "name": "Omar Fathy",
-      "title": "Mobile App Developer",
-      "image": "https://source.unsplash.com/random/200x200?person-3",
-      "courseRating": 4.5,
-      "students": "8,750",
-      "courses": "02",
-      "website": "https://www.omarfathy.dev",
-      "description": "Omar is a Flutter developer helping students build mobile apps from scratch.",
-      "email": "omar.fathy@example.com",
-      "status": "Pending",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1oY_cJt2iPp1giM1v4nz5L9rh23I_2e-V"
+      "id": 5,
+      "name": "Mr. Tamer Fathy",
+      "subject": "Social Studies",
+      "avatar": "src/assets/courses images/instructor5.jpeg",
+      "bio": "Tamer makes history and culture fun and accessible for young minds.",
+      "students": 15000,
+      "numberOfCourses": 1,
+      "website": "https://socialstudies-tamer.com",
+      "rating": 4.6
     },
     {
-      "id": "6",
-      "name": "Salma Hassan",
-      "title": "Cybersecurity Trainer",
-      "image": "https://source.unsplash.com/random/200x200?woman-4",
-      "courseRating": 4.9,
-      "students": "29,500",
-      "courses": "04",
-      "website": "https://www.salma-secure.com",
-      "description": "Salma focuses on ethical hacking, network security...",
-      "email": "salma.hassan@example.com",
-      "status": "Deactivated",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1Bnd_xlFG-PxF1FzJytzP_DVmYhBz8bdM"
+      "id": 6,
+      "name": "Dr. Sara Adel",
+      "subject": "Physics",
+      "avatar": "src/assets/courses images/instructor6.png",
+      "bio": "Sara simplifies physics for high schoolers using visuals, real-world applications, and interactive tools.",
+      "students": 19500,
+      "numberOfCourses": 1,
+      "website": "https://physicswithsara.com",
+      "rating": 4.8
     },
     {
-      "id": "7",
-      "name": "Mohamed Nour",
-      "title": "Machine Learning Engineer",
-      "image": "https://source.unsplash.com/random/200x200?person-5",
-      "courseRating": 4.6,
-      "students": "11,800",
-      "courses": "03",
-      "website": "https://www.mnour.ai",
-      "description": "Mohamed helps beginners master ML and AI...",
-      "email": "mohamed.nour@example.com",
-      "status": "Pending",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1dV8Fxw2ruOswqGp9rsprTHLRb7_JZ6eA"
+      "id": 7,
+      "name": "Prof. Nourhan Ezz",
+      "subject": "Chemistry",
+      "avatar": "src/assets/courses images/instructor7.png",
+      "bio": "Nourhan helps students unlock the mysteries of chemistry through logic and visualization.",
+      "students": 17500,
+      "numberOfCourses": 1,
+      "website": "https://nourhanchem.com",
+      "rating": 4.7
     },
     {
-      "id": "8",
-      "name": "Heba El-Masry",
-      "title": "UI/UX Designer & Mentor",
-      "image": "https://source.unsplash.com/random/200x200?woman-6",
-      "courseRating": 4.7,
-      "students": "17,250",
-      "courses": "05",
-      "website": "https://www.heba.design",
-      "description": "Heba simplifies UI/UX for designers with practical...",
-      "email": "heba.masry@example.com",
-      "status": "Active",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1xk41zYk5oRBxOq8ORe92wKK0rTSmnoDT"
+      "id": 8,
+      "name": "Mr. Khaled Mostafa",
+      "subject": "Biology",
+      "avatar": "src/assets/courses images/instructor8.jpeg",
+      "bio": "Khaled is known for making biology relatable with models, diagrams, and student participation.",
+      "students": 16000,
+      "numberOfCourses": 1,
+      "website": "https://biowithkhaled.com",
+      "rating": 4.9
     },
     {
-      "id": "9",
-      "name": "Tarek Mostafa",
-      "title": "DevOps & Cloud Specialist",
-      "image": "https://source.unsplash.com/random/200x200?person-7",
-      "courseRating": 4.4,
-      "students": "9,300",
-      "courses": "02",
-      "website": "https://www.tarekcloud.io",
-      "description": "Tarek teaches Docker, Kubernetes, AWS, and CI/CD...",
-      "email": "tarek.mostafa@example.com",
-      "status": "Deactivated",
-      "password": "123456",
-      "driveLink": "https://drive.google.com/drive/folders/1l28x9lxJzFfRO8TtY88QyJWxIYlTAlBu"
+      "id": 9,
+      "name": "Dr. Hoda Selim",
+      "subject": "Philosophy",
+      "avatar": "src/assets/courses images/instructor9.jpeg",
+      "bio": "Hoda encourages young adults to think critically and logically through structured discussions.",
+      "students": 11000,
+      "numberOfCourses": 1,
+      "website": "https://philosophy-hoda.com",
+      "rating": 4.5
     },
     {
-      "id": "10",
-      "name": "Nourhan Adel",
-      "title": "Frontend Developer",
-      "image": "https://source.unsplash.com/random/200x200?woman-8",
-      "courseRating": 4.6,
-      "students": "13,200",
-      "courses": "04",
-      "website": "https://www.nourfrontend.com",
-      "description": "Nourhan creates beginner-friendly React and HTML/CSS tutorials.",
-      "email": "nourhan.adel@example.com",
-      "status": "Active"
+      "id": 10,
+      "name": "Ms. Yara Fouad",
+      "subject": "History",
+      "avatar": "src/assets/courses images/instructor10.jpeg",
+      "bio": "Yara makes Egypt’s rich history come alive with storytelling and visuals.",
+      "students": 13000,
+      "numberOfCourses": 1,
+      "website": "https://egyptianhistorybyyara.com",
+      "rating": 4.6
     },
     {
-      "id": "11",
-      "name": "Youssef Gamal",
-      "title": "Game Developer & Instructor",
-      "image": "https://source.unsplash.com/random/200x200?person-9",
-      "courseRating": 4.3,
-      "students": "6,700",
-      "courses": "01",
-      "website": "https://www.gamedev-eg.com",
-      "description": "Youssef teaches Unity and game design in Arabic and English.",
-      "email": "youssef.gamal@example.com",
-      "status": "Pending"
+      "id": 11,
+      "name": "Dr. Ayman Saber",
+      "subject": "Geography",
+      "avatar": "src/assets/courses images/instructor11.jpeg",
+      "bio": "Ayman uses maps, apps, and case studies to teach students about our planet’s geography.",
+      "students": 14000,
+      "numberOfCourses": 1,
+      "website": "https://geographywithayman.com",
+      "rating": 4.7
     },
     {
-      "id": "12",
-      "name": "Aya Hossam",
-      "title": "Backend Developer (Node.js)",
-      "image": "https://source.unsplash.com/random/200x200?woman-10",
-      "courseRating": 4.5,
-      "students": "10,900",
-      "courses": "03",
-      "website": "https://www.ayabackend.dev",
-      "description": "Aya teaches API development, MongoDB, and authentication.",
-      "email": "aya.hossam@example.com",
-      "status": "Active"
-    },
-    {
-      "id": "1746087559031",
-      "name": "Saad",
-      "title": "Arabic Teacher",
-      "image": "SDA",
-      "courseRating": 0,
-      "students": "0",
-      "courses": "0",
-      "website": "DSA",
-      "description": "SAD",
-      "email": "saad_nsr@hotmail.com",
-      "status": "Pending",
-      "driveLink": "SDA"
-    },
-    {
-      "id": "1746088278526",
-      "name": "Saad",
-      "title": "Arabic Teacher",
-      "email": "saad_nsr@hotmail.com",
-      "image": "https://drive.google.com/drive/u/0/",
-      "description": "i AM AN SFDSAPOFJDASDPOFJDSPF",
-      "website": "https://drive.google.com/drive/u/0/",
-      "driveLink": "https://drive.google.com/drive/u/0/",
-      "courseRating": 0,
-      "students": "0",
-      "courses": "0",
-      "status": "Pending"
-    },
-    {
-      "id": "1746099620071",
-      "name": "ali",
-      "title": "ali",
-      "email": "aaaaaa30101975@gmail.com",
-      "password": "123123",
-      "image": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
-      "description": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
-      "website": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
-      "driveLink": "https://stackoverflow.com/questions/55169538/command-json-server-watch-db-json-is-not-working-it-returnsjson-server-co",
-      "courseRating": 0,
-      "students": "0",
-      "courses": "0",
-      "status": "Active"
-    },
-    {
-      "id": "1746112483899",
-      "name": "Saad Abdelfattah",
-      "title": "Physics Teacher",
-      "email": "Saad111@gmail.com",
-      "password": "123456",
-      "image": "https://www.facebook.com/",
-      "description": "Hello i am an expert Physics Teacher",
-      "website": "https://www.facebook.com/",
-      "driveLink": "https://www.facebook.com/",
-      "courseRating": 0,
-      "students": "0",
-      "courses": "0",
-      "status": "Active"
+      "id": 12,
+      "name": "Eng. Rami Elsheikh",
+      "subject": "Computer Skills",
+      "avatar": "src/assets/courses images/instructor12.jpeg",
+      "bio": "Rami teaches digital literacy to kids, including typing, browsing, and basic coding.",
+      "students": 12500,
+      "numberOfCourses": 1,
+      "website": "https://digitalkids-rami.com",
+      "rating": 4.8
     }
   ],
   "students": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Guy Hawkins",
       "image": "src/assets/courses images/avatar1.png",
       "date": "1 week ago",
       "comment": "I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako."
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Dianne Russell",
       "image": "src/assets/courses images/avatar2.png",
       "date": "51 mins ago",
       "comment": "This course is just amazing! has great course content, the best practices, and a lot of real-world knowledge. I love the way of giving examples, the best tips by the instructor which are pretty interesting, fun and knowledgable and I was never getting bored throughout the course. This course meets more than my expectation and, I made the best investment of time to learn and practice what I am passionate about. Thank you so much to our excellent instructor Vako!! Highly recommend this course! Take the next step."
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Eleanor Pena",
       "image": "src/assets/courses images/avatar3.png",
       "date": "1 days ago",
@@ -646,7 +558,7 @@
   ],
   "lesson": [
     {
-      "id": "1",
+      "id": 1,
       "courseTitle": "Complete Website Responsive Design: from Figma to Webflow to Website Design",
       "lessonTitle": "2. Sign up in Webflow",
       "sections": 6,
@@ -661,6 +573,20 @@
       "attachFiles": "(01)",
       "fileName": "Create account on webflow.pdf",
       "fileSize": "12.6 MB"
+    }
+  ],
+  "promocodes": [
+    {
+      "id": "ac89",
+      "code": "SAVE25",
+      "discount": 25,
+      "courseId": 7
+    },
+    {
+      "id": "4315",
+      "code": "FULL",
+      "discount": 100,
+      "courseId": 5
     }
   ],
   "users": [

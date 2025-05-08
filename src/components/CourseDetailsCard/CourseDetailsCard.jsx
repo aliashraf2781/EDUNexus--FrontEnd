@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {
   AlarmClock, Clock3, ChartNoAxesColumnIncreasing, UsersRound, BookText,
   NotepadText, DollarSign, Trophy, TvMinimal, Layers, Copy,
@@ -98,7 +99,6 @@ function CourseDetailsCard({ course }) {
             <div className='gap-2 flex items-center'><NotepadText size={19}/><span>English subtitles</span></div>
             <div className='gap-2 flex items-center'><Layers size={19}/><span>100% online course</span></div>
           </div>
-
           <div className='text-[15px] text-light flex flex-col gap-3 py-6 px-5'>
             <div className='text-dark text-md font-semibold'>Share this course:</div>
             <div className='flex gap-1 items-center'>
@@ -111,7 +111,6 @@ function CourseDetailsCard({ course }) {
           </div>
         </div>
       </div>
-
       {/* Mobile View */}
       <div className='flex lg:hidden'>
         <div className="fixed bottom-2 left-1 right-1 py-2 px-4 bg-white border border-gray-200 shadow-lg z-50 rounded-lg">
