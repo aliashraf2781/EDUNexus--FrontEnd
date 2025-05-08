@@ -174,16 +174,16 @@ function CourseList() {
           {showFilters && (
             <div className="lg:col-span-3">
               <div className="hidden lg:block">
-              <FilterSection
-                showFilters={showFilters}
-                setShowFilters={setShowFilters}
-                grades={grades}
-                subjects={subjects}
-                selectedGrade={selectedGrade}
-                setSelectedGrade={setSelectedGrade}
-                selectedSubject={selectedSubject}
-                setSelectedSubject={setSelectedSubject}
-              />
+                <FilterSection
+                  showFilters={showFilters}
+                  setShowFilters={setShowFilters}
+                  grades={grades}
+                  subjects={subjects}
+                  selectedGrade={selectedGrade}
+                  setSelectedGrade={setSelectedGrade}
+                  selectedSubject={selectedSubject}
+                  setSelectedSubject={setSelectedSubject}
+                />
               </div>
               <SideFilterMenu
                 showFilters={showFilters}
@@ -224,12 +224,14 @@ function CourseList() {
               ))}
             </div>
             <div className="col-span-full h-20 flex items-center justify-center mx-2">
-              {filteredCourses.length > itemsPerPage && <Pagination
-                itemsPerPage={itemsPerPage}
-                totalItems={filteredCourses.length}
-                paginate={paginate}
-                currentPage={currentPage}
-              />}
+              {filteredCourses.length > itemsPerPage && (
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={filteredCourses.length}
+                  paginate={paginate}
+                  currentPage={currentPage}
+                />
+              )}
             </div>
           </div>
         </div>
