@@ -8,7 +8,7 @@ import { getLessons } from '../../api/courses'
 
 function CourseLesson() {
     const [lesson, setLesson] = useState([]);
-    const [finished , setFinished] = useState(false);
+    // const [finished , setFinished] = useState(false);
      useEffect(() => {
         const fetchData = async () => {
           const allLessons = await getLessons();
