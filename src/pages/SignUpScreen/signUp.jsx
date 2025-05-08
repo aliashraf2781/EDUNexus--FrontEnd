@@ -26,17 +26,21 @@ export default function SignupPage() {
 
   // Handle signup form submission
   const handleSignup = async (values) => {
+    
     try {
-      const response = await fetch("http://localhost:3001/users", {
+      // const response = await fetch("http://localhost:3001/users", {
+      const response = await fetch("https://rat-intent-hideously.ngrok-free.app/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": true,
         },
         body: JSON.stringify({
-          id: Date.now(),
-          username: values.username,
+          // id: Date.now(),
+          name: values.username,
           email: values.email,
           password: values.password,
+          role: "student", // Assuming the default role is 'student'
         }),
       });
 
