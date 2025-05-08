@@ -11,6 +11,7 @@ import { useCart } from '../../context/CartContext';
 function CourseDetailsCard({ course }) {
   const { inCart, toggleCartItem } = useCart();
 
+
   // enroll in course function
   const navigate = useNavigate()
   const enrollInCourse = async () => {
