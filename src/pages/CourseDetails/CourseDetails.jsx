@@ -5,12 +5,12 @@ import { Loader, ArrowRight } from 'lucide-react'
 import CourseData from '../../components/CourseData/CourseData'
 import CourseDetailsCard from '../../components/CourseDetailsCard/CourseDetailsCard'
 import SmallCourseCard from '../../components/SmallCourseCard/SmallCourseCard'
-import { getRelatedCourses } from '../../api/courses'
+// import { getRelatedCourses } from '../../api/courses'
 
 function CourseDetails() {
   const { id } = useParams()
   const [course, setCourse] = useState(null)
-  const [relatedCourses, setRelatedCourses] = useState([])
+  // const [relatedCourses, setRelatedCourses] = useState([])
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -30,14 +30,16 @@ function CourseDetails() {
     fetchCourse()
   }, [id])
 
-  useEffect(() => {
-    const fetchRelatedCourses = async () => {
-      const response = await getRelatedCourses()
-      setRelatedCourses(response.data)
-    }
+  console.log(course)
 
-    fetchRelatedCourses()
-  }, [])
+  // useEffect(() => {
+  //   const fetchRelatedCourses = async () => {
+  //     const response = await getRelatedCourses()
+  //     setRelatedCourses(response.data)
+  //   }
+
+  //   fetchRelatedCourses()
+  // }, [])
 
   if (!course) return <div className='p-8 text-center'>Loading...</div>
 
