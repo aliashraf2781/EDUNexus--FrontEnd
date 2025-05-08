@@ -26,7 +26,22 @@ export const apiSlice = createApi({
         body: userData,
       }),
     }),
+    getAllUsers: builder.query({
+      query: () => ({
+        url: "/api/auth/users",
+        method: "GET",
+      }),
+    }),
+    updateUserByAdmin: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/api/auth/users/${id}`,
+        method: "PATCH",
+        body: data,
+      }),
+      invalidatesTags: ["Users"],
+    }),
   }),
 });
 
-export const { useLoginMutation, useRegisterMutation } = apiSlice;
+export const { useLoginMutation, useRegisterMutation, useGetAllCoursesQuery,useGetAllUsersQuery ,useUpdateUserByAdminMutation} =
+  apiSlice;

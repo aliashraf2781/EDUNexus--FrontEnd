@@ -17,7 +17,7 @@ export default function SearchFilterBar({
 
       {/* Filter Buttons */}
       <div className="flex gap-2">
-        {["all", "Active", "Pending", "Deactivated"].map(
+        {["all", "active", "pending", "deactivated"].map(
           (status) => (
             <button
               key={status}

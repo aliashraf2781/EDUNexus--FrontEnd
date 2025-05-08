@@ -1,132 +1,247 @@
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
-import { Trophy, Star, CheckCircle } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { Calendar, Award, FileText, ExternalLink } from 'lucide-react';
 
-const progressData = [
-  { week: 0, user: 100, avg: 50 },
-  { week: 2, user: 250, avg: 150 },
-  { week: 4, user: 400, avg: 300 },
-  { week: 6, user: 600, avg: 450 },
-  { week: 8, user: 780, avg: 500 },
-];
+const CertificatePage = () => {
+  const [certificates, setCertificates] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
-export default function StdLeaderboard() {
+  useEffect(() => {
+    const fetchCertificates = async () => {
+      try {
+        setLoading(true);
+        
+        // Get token from local storage
+        const token = localStorage.getItem('token');
+        
+        if (!token) {
+          throw new Error('Authentication token not found. Please log in again.');
+        }
+        
+        // Set up headers with the token and ngrok skip browser warning
+        const headers = {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true'
+        };
+        
+        // First, get the user ID
+        const userResponse = await fetch('https://rat-intent-hideously.ngrok-free.app/api/auth/me', {
+          headers: headers
+        });
+        
+        if (!userResponse.ok) {
+          throw new Error('Failed to fetch user data');
+        }
+        
+        const userData = await userResponse.json();
+        const userId = userData._id;
+        
+        // Then, use the user ID to fetch certificates
+        const certificatesResponse = await fetch(`https://rat-intent-hideously.ngrok-free.app/api/certificates/user/${userId}`, {
+          headers: headers
+        });
+        
+        if (!certificatesResponse.ok) {
+          throw new Error('Failed to fetch certificates');
+        }
+        
+        const certificatesData = await certificatesResponse.json();
+        setCertificates(certificatesData.certificates || []);
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCertificates();
+  }, []);
+
+  // Format date function
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
+  // Open certificate modal
+  const openCertificate = (cert) => {
+    setSelectedCertificate(cert);
+  };
+
+  // Close certificate modal
+  const closeCertificate = () => {
+    setSelectedCertificate(null);
+  };
+
   return (
-    <div className="w-full mx-auto bg-white p-6 rounded-xl shadow-md space-y-6 text-[#1e1e1e] text-sm">
-      <div className="text-center space-y-1">
-        <h1 className="text-xl font-semibold text-[#FF6636]">My Progress</h1>
-        <p className="text-gray-500 text-sm">
-          See how you rank among other learners
-        </p>
-      </div>
-
-      <div className="bg-[#f7f8fa] p-4 rounded-lg flex items-center space-x-4">
-        <div className="flex flex-col items-center text-orange-500">
-          <Trophy size={60} />
-          <span className="text-xs text-gray-600 mt-1">You</span>
+    <div className="py-6 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">My Certificates</h2>
+          <p className="text-gray-600">Your achievement certificates for completed courses</p>
         </div>
 
-        <div className="space-y-1">
-          <p className="font-medium">
-            Rank: <span className="font-bold">5th</span> out of 30
-          </p>
-          <p>
-            Points: <strong>780 XP</strong>
-          </p>
-          <p>
-            Level:{" "}
-            <span className="text-[#FF6636] font-medium">Advanced Learner</span>
-          </p>
-        </div>
-      </div>
+        {/* Loading State */}
+        {loading && (
+          <div className="text-center py-8">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-blue-600 mb-4"></div>
+            <p className="text-gray-600">Loading certificates...</p>
+          </div>
+        )}
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="flex-1 bg-[#f7f8fa] p-4 rounded-lg space-y-2">
-          <p className="font-medium mb-1">Nearby competitors</p>
-          <div className="flex justify-between">
-            <span>Salma</span>
-            <span>790</span>
-          </div>
-          <div className="flex justify-between font-semibold text-[#FF6636]">
-            <span>You</span>
-            <span>780</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Mostafa</span>
-            <span>770</span>
-          </div>
-        </div>
-
-        <div className="flex-1 bg-[#f7f8fa] p-4 rounded-lg space-y-2">
-          <p className="font-medium mb-1">Achievements</p>
-          <div className="flex items-center space-x-2 text-gray-700">
-            <CheckCircle size={18} className="text-green-600" />
-            <span>Completed 10 Quizzes</span>
-          </div>
-          <div className="flex items-center space-x-2 text-gray-700">
-            <Star size={18} className="text-yellow-500" />
-            <span>Top 10 Rank for 2 weeks</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <p className="font-medium">Weekly progress</p>
-
-          <div className="flex space-x-4 text-sm">
-            <div className="flex items-center space-x-1">
-              <span className="w-3 h-1.5 bg-[#FF6636] rounded-sm" />
-              <span className="text-gray-600">Your Progress</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="w-3 h-1.5 bg-gray-300 rounded-sm" />
-              <span className="text-gray-600">Class Average</span>
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+            <div className="flex">
+              <div className="ml-3">
+                <p className="text-sm text-red-700">
+                  Error loading certificates: {error}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        <ResponsiveContainer width="100%" height={180}>
-          <LineChart data={progressData}>
-            <XAxis dataKey="week" />
-            <YAxis />
-            <Tooltip />
-            <Line
-              type="monotone"
-              dataKey="user"
-              stroke="#FF6636"
-              strokeWidth={2}
-              dot={{ r: 3 }}
-              activeDot={{ r: 5 }}
-              name="Your Progress"
-            />
-            <Line
-              type="monotone"
-              dataKey="avg"
-              stroke="#d1d5db"
-              strokeWidth={2}
-              strokeDasharray="4 4"
-              dot={{ r: 3 }}
-              activeDot={{ r: 5 }}
-              name="Class Average"
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+        {/* Empty State */}
+        {!loading && !error && certificates.length === 0 && (
+          <div className="text-center py-8 bg-white rounded-lg shadow-sm border border-gray-100">
+            <Award className="mx-auto h-12 w-12 text-gray-400" />
+            <h3 className="mt-2 text-lg font-medium text-gray-900">No certificates yet</h3>
+            <p className="mt-1 text-gray-500">Complete courses to earn certificates.</p>
+          </div>
+        )}
 
-      <div className="text-center text-gray-600 text-sm">
-        You’re just <strong>10 points</strong> away from 4th place!
-        <br />
-        <span className="text-[#FF6636] font-medium">
-          Complete one more quiz to level up!
-        </span>
+        {/* Certificate Grid */}
+        {!loading && !error && certificates.length > 0 && (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {certificates.map((certificate) => (
+              <div 
+                key={certificate._id} 
+                className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                onClick={() => openCertificate(certificate)}
+              >
+                <div className="relative aspect-video overflow-hidden bg-gray-200">
+                  {certificate.certificateImageUrl ? (
+                    <img 
+                      src={certificate.certificateImageUrl} 
+                      alt={`Certificate for ${certificate.courseId?.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full bg-gray-100">
+                      <Award className="h-16 w-16 text-gray-400" />
+                    </div>
+                  )}
+                  <div className="absolute top-0 right-0 m-2 px-2 py-1 bg-blue-500 text-white text-xs font-medium rounded">
+                    {certificate.courseId?.category || "Uncategorized"}
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 line-clamp-1">
+                    {certificate.courseId?.title || "Untitled Course"}
+                  </h3>
+                  <div className="mt-2 flex items-center text-sm text-gray-500">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span>Issued: {formatDate(certificate.issueDate)}</span>
+                  </div>
+                </div>
+                <div className="px-4 py-3 bg-gray-50 flex justify-between items-center">
+                  <button 
+                    className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(certificate.certificateUrl, '_blank');
+                    }}
+                  >
+                    <FileText className="h-4 w-4 mr-1" />
+                    View PDF
+                  </button>
+                  <button 
+                    className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-800"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const link = document.createElement('a');
+                      link.href = certificate.certificateUrl;
+                      link.download = `${certificate.courseId?.title || 'Certificate'}.pdf`;
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Certificate Modal */}
+        {selectedCertificate && (
+          <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg max-w-2xl w-full overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-200 flex justify-between items-center">
+                <h3 className="font-semibold text-gray-900">
+                  {selectedCertificate.courseId?.title || "Certificate"}
+                </h3>
+                <button 
+                  onClick={closeCertificate}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <span className="text-2xl">&times;</span>
+                </button>
+              </div>
+              <div className="p-4">
+                <div className="bg-gray-100 rounded-lg p-2 mb-4">
+                  <img 
+                    src={selectedCertificate.certificateImageUrl} 
+                    alt={`Certificate for ${selectedCertificate.courseId?.title}`}
+                    className="w-full rounded shadow"
+                  />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500">Course</h4>
+                    <p className="text-gray-900">{selectedCertificate.courseId?.title || "Untitled Course"}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500">Category</h4>
+                    <p className="text-gray-900">{selectedCertificate.courseId?.category || "Uncategorized"}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500">Issue Date</h4>
+                    <p className="text-gray-900">{formatDate(selectedCertificate.issueDate)}</p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-200">
+                  <a 
+                    href={selectedCertificate.certificateUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center px-3 py-1.5 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-1.5" />
+                    Open Certificate
+                  </a>
+                  <a 
+                    href={selectedCertificate.certificateUrl} 
+                    download={`${selectedCertificate.courseId?.title || 'Certificate'}.pdf`}
+                    className="flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                  >
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-}
+};
+
+export default CertificatePage;

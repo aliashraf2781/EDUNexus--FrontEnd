@@ -37,6 +37,8 @@ import {
   InstructorRoute,
   StudentRoute,
 } from "./components/ProtectedRoute/ProtectedRoute";
+import AdminLogin from "./pages/AdminLoginPage/AdminLoginPage";
+import StudentsPage from "./pages/AdminDashboardPages/StudentsPage/StudentsPage";
 
 const route = createBrowserRouter([
   {
@@ -205,7 +207,10 @@ const route = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminLayout />,
-    children: [{ index: true, element: <InstructorsPage /> }],
+    children: [
+      { index: true, element: <InstructorsPage /> },
+      { path: "students", element: <StudentsPage /> },
+    ],
   },
   {
     path: "/instructorRegister",
@@ -223,6 +228,7 @@ const route = createBrowserRouter([
     path: "/deactivated",
     element: <AccountDeactivated />,
   },
+  { path: "/adminLogin", element: <AdminLogin /> },
 ]);
 function App() {
   return (

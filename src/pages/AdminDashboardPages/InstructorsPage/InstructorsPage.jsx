@@ -4,12 +4,13 @@ import StatsCard from "../../../components/AdminDashboardComponents/StatsCard/St
 import SearchFilterBar from "../../../components/AdminDashboardComponents/SearchFilterBar/SearchFilterBar";
 import InstructorTable from "../../../components/AdminDashboardComponents/InstructorTable/InstructorTable";
 import InstructorModal from "../../../components/AdminDashboardComponents/InstructorModal/InstructorModal";
+
 import {
-  getAllInstructors,
   addInstructor,
   updateInstructor,
   deleteInstructor,
 } from "../../../api/instructors"; // Make sure the path is correct
+import { useGetAllUsersQuery, useUpdateUserByAdminMutation } from "../../../services/apiSlice";
 
 export default function InstructorsPage() {
   const [instructors, setInstructors] = useState([]);
@@ -19,37 +20,48 @@ export default function InstructorsPage() {
   const [showInstructorModal, setShowInstructorModal] = useState(false);
   const [deletingInstructorId, setDeletingInstructorId] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-
-  // Fetch instructors from the API when the page loads
+  const [updateUserByAdmin] = useUpdateUserByAdminMutation();
+  const { data: users = [] } = useGetAllUsersQuery();
   useEffect(() => {
-    const fetchInstructors = async () => {
-      try {
-        const response = await getAllInstructors();
-        setInstructors(response.data); // Assuming response.data contains the array of instructors
-      } catch (error) {
-        console.error("Error fetching instructors:", error);
-      }
-    };
+    
+    if (users.length > 0) {
+      const instructorUsers = users.filter(
+        (user) => user.role === "instructor"
+      );
+      setInstructors(instructorUsers);
+      console.log(instructorUsers)
+    }
+  }, [users]);
 
-    fetchInstructors();
-  }, []); // Empty dependency array means this effect runs once on component mount
+  // // Fetch instructors from the API when the page loads
+  // useEffect(() => {
+  //   const fetchInstructors = async () => {
+  //     try {
+  //       const response = await getAllInstructors();
+  //       setInstructors(response.data); // Assuming response.data contains the array of instructors
+  //     } catch (error) {
+  //       console.error("Error fetching instructors:", error);
+  //     }
+  //   };
+
+  //   fetchInstructors();
+  // }, []); // Empty dependency array means this effect runs once on component mount
 
   const updateStatus = async (id, newStatus) => {
     try {
-      // Get the existing instructor object
-      const existingInstructor = instructors.find((inst) => inst.id === id);
+      const existingInstructor = instructors.find((inst) => inst._id === id);
       if (!existingInstructor) return;
   
       const updatedInstructor = { ...existingInstructor, status: newStatus };
   
-      // Send full object for PUT request
-      await updateInstructor(id, updatedInstructor);
+      // ✅ Use RTK mutation
+      // console.log(id,newStatus)
+      await updateUserByAdmin({ id, data: { status: newStatus } }).unwrap(); // ✅ CORRECT
+
   
       // Update local state
       setInstructors((prev) =>
-        prev.map((inst) =>
-          inst.id === id ? updatedInstructor : inst
-        )
+        prev.map((inst) => (inst._id === id ? updatedInstructor : inst))
       );
     } catch (error) {
       console.error("Error updating instructor status:", error);
@@ -114,18 +126,18 @@ export default function InstructorsPage() {
             <StatsCard label="Total Instructors" count={instructors.length} />
             <StatsCard
               label="Active"
-              count={instructors.filter((i) => i.status === "Active").length}
+              count={instructors.filter((i) => i.status === "active").length}
               color="green"
             />
             <StatsCard
               label="Pending"
-              count={instructors.filter((i) => i.status === "Pending").length}
+              count={instructors.filter((i) => i.status === "pending").length}
               color="yellow"
             />
             <StatsCard
               label="Deactivated"
               count={
-                instructors.filter((i) => i.status === "Deactivated").length
+                instructors.filter((i) => i.status === "deactivated").length
               }
               color="red"
             />

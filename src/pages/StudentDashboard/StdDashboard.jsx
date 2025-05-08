@@ -23,7 +23,7 @@ const Dashboard = () => {
     { title: "Enrolled Courses", icon: enrolledIcon },
     { title: "Progress Tracking", icon: progressIcon },
     { title: "Upcoming Quizzes", icon: quizIcon },
-    { title: "Leaderboard", icon: leaderboardIcon },
+    { title: "Certificate", icon: leaderboardIcon },
   ];
 
   const renderContent = () => {
@@ -92,7 +92,7 @@ const Dashboard = () => {
       //   );
       // case "Upcoming Quizzes":
       //   return <UpcomingQuizzes />;
-      case "Leaderboard":
+      case "Certificate":
         return (
           <div className="p-6 text-gray-700 font-medium">
             <StdLeaderboard />
