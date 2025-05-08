@@ -42,6 +42,7 @@ function CourseDetails() {
   if (!course) return <div className='p-8 text-center'>Loading...</div>
 
   return (
+    <>
     <div className='w-vw min-h-lvh'>
       <div className='grid grid-cols-1 lg:grid-cols-5'>
         <div className='lg:col-span-3 flex flex-col gap-4'>
@@ -104,12 +105,13 @@ function CourseDetails() {
 
             <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4'>
               {relatedCourses.map((course) => (
-                <SmallCourseCard key={course._id} course={course} />
+                <SmallCourseCard key={course._id} course={course} />))}
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   )
 }
 
