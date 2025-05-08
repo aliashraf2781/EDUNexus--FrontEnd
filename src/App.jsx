@@ -39,6 +39,7 @@ import {
 } from "./components/ProtectedRoute/ProtectedRoute";
 import AdminLogin from "./pages/AdminLoginPage/AdminLoginPage";
 import StudentsPage from "./pages/AdminDashboardPages/StudentsPage/StudentsPage";
+import CourseDetailsPage from "./pages/InstructorDashboardPages/CourseDetailsPage/CourseDetailsPage";
 
 const route = createBrowserRouter([
   {
@@ -127,6 +128,7 @@ const route = createBrowserRouter([
           </InstructorRoute>
         ),
       },
+     
       {
         path: "student-dashboard",
         element: (
@@ -173,6 +175,10 @@ const route = createBrowserRouter([
       {
         path: "create-course",
         element: <CreateCoursePage />,
+      },
+      {
+        path:"instructorCourses/:courseId",
+        element:<CourseDetailsPage/>
       },
       {
         path: "create-quiz",
