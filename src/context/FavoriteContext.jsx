@@ -18,16 +18,16 @@ export const FavoriteProvider = ({ children }) => {
 
   const toggleFavorite = (course) => {
     setFavorites((prev) => {
-      const exists = prev.find((c) => c.id === course.id);
+      const exists = prev.find((c) => c._id === course._id);
       if (exists) {
-        return prev.filter((c) => c.id !== course.id);
+        return prev.filter((c) => c._id !== course._id);
       } else {
         return [...prev, course];
       }
     });
   };
 
-  const isFavorite = (id) => favorites.some((c) => c.id === id);
+  const isFavorite = (_id) => favorites.some((c) => c._id === _id);
 
   return (
     <FavoriteContext.Provider value={{ favorites, toggleFavorite, isFavorite }}>

@@ -7,11 +7,11 @@ function FilterSection({
   grades, subjects,selectedGrade, setSelectedGrade,
   selectedSubject, setSelectedSubject,
 }) {
-  const handleGradeClick = (gradeId) => {
-    setSelectedGrade(prev => prev === gradeId ? null : gradeId);
+  const handleGradeClick = (gradeName) => {
+    setSelectedGrade(prev => prev === gradeName ? null : gradeName);
   };
-  const handleSubjectClick = (subjectId) => {
-    setSelectedSubject(prev => prev === subjectId ? null : subjectId);
+  const handleSubjectClick = (subjectName) => {
+    setSelectedSubject(prev => prev === subjectName ? null : subjectName);
   };
 
   return (
@@ -26,7 +26,7 @@ function FilterSection({
             <FilterTopic
               key={grade.id}
               topic={grade}
-              isSelected={selectedGrade === grade.id}
+              isSelected={selectedGrade === grade.name}
               groupName="grade"
               onToggle={handleGradeClick}
             />
@@ -44,7 +44,7 @@ function FilterSection({
             <FilterTopic
               key={subject.id}
               topic={subject}
-              isSelected={selectedSubject === subject.id}
+              isSelected={selectedSubject === subject.name}
               groupName="subject"
               onToggle={handleSubjectClick}
             />

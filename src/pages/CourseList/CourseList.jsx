@@ -4,125 +4,126 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import FilterSection from "../../components/FilterSection/FilterSection";
 import Pagination from "../../components/Pagination/Pagination";
 import SideFilterMenu from "../../components/SideFilterMenu/SideFilterMenu";
-import { getAllCourses, getAllSubjects, getAllGrades } from "../../api/courses";
-import { useGetAllCoursesQuery } from "../../services/apiSlice";
-const gradesInitialValue = [
-  {
-    id: "1",
-    name: "Grade 1",
-  },
-  {
-    id: "2",
-    name: "Grade 2",
-  },
-  {
-    id: "3",
-    name: "Grade 3",
-  },
-  {
-    id: "4",
-    name: "Grade 4",
-  },
-  {
-    id: "5",
-    name: "Grade 5",
-  },
-  {
-    id: "6",
-    name: "Grade 6",
-  },
-  {
-    id: "7",
-    name: "Grade 7",
-  },
-  {
-    id: "8",
-    name: "Grade 8",
-  },
-  {
-    id: "9",
-    name: "Grade 9",
-  },
-  {
-    id: "10",
-    name: "Grade 10",
-  },
-  {
-    id: "11",
-    name: "Grade 11",
-  },
-  {
-    id: "12",
-    name: "Grade 12",
-  },
-];
-const subjectsInitialValue = [
-  {
-    id: "1",
-    name: "Arabic Language",
-  },
-  {
-    id: "2",
-    name: "Mathematics",
-  },
-  {
-    id: "3",
-    name: "Science",
-  },
-  {
-    id: "4",
-    name: "English Language",
-  },
-  {
-    id: "5",
-    name: "Social Studies",
-  },
-  {
-    id: "6",
-    name: "Physics",
-  },
-  {
-    id: "7",
-    name: "Chemistry",
-  },
-  {
-    id: "8",
-    name: "Biology",
-  },
-  {
-    id: "9",
-    name: "Philosophy and Logic",
-  },
-  {
-    id: "10",
-    name: "Psychology and Sociology",
-  },
-  {
-    id: "11",
-    name: "History",
-  },
-  {
-    id: "12",
-    name: "Geography",
-  },
-  {
-    id: "13",
-    name: "Computer Science",
-  },
-];
+import { getAllCourses } from "../../api/courses";
+
 function CourseList() {
   const [showFilters, setShowFilters] = useState(false);
   const [courses, setCourses] = useState([]);
-  const [subjects, setSubjects] = useState(subjectsInitialValue);
-  const [grades, setGrades] = useState(gradesInitialValue);
+  // const [subjects, setSubjects] = useState([]);
+  // const [grades, setGrades] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(8);
-  const [selectedGrade, setSelectedGrade] = useState(null);
-  const [selectedSubject, setSelectedSubject] = useState(null);
+  const [selectedGrade, setSelectedGrade] = useState('');
+  const [selectedSubject, setSelectedSubject] = useState('');
   const [sortOrder, setSortOrder] = useState("popular");
-  const [searchTerm, setSearchTerm] = useState("");
-  const { data, isLoading, error } = useGetAllCoursesQuery();
-  console.log(data)
+  const [searchTerm, setSearchTerm] = useState('');
+  const subjects = [
+    {
+      "id": 1,
+      "name": "Science"
+    },
+    {
+      "id": 2,
+      "name": "Physics"
+    },
+    {
+      "id": 3,
+      "name": "Mathematics"
+    },
+    {
+      "id": 4,
+      "name": "English"
+    },
+    {
+      "id": 5,
+      "name": "Psychology and Sociology"
+    },
+    {
+      "id": 7,
+      "name": "Chemistry"
+    },
+    {
+      "id": 8,
+      "name": "Biology"
+    },
+    {
+      "id": 11,
+      "name": "History"
+    },
+  ]
+  const grades = [
+    {
+      "id": 1,
+      "name": "Grade 1"
+    },
+    {
+      "id": 2,
+      "name": "Grade 2"
+    },
+    {
+      "id": 3,
+      "name": "Grade 3"
+    },
+    {
+      "id": 4,
+      "name": "Grade 4"
+    },
+    {
+      "id": 5,
+      "name": "Grade 5"
+    },
+    {
+      "id": 6,
+      "name": "Grade 6"
+    },
+    {
+      "id": 7,
+      "name": "Grade 7"
+    },
+    {
+      "id": 8,
+      "name": "Grade 8"
+    },
+    {
+      "id": 9,
+      "name": "Grade 9"
+    },
+    {
+      "id": 10,
+      "name": "Grade 10"
+    },
+    {
+      "id": 11,
+      "name": "Grade 11"
+    },
+    {
+      "id": 12,
+      "name": "Grade 12"
+    }
+  ]
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const allCourses = await getAllCourses();
+      setCourses(allCourses.data);
+      // const allSubjects = await getAllSubjects();
+      // setSubjects(allSubjects.data);
+      // const allGrades = await getAllGrades();
+      // setGrades(allGrades.data);
+    };
+    fetchData();
+  }, []);
+
+  const extractGrade = (title) => {
+    const match = title.match(/(?:grade|gr)\s*(\d+)/i);
+    return match[0];
+  }
+
+  const coursesWithGrades = courses.map((course) => ({
+    ...course,
+    grade: extractGrade(course.title),
+  }));
+
   useEffect(() => {
     console.log("Selected Grade:", selectedGrade);
     console.log("Selected Subject:", selectedSubject);
@@ -130,40 +131,33 @@ function CourseList() {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const filteredCourses = courses.filter((course) => {
+  console.log(coursesWithGrades);
+  const filteredCourses = coursesWithGrades.filter(course => {
     const matchesGrade = selectedGrade ? course.grade == selectedGrade : true;
-    const matchesSubject = selectedSubject
-      ? course.subject_id == selectedSubject
-      : true;
+    const matchesSubject = selectedSubject ? course.category == selectedSubject : true;
     return matchesGrade && matchesSubject;
   });
 
-  const searchedCourses = filteredCourses.filter(
-    (course) =>
-      course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      course.shortDescription
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase()) ||
-      course.longDescription.toLowerCase().includes(searchTerm.toLowerCase())
+  const searchedCourses = filteredCourses.filter(course =>
+    course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    course.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const indexOfLastCourse = currentPage * itemsPerPage;
+  const indexOfFirstCourse = indexOfLastCourse - itemsPerPage;
 
   const sortedCourses = [...searchedCourses].sort((a, b) => {
     if (sortOrder === "popular") {
-      return b.students - a.students;
+      return b.enrolledStudents.length - a.enrolledStudents.length;
     } else if (sortOrder === "newest") {
-      return new Date(b.created_at) - new Date(a.created_at);
+      return indexOfLastCourse - indexOfFirstCourse;
     } else if (sortOrder === "oldest") {
-      return new Date(a.created_at) - new Date(b.created_at);
+      return indexOfFirstCourse - indexOfLastCourse;
     }
     return 0;
   });
 
-  const indexOfLastCourse = currentPage * itemsPerPage;
-  const indexOfFirstCourse = indexOfLastCourse - itemsPerPage;
-  const currentCourses = sortedCourses.slice(
-    indexOfFirstCourse,
-    indexOfLastCourse
-  );
+  const currentCourses = sortedCourses.slice(indexOfFirstCourse, indexOfLastCourse);
 
   return (
     <div className="w-vw min-h-lvh lg:py-8 py-4 lg:px-15 px-3">
@@ -226,13 +220,7 @@ function CourseList() {
               }`}
             >
               {currentCourses.map((course) => (
-                <CourseCard
-                  course={course}
-                  subject={
-                    subjects.find((subject) => subject.id == course.subject_id)
-                      ?.name
-                  }
-                />
+                <CourseCard key={course.id} course={course}/>
               ))}
             </div>
             <div className="col-span-full h-20 flex items-center justify-center mx-2">
@@ -252,4 +240,4 @@ function CourseList() {
   );
 }
 
-export default CourseList;
+export default CourseList

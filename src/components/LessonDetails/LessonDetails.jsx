@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+import {FileText} from 'lucide-react'
 import {
   SkipBack,
   Pause,
@@ -7,7 +8,6 @@ import {
   Captions,
   Settings,
   Maximize,
-  FileText,
   Video,
 } from "lucide-react";
 import createdBy1 from "../../assets/courses images/createdBy1.png";
@@ -175,7 +175,22 @@ function LessonDetails({ lesson }) {
             Download File
           </div>
         </div>
-      </div>
+        <div className='flex flex-col gap-4 py-2'>
+            <span className='text-dark text-2xl font-semibold'>Attach Files</span>
+            <div className='flex bg-gray-200 w-full py-4 px-5 justify-between items-center'>
+                <div className='flex gap-3 items-center'>
+                    <FileText size={50} color='#5183C4'/>
+                    <div className='flex flex-col gap-0.5'>
+                        <span className='text-dark text-md'>{lesson.fileName}</span>
+                        <span className='text-gray-600 text-sm'>{lesson.fileSize}</span>
+                    </div>
+                </div>
+                <div className='bg-primary text-white py-3 px-5 text-sm font-semibold cursor-pointer'>
+                    Download File
+                </div>
+            </div>
+        </div>
+    </div>
     </>
   );
 }

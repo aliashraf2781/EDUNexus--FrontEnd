@@ -118,7 +118,7 @@ export default function Navbar() {
               <img src={logo} alt="EduNexus Logo" className="h-8 sm:h-auto" />
             </a></Link>
 
-            <div className="relative border-2 border-gray-200 w-full sm:w-64 md:w-80 lg:w-96 py-2 px-10 max-w-full sm:max-w-md">
+            {/* <div className="relative border-2 border-gray-200 w-full sm:w-64 md:w-80 lg:w-96 py-2 px-10 max-w-full sm:max-w-md">
               <form>
                 <input
                   type="text"
@@ -136,7 +136,7 @@ export default function Navbar() {
                   </button>
                 </span>
               </form>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex items-center justify-center sm:justify-end gap-4 lg:gap-6 w-full sm:w-auto">
@@ -147,7 +147,9 @@ export default function Navbar() {
               <NavLink to={"/favorite-courses"}>
                 <Heart className="cursor-pointer h-5 w-5" />
               </NavLink>
-              <ShoppingCart className="cursor-pointer h-5 w-5" />
+              <NavLink to={"cart"}>
+                <ShoppingCart className="cursor-pointer h-5 w-5" />
+              </NavLink>
             </div>
 
             <div className="flex flex-row items-center gap-2 sm:gap-3">

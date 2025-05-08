@@ -19,7 +19,9 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-import ContactUs from "./pages/ContactSreen/contactus";
+import ContactUs from "./pages/ContactSreen/contactus"
+import Cart from "./pages/Cart/Cart";
+import AddPromoCode from "./pages/AddPromoCode/AddPromoCode";
 import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
 import InstructorsPage from "./pages/AdminDashboardPages/InstructorsPage/InstructorsPage";
 import RegisterInstructor from "./pages/InstructorRegister/InstructorRegister";
@@ -109,6 +111,10 @@ const route = createBrowserRouter([
         ),
       },
       {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
         path: "instructor-profile/:id",
         element: <InsProfile />,
       },
@@ -171,6 +177,10 @@ const route = createBrowserRouter([
       {
         path: "create-quiz",
         element: <InsQuizEditor />,
+      },
+      {
+        path: "add-promocode",
+        element: <AddPromoCode />,
       },
     ],
   },

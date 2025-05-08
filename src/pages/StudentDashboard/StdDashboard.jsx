@@ -23,7 +23,7 @@ const Dashboard = () => {
     { title: "Enrolled Courses", icon: enrolledIcon },
     { title: "Progress Tracking", icon: progressIcon },
     { title: "Upcoming Quizzes", icon: quizIcon },
-    { title: "Leaderboard", icon: leaderboardIcon },
+    { title: "Certificate", icon: leaderboardIcon },
   ];
 
   const renderContent = () => {
@@ -53,12 +53,7 @@ const Dashboard = () => {
             <div>{renderActiveCardContent()}</div>
           </div>
         );
-      case "Messages":
-        return (
-          <div className="p-6 text-gray-700 font-medium">
-            <ChatApp />
-          </div>
-        );
+
       case "Settings":
         return (
           <div className="p-6 text-gray-700 bg-[#FFF3F0] font-medium">
@@ -87,17 +82,17 @@ const Dashboard = () => {
       case "Enrolled Courses":
         return <EnrolledCourses />;
 
-      case "Progress Tracking":
-        return (
-          <div className="p-4 md:p-8 space-y-10">
-            <StatisticsSection />
-            <ActiveCourse />
-            <DeadlinesSection />
-          </div>
-        );
-      case "Upcoming Quizzes":
-        return <UpcomingQuizzes />;
-      case "Leaderboard":
+      // case "Progress Tracking":
+      //   return (
+      //     <div className="p-4 md:p-8 space-y-10">
+      //       <StatisticsSection />
+      //       <ActiveCourse />
+      //       <DeadlinesSection />
+      //     </div>
+      //   );
+      // case "Upcoming Quizzes":
+      //   return <UpcomingQuizzes />;
+      case "Certificate":
         return (
           <div className="p-6 text-gray-700 font-medium">
             <StdLeaderboard />
@@ -116,7 +111,7 @@ const Dashboard = () => {
           <Header />
           <div className="bg-white border-t border-gray-200 overflow-x-auto">
             <div className="flex justify-center space-x-6 px-6 pt-3">
-              {["Dashboard", "Messages", "Settings","Wishlist","Shopping Cart"].map((tab) => (
+              {["Dashboard", "Settings","Wishlist","Shopping Cart"].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
