@@ -40,8 +40,49 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ["Users"],
     }),
+    addCourse: builder.mutation({
+      query: (courseData) => ({
+        url: "/api/courses", // adjust this path if your actual endpoint differs
+        method: "POST",
+        body: courseData,
+      }),
+      invalidatesTags: ["Courses"],
+    }),
+    getUserData: builder.query({
+      query: () => ({
+        url: "/api/auth/me",
+        method: "GET",
+      }),
+    }),
+    getCourses: builder.query({
+      query: () => ({
+        url: "/api/courses",
+        method: "GET",
+      }),
+      providesTags: ["Courses"],
+    }),
+    getLessonsByCourseId: builder.query({
+      query: (courseId) => `/api/courses/${courseId}/lessons`,
+    }),
+    saveLesson: builder.mutation({
+      query: ({ courseId, ...lessonData }) => ({
+        url: `/api/courses/${courseId}/lessons`,
+        method: "POST",
+        body: lessonData,
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useRegisterMutation, useGetAllCoursesQuery,useGetAllUsersQuery ,useUpdateUserByAdminMutation} =
-  apiSlice;
+export const {
+  useLoginMutation,
+  useRegisterMutation,
+  useGetAllCoursesQuery,
+  useGetAllUsersQuery,
+  useUpdateUserByAdminMutation,
+  useAddCourseMutation,
+  useGetUserDataQuery,
+  useGetCoursesQuery,
+  useGetLessonsByCourseIdQuery,
+  useSaveLessonMutation,
+} = apiSlice;

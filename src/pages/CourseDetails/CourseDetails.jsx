@@ -128,11 +128,10 @@ function CourseDetails() {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4">
+            {/* <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4'>
               {relatedCourses.map((course) => (
                 <SmallCourseCard key={course._id} course={course} />
-              ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
