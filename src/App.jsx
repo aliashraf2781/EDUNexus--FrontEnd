@@ -54,10 +54,10 @@ const route = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // {
-      //   path: "courses",
-      //   element: <CourseList />,
-      // },
+      {
+        path: "courses",
+        element: <CourseList />,
+      },
       {
         path: "about",
         element: <About />,
