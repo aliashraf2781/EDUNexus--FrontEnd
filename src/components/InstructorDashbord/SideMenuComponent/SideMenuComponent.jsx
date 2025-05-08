@@ -95,6 +95,20 @@ export default function SideMenuComponent() {
             </li>
             <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
               <NavLink
+                to={"add-promocode"}
+                rel="noopener noreferrer"
+                className={({ isActive }) =>
+                  `flex items-center p-2 space-x-3 rounded-md ${
+                    isActive ? "bg-gray-200 text-orange-600" : "text-gray-400"
+                  }`
+                }
+              >
+                <img src={myCoursesSvg} alt="" />
+                <span>Create Promo Code</span>
+              </NavLink>
+            </li>
+            <li className="rounded-sm hover:bg-gray-800 hover:text-gray-50">
+              <NavLink
                 to={"settings"}
                 rel="noopener noreferrer"
                 className={({ isActive }) =>

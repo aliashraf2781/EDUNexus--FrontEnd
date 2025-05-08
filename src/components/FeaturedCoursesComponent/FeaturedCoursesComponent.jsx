@@ -35,7 +35,7 @@ export default function FeaturedCoursesComponent() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/featuredCourses"
+          "http://localhost:3001/courses"
         );
         // Log the response to ensure it's correct
         console.log(response.data);

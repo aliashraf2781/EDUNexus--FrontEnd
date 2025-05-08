@@ -147,7 +147,9 @@ export default function Navbar() {
               <NavLink to={"/favorite-courses"}>
                 <Heart className="cursor-pointer h-5 w-5" />
               </NavLink>
-              <ShoppingCart className="cursor-pointer h-5 w-5" />
+              <NavLink to={"cart"}>
+                <ShoppingCart className="cursor-pointer h-5 w-5" />
+              </NavLink>
             </div>
 
             <div className="flex flex-row items-center gap-2 sm:gap-3">

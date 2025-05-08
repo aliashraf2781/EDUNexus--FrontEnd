@@ -12,7 +12,7 @@ function FilterTopic({ topic, isSelected, onToggle, groupName }) {
             type="radio"
             name={groupName}
             checked={isSelected}
-            onChange={() => (onToggle(topic.id), console.log("Radio changed:", topic.id))}
+            onChange={() => (onToggle(topic.name), console.log("Radio changed:", topic.name))}
             className="peer absolute w-full h-full opacity-0 cursor-pointer"
           />
           <div className="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center">
