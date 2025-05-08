@@ -6,8 +6,12 @@ import {
   Facebook, Twitter, Mail, MessageCircleCode
 } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useCart } from '../../context/CartContext';
 
 function CourseDetailsCard({ course }) {
+  const { inCart, toggleCartItem } = useCart();
+
+
   // enroll in course function
   const navigate = useNavigate()
   const enrollInCourse = async () => {
@@ -83,9 +87,17 @@ function CourseDetailsCard({ course }) {
           </div>
 
           <div className='flex flex-col gap-3 border-b-[1.5px] border-gray-200 py-6 px-5'>
-            <button className='bg-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2'>
-              Add To Cart
-            </button>
+            <div onClick={() => toggleCartItem(course)}>
+              {inCart(course._id) ? (
+                <button className="bg-white border-2 border-primary text-primary w-full cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2">
+                  Remove From Cart
+                </button>
+              ) : (
+                <span className="bg-primary border-2 border-primary text-white cursor-pointer py-3 px-4 flex items-center font-semibold justify-center gap-2">
+                  Add To Cart
+                </span>
+              )}
+            </div>
 
             {/* <Link to='/course-lesson'> */}
               <button onClick={enrollInCourse} className='bg-white border-2 border-primary text-primary cursor-pointer py-3 px-4 w-full flex items-center font-semibold justify-center gap-2'>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import { Loader, ArrowRight } from "lucide-react";
 
+<<<<<<< HEAD
 import CourseData from "../../components/CourseData/CourseData";
 import CourseDetailsCard from "../../components/CourseDetailsCard/CourseDetailsCard";
 import SmallCourseCard from "../../components/SmallCourseCard/SmallCourseCard";
@@ -12,6 +13,18 @@ function CourseDetails() {
   const [course, setCourse] = useState(null);
   const [relatedCourses, setRelatedCourses] = useState([]);
   const navigate = useNavigate();
+=======
+import CourseData from '../../components/CourseData/CourseData'
+import CourseDetailsCard from '../../components/CourseDetailsCard/CourseDetailsCard'
+import SmallCourseCard from '../../components/SmallCourseCard/SmallCourseCard'
+// import { getRelatedCourses } from '../../api/courses'
+
+function CourseDetails() {
+  const { id } = useParams()
+  const [course, setCourse] = useState(null)
+  // const [relatedCourses, setRelatedCourses] = useState([])
+  const navigate = useNavigate()
+>>>>>>> 752574d789baeb47020c98a3d65793b326669276
 
   useEffect(() => {
     const fetchCourse = async () => {
@@ -33,14 +46,16 @@ function CourseDetails() {
     fetchCourse();
   }, [id]);
 
-  useEffect(() => {
-    const fetchRelatedCourses = async () => {
-      const response = await getRelatedCourses();
-      setRelatedCourses(response.data);
-    };
+  console.log(course)
 
-    fetchRelatedCourses();
-  }, []);
+  // useEffect(() => {
+  //   const fetchRelatedCourses = async () => {
+  //     const response = await getRelatedCourses()
+  //     setRelatedCourses(response.data)
+  //   }
+
+  //   fetchRelatedCourses()
+  // }, [])
 
   if (!course) return <div className="p-8 text-center">Loading...</div>;
 

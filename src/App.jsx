@@ -1,6 +1,6 @@
 import CourseDetails from "./pages/CourseDetails/CourseDetails";
 import CourseLesson from "./pages/CourseLesson/CourseLesson";
-import CourseList from "./pages/CourseList/CourseList";
+// import CourseList from "./pages/CourseList/CourseList";
 import CourseNotfication from "./pages/CourseNotification/CourseNotification";
 import InsProfile from "./pages/InstructorProfile/InstructorProfile";
 import InsQuizEditor from "./pages/instructorQuizEditor/InsQuizEditor";
@@ -19,7 +19,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Quiz from "./Components/Quiz/Quiz";
 // import { Layout } from "lucide-react";
 import DashboardLayout from "./Components/Layout/DashboardLayout";
-import ContactUs from "./pages/ContactSreen/contactus"
+import ContactUs from "./pages/ContactSreen/contactus";
 import Cart from "./pages/Cart/Cart";
 import AddPromoCode from "./pages/AddPromoCode/AddPromoCode";
 import AdminLayout from "./pages/AdminDashboardPages/AdminLayout";
@@ -30,7 +30,8 @@ import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
 import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
 
-import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
+import OrganizationLayout from "./components/Layout/OrganizationDashboardLayout";
+import OrganizationDashboard from "./pages/OrgDashboard/index";
 import Unauthorized from "./pages/UnauthorizedPage/UnauthorizedPage";
 import {
   InstructorRoute,
@@ -70,7 +71,6 @@ const route = createBrowserRouter([
         path: "student-dashboard",
         element: (
           <StudentRoute>
-            {" "}
             <StudentDashboard />
           </StudentRoute>
         ),
@@ -193,7 +193,13 @@ const route = createBrowserRouter([
 
   {
     path: "organization-dashboard",
-    element: <OrganizationDashboard />,
+    element: <OrganizationLayout />,
+    children: [
+      {
+        index: true,
+        element: <OrganizationDashboard />,
+      },
+    ],
   },
 
   {

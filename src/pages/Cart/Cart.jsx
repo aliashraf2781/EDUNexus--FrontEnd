@@ -64,7 +64,7 @@ const Cart = () => {
           >
             <div className="flex justify-between items-start">
               <div className='flex gap-2'>
-                <img src={course.image_url} alt="courseimage" width={150} className='rounded'/>
+                <img src={course.thumbnail} alt="courseimage" width={150} className='rounded'/>
                 <div className='flex flex-col'>
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
                     {course.title}

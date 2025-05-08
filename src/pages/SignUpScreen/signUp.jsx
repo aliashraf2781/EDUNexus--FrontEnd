@@ -1,10 +1,12 @@
 import { User, Mail, Lock } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom"; // ✅ Import for navigation
+import { NavLink, useNavigate } from "react-router-dom"; // ✅ Import for navigation
+import { useState } from "react"; // ✅ لإدارة حالة اللودينج
 
 export default function SignupPage() {
   const navigate = useNavigate(); // ✅ Initialize navigate function
+  const [isSubmitting, setIsSubmitting] = useState(false); // ✅ لودينج
 
   // Define validation schema using Yup
   const SignupSchema = Yup.object().shape({
@@ -20,43 +22,48 @@ export default function SignupPage() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password")], "Passwords must match")
       .required("Confirm Password is required"),
-    terms: Yup.boolean()
-      .oneOf([true], "You must accept the terms and conditions"),
+    terms: Yup.boolean().oneOf(
+      [true],
+      "You must accept the terms and conditions"
+    ),
   });
 
   // Handle signup form submission
   const handleSignup = async (values) => {
-    
+    setIsSubmitting(true); // ✅ بدأ التحميل
     try {
-      // const response = await fetch("http://localhost:3001/users", {
-      const response = await fetch("https://rat-intent-hideously.ngrok-free.app/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "ngrok-skip-browser-warning": true,
-        },
-        body: JSON.stringify({
-          // id: Date.now(),
-          name: values.username,
-          email: values.email,
-          password: values.password,
-          role: "student", // Assuming the default role is 'student'
-        }),
-      });
+      const response = await fetch(
+        "https://rat-intent-hideously.ngrok-free.app/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": true,
+          },
+          body: JSON.stringify({
+            name: values.username,
+            email: values.email,
+            password: values.password,
+            role: "student",
+          }),
+        }
+      );
 
       if (response.ok) {
         const newUser = await response.json();
         console.log("User created:", newUser);
         alert("Account created successfully!");
+        localStorage.setItem("user", JSON.stringify(newUser)); // أو newUser.token لو عندك توكن
 
-        // ✅ Redirect to the dashboard after successful signup
-        navigate("/"); 
+        navigate("/");
       } else {
         alert("Error creating account.");
       }
     } catch (error) {
       console.error("Error during signup:", error);
       alert("An error occurred during signup.");
+    } finally {
+      setIsSubmitting(false); // ✅ وقف التحميل
     }
   };
 
@@ -83,12 +90,19 @@ export default function SignupPage() {
             <Form className="space-y-4 w-full max-w-sm">
               {/* Username Field */}
               <div className="relative">
-                <User className="absolute left-3 top-3.5 text-light" size={20} />
+                <User
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="text"
                   name="username"
                   placeholder="Username"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.username && touched.username ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.username && touched.username
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="username"
@@ -99,12 +113,19 @@ export default function SignupPage() {
 
               {/* Email Field */}
               <div className="relative">
-                <Mail className="absolute left-3 top-3.5 text-light" size={20} />
+                <Mail
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.email && touched.email ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.email && touched.email
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="email"
@@ -115,12 +136,19 @@ export default function SignupPage() {
 
               {/* Password Field */}
               <div className="relative">
-                <Lock className="absolute left-3 top-3.5 text-light" size={20} />
+                <Lock
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.password && touched.password ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.password && touched.password
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="password"
@@ -131,12 +159,19 @@ export default function SignupPage() {
 
               {/* Confirm Password Field */}
               <div className="relative">
-                <Lock className="absolute left-3 top-3.5 text-light" size={20} />
+                <Lock
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.confirmPassword && touched.confirmPassword ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.confirmPassword && touched.confirmPassword
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="confirmPassword"
@@ -147,9 +182,17 @@ export default function SignupPage() {
 
               {/* Terms and Conditions */}
               <div className="flex items-center space-x-2 text-sm">
-                <Field type="checkbox" name="terms" id="terms" className="accent-primary" />
+                <Field
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                  className="accent-primary"
+                />
                 <label htmlFor="terms" className="text-dark">
-                  Accept <a href="#" className="text-primary underline">terms and conditions</a>
+                  Accept{" "}
+                  <a href="#" className="text-primary underline">
+                    terms and conditions
+                  </a>
                 </label>
               </div>
               <ErrorMessage
@@ -159,13 +202,24 @@ export default function SignupPage() {
               />
 
               {/* Submit Button */}
-              <button type="submit" className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:brightness-90">
-                SIGN UP
+              <button
+                type="submit"
+                disabled={isSubmitting} // ✅ تعطيل الزر أثناء اللودينج
+                className={`w-full font-semibold py-2 rounded-md hover:brightness-90 ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-primary text-white"
+                }`}
+              >
+                {isSubmitting ? "Creating..." : "SIGN UP"}
               </button>
 
               {/* Login Link */}
               <p className="text-center text-sm text-dark">
-                You have an account? <a href="#" className="text-primary font-medium">Login now</a>
+                You have an account?{" "}
+                <NavLink to={"login"} className="text-primary font-medium">
+                  Login now
+                </NavLink>
               </p>
             </Form>
           )}
