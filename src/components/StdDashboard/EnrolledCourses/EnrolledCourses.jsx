@@ -7,7 +7,14 @@ const EnrolledCourses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://localhost:3002/courses");
+        const response = await fetch("https://rat-intent-hideously.ngrok-free.app/api/courses/mycourses", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "true",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
         const data = await response.json();
         setCourses(data);
       } catch (error) {
@@ -22,15 +29,17 @@ const EnrolledCourses = () => {
         <FilterBar />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-        {courses.map((course, idx) => (
-          <CourseCard
-            key={idx}
-            image={course.image}
-            title={course.title}
-            category={course.category}
-            progress={course.progress}
-          />
-        ))}
+      {Array.isArray(courses) && courses.map((course) => (
+        <CourseCard
+          key={course._id}
+          image={course.thumbnail}
+          title={course.title}
+          category={course.category}
+          id = {course._id}
+          progress={0} // لاحقًا ممكن تحسبها بناءً على عدد الدروس المنتهية
+        />
+      ))}
+
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"courses"}
+                  to={"/courses"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
@@ -45,7 +45,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"about"}
+                  to={"/about"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
@@ -54,7 +54,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"contact"}
+                  to={"/contact"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
@@ -63,7 +63,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"instructorRegister"}
+                  to={"/instructorRegister"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
@@ -72,7 +72,7 @@ export default function Navbar() {
               </li>
               <li>
                 <NavLink
-                  to={"student-dashboard"}
+                  to={"/student-dashboard"}
                   className="text-gray-400 transition hover:text-gray-200/75"
                   href="#"
                 >
@@ -119,7 +119,7 @@ export default function Navbar() {
               </a>
             </Link>
 
-            <div className="relative border-2 border-gray-200 w-full sm:w-64 md:w-80 lg:w-96 py-2 px-10 max-w-full sm:max-w-md">
+            {/* <div className="relative border-2 border-gray-200 w-full sm:w-64 md:w-80 lg:w-96 py-2 px-10 max-w-full sm:max-w-md">
               <form>
                 <input
                   type="text"
@@ -137,23 +137,25 @@ export default function Navbar() {
                   </button>
                 </span>
               </form>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex items-center justify-center sm:justify-end gap-4 lg:gap-6 w-full sm:w-auto">
             <div className="flex  items-center gap-4">
-              <NavLink to={"course-notifation"}>
+              <NavLink to={"/course-notifation"}>
                 <Bell className="cursor-pointer h-5 w-5" />
               </NavLink>
-              <NavLink to={"favorite-courses"}>
+              <NavLink to={"/favorite-courses"}>
                 <Heart className="cursor-pointer h-5 w-5" />
               </NavLink>
-              <ShoppingCart className="cursor-pointer h-5 w-5" />
+              <NavLink to={"cart"}>
+                <ShoppingCart className="cursor-pointer h-5 w-5" />
+              </NavLink>
             </div>
 
             <div className="flex flex-row items-center gap-2 sm:gap-3">
               <NavLink
-                to={"signup"}
+                to={"/signup"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-orange-100 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-primary focus:ring-2"
               >
                 <span className="absolute -end-full transition-all group-hover:end-4">
@@ -165,7 +167,7 @@ export default function Navbar() {
               </NavLink>
 
               <NavLink
-                to={"login"}
+                to={"/login"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-primary px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-white focus:ring-2"
               >
                 <span className="absolute -end-full transition-all group-hover:end-4">
