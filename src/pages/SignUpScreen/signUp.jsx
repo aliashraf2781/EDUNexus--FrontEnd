@@ -1,7 +1,7 @@
 import { User, Mail, Lock } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom"; // ✅ Import for navigation
+import { NavLink, useNavigate } from "react-router-dom"; // ✅ Import for navigation
 
 export default function SignupPage() {
   const navigate = useNavigate(); // ✅ Initialize navigate function
@@ -20,8 +20,10 @@ export default function SignupPage() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password")], "Passwords must match")
       .required("Confirm Password is required"),
-    terms: Yup.boolean()
-      .oneOf([true], "You must accept the terms and conditions"),
+    terms: Yup.boolean().oneOf(
+      [true],
+      "You must accept the terms and conditions"
+    ),
   });
 
   // Handle signup form submission
@@ -46,7 +48,7 @@ export default function SignupPage() {
         alert("Account created successfully!");
 
         // ✅ Redirect to the dashboard after successful signup
-        navigate("/"); 
+        navigate("/");
       } else {
         alert("Error creating account.");
       }
@@ -79,12 +81,19 @@ export default function SignupPage() {
             <Form className="space-y-4 w-full max-w-sm">
               {/* Username Field */}
               <div className="relative">
-                <User className="absolute left-3 top-3.5 text-light" size={20} />
+                <User
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="text"
                   name="username"
                   placeholder="Username"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.username && touched.username ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.username && touched.username
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="username"
@@ -95,12 +104,19 @@ export default function SignupPage() {
 
               {/* Email Field */}
               <div className="relative">
-                <Mail className="absolute left-3 top-3.5 text-light" size={20} />
+                <Mail
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.email && touched.email ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.email && touched.email
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="email"
@@ -111,12 +127,19 @@ export default function SignupPage() {
 
               {/* Password Field */}
               <div className="relative">
-                <Lock className="absolute left-3 top-3.5 text-light" size={20} />
+                <Lock
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.password && touched.password ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.password && touched.password
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="password"
@@ -127,12 +150,19 @@ export default function SignupPage() {
 
               {/* Confirm Password Field */}
               <div className="relative">
-                <Lock className="absolute left-3 top-3.5 text-light" size={20} />
+                <Lock
+                  className="absolute left-3 top-3.5 text-light"
+                  size={20}
+                />
                 <Field
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  className={`pl-10 pr-4 py-2 w-full border ${errors.confirmPassword && touched.confirmPassword ? 'border-red-500' : 'border-secondary'} rounded-md outline-none focus:ring-2 focus:ring-primary`}
+                  className={`pl-10 pr-4 py-2 w-full border ${
+                    errors.confirmPassword && touched.confirmPassword
+                      ? "border-red-500"
+                      : "border-secondary"
+                  } rounded-md outline-none focus:ring-2 focus:ring-primary`}
                 />
                 <ErrorMessage
                   name="confirmPassword"
@@ -143,9 +173,17 @@ export default function SignupPage() {
 
               {/* Terms and Conditions */}
               <div className="flex items-center space-x-2 text-sm">
-                <Field type="checkbox" name="terms" id="terms" className="accent-primary" />
+                <Field
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                  className="accent-primary"
+                />
                 <label htmlFor="terms" className="text-dark">
-                  Accept <a href="#" className="text-primary underline">terms and conditions</a>
+                  Accept{" "}
+                  <a href="#" className="text-primary underline">
+                    terms and conditions
+                  </a>
                 </label>
               </div>
               <ErrorMessage
@@ -155,13 +193,19 @@ export default function SignupPage() {
               />
 
               {/* Submit Button */}
-              <button type="submit" className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:brightness-90">
+              <button
+                type="submit"
+                className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:brightness-90"
+              >
                 SIGN UP
               </button>
 
               {/* Login Link */}
               <p className="text-center text-sm text-dark">
-                You have an account? <a href="#" className="text-primary font-medium">Login now</a>
+                You have an account?{" "}
+                <NavLink to={"login"} className="text-primary font-medium">
+                  Login now
+                </NavLink>
               </p>
             </Form>
           )}

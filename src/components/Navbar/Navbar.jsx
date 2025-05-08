@@ -114,9 +114,10 @@ export default function Navbar() {
         <div className="flex flex-col sm:flex-row h-auto sm:h-20 py-4 sm:py-0 items-center justify-between gap-4 sm:gap-0">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 lg:gap-12 w-full sm:w-auto">
             <Link to="">
-            <a href="#" className="flex-shrink-0">
-              <img src={logo} alt="EduNexus Logo" className="h-8 sm:h-auto" />
-            </a></Link>
+              <a href="#" className="flex-shrink-0">
+                <img src={logo} alt="EduNexus Logo" className="h-8 sm:h-auto" />
+              </a>
+            </Link>
 
             <div className="relative border-2 border-gray-200 w-full sm:w-64 md:w-80 lg:w-96 py-2 px-10 max-w-full sm:max-w-md">
               <form>
@@ -154,7 +155,6 @@ export default function Navbar() {
               <NavLink
                 to={"signup"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-orange-100 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-primary focus:ring-2"
-                href="#"
               >
                 <span className="absolute -end-full transition-all group-hover:end-4">
                   <UserPlus className="h-4 w-4" />
@@ -167,7 +167,6 @@ export default function Navbar() {
               <NavLink
                 to={"login"}
                 className="group relative w-full xs:w-auto inline-flex justify-center items-center overflow-hidden rounded-sm bg-primary px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-white focus:ring-2"
-                href="#"
               >
                 <span className="absolute -end-full transition-all group-hover:end-4">
                   <LogIn className="h-4 w-4" />

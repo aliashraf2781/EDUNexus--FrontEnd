@@ -28,8 +28,8 @@ import InstructorLogin from "./pages/InstructorLogIn/InstructorLogIn";
 import Dashboard from "./Components/InstructorDashbord/Dashboard/Dashboard";
 import AccountDeactivated from "./pages/AccountDeactivatedPage/AccountDeactivatedPage";
 
-import OrganizationDashboard from "./Components/Layout/OrganizationDashboard";
-
+import OrganizationLayout from "./components/Layout/OrganizationDashboardLayout";
+import OrganizationDashboard from "./pages/OrgDashboard/index";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -127,7 +127,13 @@ const route = createBrowserRouter([
 
   {
     path: "organization-dashboard",
-    element: <OrganizationDashboard />,
+    element: <OrganizationLayout />,
+    children: [
+      {
+        index: true,
+        element: <OrganizationDashboard />,
+      },
+    ],
   },
 
   {
