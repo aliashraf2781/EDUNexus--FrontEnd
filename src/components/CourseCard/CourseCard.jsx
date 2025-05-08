@@ -7,7 +7,7 @@ function CourseCard({ course }) {
     const { isFavorite, toggleFavorite } = useFavorites();
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate(`/course-details/${course.id}`);
+        navigate(`/course-details/${course._id}`);
     };
 
   return (
@@ -17,7 +17,7 @@ function CourseCard({ course }) {
             <div 
                 onClick={(e) => { e.stopPropagation(); toggleFavorite(course); }}
                 className="absolute top-2 right-2 cursor-pointer w-9 h-9 rounded-full bg-white flex items-center justify-center">
-                {isFavorite(course.id) ? (
+                {isFavorite(course._id) ? (
                     <Heart size={22} color='red' fill='red' />
                 ) : (
                     <Heart size={22} color='gray' />
